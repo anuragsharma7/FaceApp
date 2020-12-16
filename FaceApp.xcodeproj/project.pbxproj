@@ -14,6 +14,9 @@
 		DB5F6994258949C000093B7C /* FaceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F6993258949C000093B7C /* FaceAppTests.swift */; };
 		DB5F699F258949C000093B7C /* FaceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F699E258949C000093B7C /* FaceAppUITests.swift */; };
 		DB5F69CE25894BDB00093B7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69CD25894BDB00093B7C /* AppDelegate.swift */; };
+		DB5F69DC25895A7800093B7C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69DB25895A7800093B7C /* Constants.swift */; };
+		DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69E325895C3300093B7C /* WelcomeVC.swift */; };
+		DB5F69ED25896BA500093B7C /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		DB5F699E258949C000093B7C /* FaceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAppUITests.swift; sourceTree = "<group>"; };
 		DB5F69A0258949C000093B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB5F69CD25894BDB00093B7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB5F69DB25895A7800093B7C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB5F69E325895C3300093B7C /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,10 @@
 		DB5F697B258949BC00093B7C /* FaceApp */ = {
 			isa = PBXGroup;
 			children = (
+				DB5F69D925895A5B00093B7C /* Utilities */,
 				DB5F69AF258949E600093B7C /* AppDelegate */,
 				DB5F69B0258949F300093B7C /* SceneDelegate */,
-				DB5F69B1258949F500093B7C /* Controller */,
+				DB5F69D825895A1C00093B7C /* Controller */,
 				DB5F69B325894A2F00093B7C /* View */,
 				DB5F69D225894C5400093B7C /* Resources */,
 				DB5F698A258949BF00093B7C /* Info.plist */,
@@ -141,18 +148,11 @@
 			path = SceneDelegate;
 			sourceTree = "<group>";
 		};
-		DB5F69B1258949F500093B7C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		DB5F69B325894A2F00093B7C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DB5F69D425894C7200093B7C /* LaunchScreen */,
 				DB5F69D325894C6A00093B7C /* Main */,
+				DB5F69D425894C7200093B7C /* LaunchScreen */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +179,39 @@
 				DB5F6987258949BF00093B7C /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		DB5F69D825895A1C00093B7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB5F69E325895C3300093B7C /* WelcomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB5F69D925895A5B00093B7C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DB5F69EB25896B9000093B7C /* Extensions */,
+				DB5F69DA25895A6D00093B7C /* Constants */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DB5F69DA25895A6D00093B7C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DB5F69DB25895A7800093B7C /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DB5F69EB25896B9000093B7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +346,9 @@
 			files = (
 				DB5F69CE25894BDB00093B7C /* AppDelegate.swift in Sources */,
 				DB5F697F258949BC00093B7C /* SceneDelegate.swift in Sources */,
+				DB5F69DC25895A7800093B7C /* Constants.swift in Sources */,
+				DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */,
+				DB5F69ED25896BA500093B7C /* ButtonExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
