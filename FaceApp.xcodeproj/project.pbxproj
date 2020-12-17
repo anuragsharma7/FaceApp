@@ -17,6 +17,14 @@
 		DB5F69DC25895A7800093B7C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69DB25895A7800093B7C /* Constants.swift */; };
 		DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69E325895C3300093B7C /* WelcomeVC.swift */; };
 		DB5F69ED25896BA500093B7C /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */; };
+		F30C9EE7258B798700233EFB /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C9EE6258B798700233EFB /* CircularProgress.swift */; };
+		F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346267D258A89D5002A72B0 /* ObjectiveVC.swift */; };
+		F3462683258A8A26002A72B0 /* AgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462682258A8A26002A72B0 /* AgeVC.swift */; };
+		F3462688258A8A5F002A72B0 /* HowYouEverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462687258A8A5F002A72B0 /* HowYouEverVC.swift */; };
+		F346268D258A8A9D002A72B0 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346268C258A8A9D002A72B0 /* ScheduleVC.swift */; };
+		F3462697258A97B1002A72B0 /* viewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462696258A97B1002A72B0 /* viewExtensions.swift */; };
+		F35BBD37258B204A001037D9 /* ConsistencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BBD36258B204A001037D9 /* ConsistencyVC.swift */; };
+		F35BBD44258B31C5001037D9 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BBD43258B31C5001037D9 /* LoadingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,14 @@
 		DB5F69DB25895A7800093B7C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DB5F69E325895C3300093B7C /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
+		F30C9EE6258B798700233EFB /* CircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
+		F346267D258A89D5002A72B0 /* ObjectiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveVC.swift; sourceTree = "<group>"; };
+		F3462682258A8A26002A72B0 /* AgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeVC.swift; sourceTree = "<group>"; };
+		F3462687258A8A5F002A72B0 /* HowYouEverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowYouEverVC.swift; sourceTree = "<group>"; };
+		F346268C258A8A9D002A72B0 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
+		F3462696258A97B1002A72B0 /* viewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewExtensions.swift; sourceTree = "<group>"; };
+		F35BBD36258B204A001037D9 /* ConsistencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsistencyVC.swift; sourceTree = "<group>"; };
+		F35BBD43258B31C5001037D9 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +201,13 @@
 			isa = PBXGroup;
 			children = (
 				DB5F69E325895C3300093B7C /* WelcomeVC.swift */,
+				F346267D258A89D5002A72B0 /* ObjectiveVC.swift */,
+				F3462682258A8A26002A72B0 /* AgeVC.swift */,
+				F3462687258A8A5F002A72B0 /* HowYouEverVC.swift */,
+				F346268C258A8A9D002A72B0 /* ScheduleVC.swift */,
+				F35BBD36258B204A001037D9 /* ConsistencyVC.swift */,
+				F30C9EE6258B798700233EFB /* CircularProgress.swift */,
+				F35BBD43258B31C5001037D9 /* LoadingVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */,
+				F3462696258A97B1002A72B0 /* viewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -344,10 +368,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30C9EE7258B798700233EFB /* CircularProgress.swift in Sources */,
 				DB5F69CE25894BDB00093B7C /* AppDelegate.swift in Sources */,
+				F3462683258A8A26002A72B0 /* AgeVC.swift in Sources */,
 				DB5F697F258949BC00093B7C /* SceneDelegate.swift in Sources */,
+				F3462688258A8A5F002A72B0 /* HowYouEverVC.swift in Sources */,
+				F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */,
+				F35BBD44258B31C5001037D9 /* LoadingVC.swift in Sources */,
+				F346268D258A8A9D002A72B0 /* ScheduleVC.swift in Sources */,
+				F35BBD37258B204A001037D9 /* ConsistencyVC.swift in Sources */,
 				DB5F69DC25895A7800093B7C /* Constants.swift in Sources */,
 				DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */,
+				F3462697258A97B1002A72B0 /* viewExtensions.swift in Sources */,
 				DB5F69ED25896BA500093B7C /* ButtonExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
