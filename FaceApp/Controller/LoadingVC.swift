@@ -20,7 +20,12 @@ class LoadingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        customisationLabel.text = ""
+        self.customisationLabel.alpha = 1
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: [.repeat, .autoreverse, .curveEaseInOut], animations: {
+            self.customisationLabel.alpha = 0
+        }, completion: nil)
+        
+        //customisationLabel.text = ""
         
         
             
@@ -38,7 +43,7 @@ class LoadingVC: UIViewController {
    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.animateLabelText()
+        //self.animateLabelText()
     }
 
     
@@ -56,57 +61,6 @@ override func didReceiveMemoryWarning() {
     // Dispose of any resources that can be recreated.
 }
     
-    func animateLabelText() {
-        
-        customisationLabel.text = ""
-        
-        let appName = (Bundle.main.infoDictionary?["Customisation according to your age."] as? String) ??  "Customisation according to your age."
-
-        // New code using Timer class
-        
-        let characters = appName.map { $0 }
-        var index = 0
-        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true, block: { [weak self] timer in
-            if index < appName.count {
-                let char = characters[index]
-                self?.customisationLabel.text! += "\(char)"
-                index += 1
-            } else {
-                timer.invalidate()
-            }
-        })
-
-
-    }
 }
-
-
-//extension UILabel {
-//            //MARK: StartBlink
-//            func startBlink() {
-//                      UIView.animate(withDuration: 0.8,//Time duration
-//                                    delay:0.0,
-//                                    options:[.allowUserInteraction, .curveEaseInOut, .autoreverse, .repeat],
-//                                    animations: { self.alpha = 0 },
-//                                    completion: nil)
-//            }
-//
-//            //MARK: StopBlink
-//            func stopBlink() {
-//                      layer.removeAllAnimations()
-//                      alpha = 1
-//            }
-//}
-
-//extension UILabel {
-//    func blink() {
-//        self.alpha = 0.0;
-//        UIView.animate(withDuration: 0.8, //Time duration you want,
-//            delay: 0.0,
-//            options: [.curveEaseInOut, .autoreverse, .repeat],
-//            animations: { [weak self] in self?.alpha = 1.0 },
-//            completion: { [weak self] _ in self?.alpha = 0.0 })
-//    }
-//
-//
-//}
+    
+    
