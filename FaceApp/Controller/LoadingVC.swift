@@ -16,7 +16,7 @@ class LoadingVC: UIViewController {
     @IBOutlet weak var customisationLabel: UILabel!
     
     var timer: Timer?
-    var count = 0
+    var count = 1
     
     //MARK:- View LifeCycle
     
@@ -55,29 +55,33 @@ class LoadingVC: UIViewController {
     }
     
     @objc func timerBegin() {
-        
+        print(count)
         if count == 3 {
-             animateWith(text: "Hi I am first!")
+            animateWith(text: "Hi I am first!")
         }
         
         if count == 6 {
             animateWith(text: "Hi I am second!")
-
+            
         }
- 
+        
         if count == 9 {
             animateWith(text: "Hi I am third!")
-
+        }
+        
+        if count > 10 {
+            
+            timer?.invalidate()
+            timer = nil
         }
         
         count += 1
-        
     }
     
     func animateWith(text: String) {
         self.customisationLabel.text = text
         self.customisationLabel.alpha = 1
-        UIView.animate(withDuration: 0.7, delay: 0.0, options: [ .curveEaseInOut], animations: {
+        UIView.animate(withDuration: 0.7, delay: 2.0, options: [ .curveEaseInOut], animations: {
             self.customisationLabel.alpha = 0
         }, completion: nil)
     }
