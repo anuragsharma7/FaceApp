@@ -17,6 +17,8 @@
 		DB5F69DC25895A7800093B7C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69DB25895A7800093B7C /* Constants.swift */; };
 		DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69E325895C3300093B7C /* WelcomeVC.swift */; };
 		DB5F69ED25896BA500093B7C /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */; };
+		F3078E19258CAF810040A4BE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3078E18258CAF810040A4BE /* HomeVC.swift */; };
+		F3078E26258CD98C0040A4BE /* HomeVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3078E25258CD98C0040A4BE /* HomeVCCell.swift */; };
 		F30C9EE7258B798700233EFB /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C9EE6258B798700233EFB /* CircularProgress.swift */; };
 		F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346267D258A89D5002A72B0 /* ObjectiveVC.swift */; };
 		F3462683258A8A26002A72B0 /* AgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462682258A8A26002A72B0 /* AgeVC.swift */; };
@@ -25,6 +27,7 @@
 		F3462697258A97B1002A72B0 /* viewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462696258A97B1002A72B0 /* viewExtensions.swift */; };
 		F35BBD37258B204A001037D9 /* ConsistencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BBD36258B204A001037D9 /* ConsistencyVC.swift */; };
 		F35BBD44258B31C5001037D9 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BBD43258B31C5001037D9 /* LoadingVC.swift */; };
+		F37028F8258C696E00A91FF3 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37028F7258C696E00A91FF3 /* PaymentVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,8 @@
 		DB5F69DB25895A7800093B7C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DB5F69E325895C3300093B7C /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
+		F3078E18258CAF810040A4BE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F3078E25258CD98C0040A4BE /* HomeVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCCell.swift; sourceTree = "<group>"; };
 		F30C9EE6258B798700233EFB /* CircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		F346267D258A89D5002A72B0 /* ObjectiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveVC.swift; sourceTree = "<group>"; };
 		F3462682258A8A26002A72B0 /* AgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeVC.swift; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 		F3462696258A97B1002A72B0 /* viewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewExtensions.swift; sourceTree = "<group>"; };
 		F35BBD36258B204A001037D9 /* ConsistencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsistencyVC.swift; sourceTree = "<group>"; };
 		F35BBD43258B31C5001037D9 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		F37028F7258C696E00A91FF3 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		DB5F697B258949BC00093B7C /* FaceApp */ = {
 			isa = PBXGroup;
 			children = (
+				F3078E24258CD9480040A4BE /* Cell */,
 				DB5F69D925895A5B00093B7C /* Utilities */,
 				DB5F69AF258949E600093B7C /* AppDelegate */,
 				DB5F69B0258949F300093B7C /* SceneDelegate */,
@@ -208,6 +215,8 @@
 				F35BBD36258B204A001037D9 /* ConsistencyVC.swift */,
 				F30C9EE6258B798700233EFB /* CircularProgress.swift */,
 				F35BBD43258B31C5001037D9 /* LoadingVC.swift */,
+				F37028F7258C696E00A91FF3 /* PaymentVC.swift */,
+				F3078E18258CAF810040A4BE /* HomeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -236,6 +245,14 @@
 				F3462696258A97B1002A72B0 /* viewExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3078E24258CD9480040A4BE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F3078E25258CD98C0040A4BE /* HomeVCCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,12 +390,15 @@
 				F3462683258A8A26002A72B0 /* AgeVC.swift in Sources */,
 				DB5F697F258949BC00093B7C /* SceneDelegate.swift in Sources */,
 				F3462688258A8A5F002A72B0 /* HowYouEverVC.swift in Sources */,
+				F37028F8258C696E00A91FF3 /* PaymentVC.swift in Sources */,
+				F3078E19258CAF810040A4BE /* HomeVC.swift in Sources */,
 				F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */,
 				F35BBD44258B31C5001037D9 /* LoadingVC.swift in Sources */,
 				F346268D258A8A9D002A72B0 /* ScheduleVC.swift in Sources */,
 				F35BBD37258B204A001037D9 /* ConsistencyVC.swift in Sources */,
 				DB5F69DC25895A7800093B7C /* Constants.swift in Sources */,
 				DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */,
+				F3078E26258CD98C0040A4BE /* HomeVCCell.swift in Sources */,
 				F3462697258A97B1002A72B0 /* viewExtensions.swift in Sources */,
 				DB5F69ED25896BA500093B7C /* ButtonExtensions.swift in Sources */,
 			);
