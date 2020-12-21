@@ -17,9 +17,14 @@
 		DB5F69DC25895A7800093B7C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69DB25895A7800093B7C /* Constants.swift */; };
 		DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69E325895C3300093B7C /* WelcomeVC.swift */; };
 		DB5F69ED25896BA500093B7C /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */; };
-		F3078E19258CAF810040A4BE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3078E18258CAF810040A4BE /* HomeVC.swift */; };
-		F3078E26258CD98C0040A4BE /* HomeVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3078E25258CD98C0040A4BE /* HomeVCCell.swift */; };
+		F30946752590A25800C26A05 /* RoutineCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30946742590A25800C26A05 /* RoutineCell2.swift */; };
+		F30946952590E62200C26A05 /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30946942590E62200C26A05 /* HomeVc.swift */; };
+		F309469B2590E64700C26A05 /* HomeVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30946992590E64700C26A05 /* HomeVCCell.swift */; };
+		F30946A22590F02700C26A05 /* HomeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30946A02590F02700C26A05 /* HomeCollectionReusableView.swift */; };
+		F30946A32590F02700C26A05 /* HomeCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30946A12590F02700C26A05 /* HomeCollectionReusableView.xib */; };
 		F30C9EE7258B798700233EFB /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C9EE6258B798700233EFB /* CircularProgress.swift */; };
+		F326D3C425909163009A6BA7 /* RoutineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326D3C325909163009A6BA7 /* RoutineVC.swift */; };
+		F326D3CC2590969E009A6BA7 /* RoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326D3CB2590969E009A6BA7 /* RoutineCell.swift */; };
 		F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346267D258A89D5002A72B0 /* ObjectiveVC.swift */; };
 		F3462683258A8A26002A72B0 /* AgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462682258A8A26002A72B0 /* AgeVC.swift */; };
 		F3462688258A8A5F002A72B0 /* HowYouEverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462687258A8A5F002A72B0 /* HowYouEverVC.swift */; };
@@ -28,6 +33,7 @@
 		F35BBD37258B204A001037D9 /* ConsistencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BBD36258B204A001037D9 /* ConsistencyVC.swift */; };
 		F35BBD44258B31C5001037D9 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BBD43258B31C5001037D9 /* LoadingVC.swift */; };
 		F37028F8258C696E00A91FF3 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37028F7258C696E00A91FF3 /* PaymentVC.swift */; };
+		F3A69CBB258E56E700A3E6D0 /* PauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CBA258E56E700A3E6D0 /* PauseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +70,14 @@
 		DB5F69DB25895A7800093B7C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DB5F69E325895C3300093B7C /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
-		F3078E18258CAF810040A4BE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		F3078E25258CD98C0040A4BE /* HomeVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCCell.swift; sourceTree = "<group>"; };
+		F30946742590A25800C26A05 /* RoutineCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCell2.swift; sourceTree = "<group>"; };
+		F30946942590E62200C26A05 /* HomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
+		F30946992590E64700C26A05 /* HomeVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCCell.swift; sourceTree = "<group>"; };
+		F30946A02590F02700C26A05 /* HomeCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionReusableView.swift; sourceTree = "<group>"; };
+		F30946A12590F02700C26A05 /* HomeCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionReusableView.xib; sourceTree = "<group>"; };
 		F30C9EE6258B798700233EFB /* CircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
+		F326D3C325909163009A6BA7 /* RoutineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineVC.swift; sourceTree = "<group>"; };
+		F326D3CB2590969E009A6BA7 /* RoutineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCell.swift; sourceTree = "<group>"; };
 		F346267D258A89D5002A72B0 /* ObjectiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveVC.swift; sourceTree = "<group>"; };
 		F3462682258A8A26002A72B0 /* AgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeVC.swift; sourceTree = "<group>"; };
 		F3462687258A8A5F002A72B0 /* HowYouEverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowYouEverVC.swift; sourceTree = "<group>"; };
@@ -75,6 +86,7 @@
 		F35BBD36258B204A001037D9 /* ConsistencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsistencyVC.swift; sourceTree = "<group>"; };
 		F35BBD43258B31C5001037D9 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		F37028F7258C696E00A91FF3 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		F3A69CBA258E56E700A3E6D0 /* PauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +228,9 @@
 				F30C9EE6258B798700233EFB /* CircularProgress.swift */,
 				F35BBD43258B31C5001037D9 /* LoadingVC.swift */,
 				F37028F7258C696E00A91FF3 /* PaymentVC.swift */,
-				F3078E18258CAF810040A4BE /* HomeVC.swift */,
+				F3A69CBA258E56E700A3E6D0 /* PauseVC.swift */,
+				F326D3C325909163009A6BA7 /* RoutineVC.swift */,
+				F30946942590E62200C26A05 /* HomeVc.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,7 +264,11 @@
 		F3078E24258CD9480040A4BE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F3078E25258CD98C0040A4BE /* HomeVCCell.swift */,
+				F326D3CB2590969E009A6BA7 /* RoutineCell.swift */,
+				F30946742590A25800C26A05 /* RoutineCell2.swift */,
+				F30946992590E64700C26A05 /* HomeVCCell.swift */,
+				F30946A02590F02700C26A05 /* HomeCollectionReusableView.swift */,
+				F30946A12590F02700C26A05 /* HomeCollectionReusableView.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -360,6 +378,7 @@
 			files = (
 				DB5F6989258949BF00093B7C /* LaunchScreen.storyboard in Resources */,
 				DB5F6986258949BF00093B7C /* Assets.xcassets in Resources */,
+				F30946A32590F02700C26A05 /* HomeCollectionReusableView.xib in Resources */,
 				DB5F6984258949BC00093B7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,20 +405,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				F30C9EE7258B798700233EFB /* CircularProgress.swift in Sources */,
+				F309469B2590E64700C26A05 /* HomeVCCell.swift in Sources */,
 				DB5F69CE25894BDB00093B7C /* AppDelegate.swift in Sources */,
+				F326D3CC2590969E009A6BA7 /* RoutineCell.swift in Sources */,
+				F30946A22590F02700C26A05 /* HomeCollectionReusableView.swift in Sources */,
 				F3462683258A8A26002A72B0 /* AgeVC.swift in Sources */,
 				DB5F697F258949BC00093B7C /* SceneDelegate.swift in Sources */,
 				F3462688258A8A5F002A72B0 /* HowYouEverVC.swift in Sources */,
 				F37028F8258C696E00A91FF3 /* PaymentVC.swift in Sources */,
-				F3078E19258CAF810040A4BE /* HomeVC.swift in Sources */,
 				F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */,
+				F3A69CBB258E56E700A3E6D0 /* PauseVC.swift in Sources */,
 				F35BBD44258B31C5001037D9 /* LoadingVC.swift in Sources */,
+				F326D3C425909163009A6BA7 /* RoutineVC.swift in Sources */,
 				F346268D258A8A9D002A72B0 /* ScheduleVC.swift in Sources */,
 				F35BBD37258B204A001037D9 /* ConsistencyVC.swift in Sources */,
+				F30946752590A25800C26A05 /* RoutineCell2.swift in Sources */,
 				DB5F69DC25895A7800093B7C /* Constants.swift in Sources */,
 				DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */,
-				F3078E26258CD98C0040A4BE /* HomeVCCell.swift in Sources */,
 				F3462697258A97B1002A72B0 /* viewExtensions.swift in Sources */,
+				F30946952590E62200C26A05 /* HomeVc.swift in Sources */,
 				DB5F69ED25896BA500093B7C /* ButtonExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

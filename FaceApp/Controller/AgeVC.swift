@@ -8,14 +8,6 @@
 import UIKit
 
 class AgeVC: UIViewController {
-
-//MARK:- View LifeCycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
     
 //MARK:- Outlets
     
@@ -30,7 +22,14 @@ class AgeVC: UIViewController {
     
 @IBOutlet weak var ageText: UITextField!
     
-    
+
+    //MARK:- View LifeCycle
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+
+            
+        }
 
 
 

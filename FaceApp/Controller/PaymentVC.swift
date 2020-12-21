@@ -50,11 +50,11 @@ class PaymentVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        day3Label.blink()
+        /*day3Label.blink()
         customWorkOutLabel.blink()
         allExerciseLabel.blink()
         unlimitedLabel.blink()
-        cancelLabel.blink()
+        cancelLabel.blink()*/
 
         
         
@@ -71,15 +71,7 @@ class PaymentVC: UIViewController {
     
 //MARK:- Methods
 
-
-
-
-
-
-
-
-    
-    override func didReceiveMemoryWarning() {
+override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -92,3 +84,4 @@ extension UILabel {
          UIView.animate(withDuration: 1, delay: 0.0, options: [.curveLinear, .repeat, .autoreverse], animations: {self.alpha = 1.0}, completion: nil)
      }
 }
+

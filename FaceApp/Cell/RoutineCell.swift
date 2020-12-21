@@ -1,5 +1,5 @@
 //
-//  HomeVCCell.swift
+//  RoutineCell.swift
 //  FaceApp
 //
 //  Created by Divya Pathak on 21/12/20.
@@ -7,8 +7,12 @@
 
 import UIKit
 
-class HomeVCCell: UITableViewCell {
+class RoutineCell: UITableViewCell {
 
+//MARK:- Outlets
+@IBOutlet weak var aboutLabel: UILabel!
+@IBOutlet weak var tiltLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +23,5 @@ class HomeVCCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

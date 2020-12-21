@@ -8,14 +8,6 @@
 import UIKit
 
 class ObjectiveVC: UIViewController {
-
-//MARK:- View LifeCycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-
-    }
     
 //MARK:- Outlets
 @IBOutlet weak var slider1Label: UILabel!
@@ -36,6 +28,16 @@ class ObjectiveVC: UIViewController {
     
     
 @IBOutlet weak var continueBtn: UIButton!
+    
+    
+    
+    //MARK:- View LifeCycle
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+
+
+        }
     
     
 //MARK:- IBAction
