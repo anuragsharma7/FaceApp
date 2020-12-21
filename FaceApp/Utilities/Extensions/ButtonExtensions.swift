@@ -14,7 +14,7 @@ extension UIButton {
         layer.cornerRadius = CGFloat(num)
     }
     
-    func makeBorder(by num: Int){
+    func makeBorder(by num: Int) {
         layer.borderWidth = 2
         //layer.borderColor = 
     }

@@ -7,13 +7,16 @@
 
 import UIKit
 
-
-class LoadingVC: UIViewController {
+class LoadingVC: BaseClass {
     
     //MARK:- Outlets
     @IBOutlet weak var generationLabel: UILabel!
     @IBOutlet weak var customTraining: UILabel!
     @IBOutlet weak var customisationLabel: UILabel!
+    
+    let firstText = "Hi I am first!"
+    let secondText = "Hi I am second!"
+    let thirdText = "Hi I am third!"
     
     var timer: Timer?
     var count = 1
@@ -23,12 +26,10 @@ class LoadingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        self.customisationLabel.text = "Hi I am first!"
+        self.customisationLabel.text = firstText
         
         //schedule timer
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerBegin), userInfo: nil, repeats: true)
-        
         
         // Do any additional setup after loading the view, typically from a nib.
         let circularProgress = CircularProgress(frame: CGRect(x: 10.0, y: 30.0, width: 50.0, height: 50.0))
@@ -57,22 +58,26 @@ class LoadingVC: UIViewController {
     @objc func timerBegin() {
         print(count)
         if count == 3 {
-            animateWith(text: "Hi I am first!")
+            animateWith(text: firstText)
         }
         
         if count == 6 {
-            animateWith(text: "Hi I am second!")
-            
+            animateWith(text: secondText)
         }
         
         if count == 9 {
-            animateWith(text: "Hi I am third!")
+            animateWith(text: thirdText)
         }
         
         if count > 10 {
-            
+            //keeps the label visible
+            self.customisationLabel.alpha = 1
+            //remove timer
             timer?.invalidate()
             timer = nil
+            
+            //Animation done,Pushing to PaymentVC now
+            self.navigationController?.pushViewController(PaymentVC.instance(), animated: true)
         }
         
         count += 1
@@ -93,14 +98,3 @@ class LoadingVC: UIViewController {
     
 }
 
-
-
-/*
- if count % 2 == 0 {
- print("\(count) is even number")
- 
- } else {
- print("\(count) is odd number")
- }
- 
- */

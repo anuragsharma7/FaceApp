@@ -8,13 +8,16 @@
 import UIKit
 
 class HomeCollectionReusableView: UICollectionReusableView {
-    static let identifier = "HomeCollectionReusableView"
+    static let identifier = "HomeCollectionReusableViewID"
     
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    class func view() -> UICollectionReusableView {
+        let v = UICollectionReusableView.fromNib() as! UICollectionReusableView
+        return v
     }
     
 }

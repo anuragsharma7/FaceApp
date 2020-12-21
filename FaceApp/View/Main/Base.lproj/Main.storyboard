@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bEA-5H-eXI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -51,6 +51,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="ij8-hL-RBO"/>
+                                                    <constraint firstAttribute="width" constant="70" id="yAX-iQ-UEJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -91,6 +92,7 @@ and simple exercises</string>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Rbc-w5-aSt" secondAttribute="trailing" id="2TW-hj-g6b"/>
+                                            <constraint firstItem="4K0-cH-Uhc" firstAttribute="centerX" secondItem="yME-6t-Jsj" secondAttribute="centerX" id="FGa-h9-rJ8"/>
                                             <constraint firstItem="Rbc-w5-aSt" firstAttribute="leading" secondItem="yME-6t-Jsj" secondAttribute="leading" id="RWU-NA-aw0"/>
                                         </constraints>
                                     </stackView>
@@ -114,7 +116,6 @@ and simple exercises</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="alphFaceLabel" destination="gpH-d2-KZB" id="mSa-s3-L2y"/>
                         <outlet property="facerefLabel" destination="8L5-Y3-kLb" id="kRE-oH-o7X"/>
                         <outlet property="imgView" destination="vnd-Pi-vHx" id="QzT-Vg-DhR"/>
                         <outlet property="startBtn" destination="Rbc-w5-aSt" id="ajT-B8-wlH"/>
@@ -123,7 +124,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2822" y="-362"/>
+            <point key="canvasLocation" x="-2893" y="-368"/>
         </scene>
         <!--ObjectiveVC-->
         <scene sceneID="gQi-Ya-kVb">
@@ -301,6 +302,7 @@ and simple exercises</string>
                             <constraint firstItem="fi3-ht-a9h" firstAttribute="bottom" secondItem="g6C-l4-H6q" secondAttribute="bottom" id="kMH-ch-8az"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8xI-Us-gFo"/>
                     <connections>
                         <outlet property="chooseYrObjLabel" destination="ehv-LU-988" id="SwN-bN-e4W"/>
                         <outlet property="continueBtn" destination="PFD-pZ-Ll8" id="B6a-fh-dqV"/>
@@ -1918,19 +1920,19 @@ and simple exercises</string>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Bq-dF-4Ci">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oo5-yQ-ulO">
                                     <size key="itemSize" width="192" height="349"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="500"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="15"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeVCCell" id="rne-MK-CwL">
-                                        <rect key="frame" x="0.0" y="0.0" width="192" height="349"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HomeVCCellID" reuseIdentifier="HomeVCCellID" id="rne-MK-CwL" customClass="HomeVCCell" customModule="FaceApp" customModuleProvider="target">
+                                        <rect key="frame" x="111" y="500" width="192" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HomeVCCell" insetsLayoutMarginsFromSafeArea="NO" id="TH6-fH-mlL" customClass="HomeVCCell" customModule="FaceApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="192" height="349"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="192" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dandruffs" translatesAutoresizingMaskIntoConstraints="NO" id="uZl-ol-Cbx">
@@ -1940,7 +1942,7 @@ and simple exercises</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dandruffs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ok-NV-eg5">
-                                                    <rect key="frame" x="2" y="262" width="143" height="44"/>
+                                                    <rect key="frame" x="2" y="183" width="143" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="6W0-bs-3pv"/>
                                                     </constraints>
@@ -1949,7 +1951,7 @@ and simple exercises</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target zones and" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3F-Kg-XOE">
-                                                    <rect key="frame" x="2" y="289" width="143" height="38"/>
+                                                    <rect key="frame" x="2" y="210" width="143" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="143" id="feK-wq-z7w"/>
                                                         <constraint firstAttribute="height" constant="38" id="grP-t7-E7K"/>
@@ -1961,19 +1963,22 @@ and simple exercises</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4ok-NV-eg5" firstAttribute="leading" secondItem="TH6-fH-mlL" secondAttribute="leading" constant="2" id="326-xI-3UG"/>
-                                                <constraint firstItem="4ok-NV-eg5" firstAttribute="top" secondItem="uZl-ol-Cbx" secondAttribute="bottom" constant="8" id="CJp-Ph-j5G"/>
+                                                <constraint firstItem="4ok-NV-eg5" firstAttribute="top" secondItem="uZl-ol-Cbx" secondAttribute="bottom" constant="-71" id="CJp-Ph-j5G"/>
                                                 <constraint firstItem="P3F-Kg-XOE" firstAttribute="leading" secondItem="TH6-fH-mlL" secondAttribute="leading" constant="2" id="bdK-g4-JEw"/>
                                                 <constraint firstItem="uZl-ol-Cbx" firstAttribute="top" secondItem="TH6-fH-mlL" secondAttribute="top" id="iGj-Tc-FHV"/>
                                                 <constraint firstAttribute="trailing" secondItem="uZl-ol-Cbx" secondAttribute="trailing" id="jhC-l2-kWK"/>
                                                 <constraint firstItem="uZl-ol-Cbx" firstAttribute="leading" secondItem="TH6-fH-mlL" secondAttribute="leading" id="kgn-nz-75N"/>
-                                                <constraint firstItem="4ok-NV-eg5" firstAttribute="top" secondItem="uZl-ol-Cbx" secondAttribute="bottom" constant="8" symbolic="YES" id="kyG-Zq-tmz"/>
                                                 <constraint firstAttribute="trailing" secondItem="4ok-NV-eg5" secondAttribute="trailing" constant="47" id="sUP-k2-nZ2"/>
-                                                <constraint firstItem="P3F-Kg-XOE" firstAttribute="top" secondItem="uZl-ol-Cbx" secondAttribute="bottom" constant="35" id="vNO-os-3sv"/>
+                                                <constraint firstItem="P3F-Kg-XOE" firstAttribute="top" secondItem="uZl-ol-Cbx" secondAttribute="bottom" constant="-44" id="vNO-os-3sv"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="192" height="349"/>
+                                        <size key="customSize" width="192" height="250"/>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="97a-N4-8eU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="PA1-lr-APP" id="ER4-xc-NeA"/>
                                     <outlet property="delegate" destination="PA1-lr-APP" id="FTb-z5-pPK"/>

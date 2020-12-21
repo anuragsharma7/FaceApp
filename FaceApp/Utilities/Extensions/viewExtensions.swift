@@ -9,14 +9,12 @@ import Foundation
 import UIKit
 extension UIView {
     
-    func makeCornerRound(){
+    func makeCornerRound() {
         
     }
     
-    
-    func borderWidth(){
+    func borderWidth() {
         
     }
-    
     
 }

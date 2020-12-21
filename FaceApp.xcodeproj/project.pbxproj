@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB45A606259118C000F78EBC /* BaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45A605259118C000F78EBC /* BaseClass.swift */; };
+		DB45A61525911B0B00F78EBC /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45A61425911B0B00F78EBC /* CommonMethods.swift */; };
+		DB45A62925912A4900F78EBC /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45A62825912A4900F78EBC /* StringExtensions.swift */; };
+		DB45A63E259147A200F78EBC /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45A63D259147A200F78EBC /* ViewExtension.swift */; };
 		DB5F697F258949BC00093B7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F697E258949BC00093B7C /* SceneDelegate.swift */; };
 		DB5F6984258949BC00093B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5F6982258949BC00093B7C /* Main.storyboard */; };
 		DB5F6986258949BF00093B7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5F6985258949BF00093B7C /* Assets.xcassets */; };
@@ -54,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB45A605259118C000F78EBC /* BaseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClass.swift; sourceTree = "<group>"; };
+		DB45A61425911B0B00F78EBC /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
+		DB45A62825912A4900F78EBC /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		DB45A63D259147A200F78EBC /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		DB5F6979258949BC00093B7C /* FaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5F697E258949BC00093B7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DB5F6983258949BC00093B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +122,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB45A604259118B300F78EBC /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				DB45A605259118C000F78EBC /* BaseClass.swift */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		DB45A61325911AFB00F78EBC /* CommonMethod */ = {
+			isa = PBXGroup;
+			children = (
+				DB45A61425911B0B00F78EBC /* CommonMethods.swift */,
+			);
+			path = CommonMethod;
+			sourceTree = "<group>";
+		};
+		DB45A63C2591479100F78EBC /* ViewExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DB45A63D259147A200F78EBC /* ViewExtension.swift */,
+			);
+			path = ViewExtension;
+			sourceTree = "<group>";
+		};
 		DB5F6970258949BC00093B7C = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +270,9 @@
 		DB5F69D925895A5B00093B7C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DB45A63C2591479100F78EBC /* ViewExtension */,
+				DB45A61325911AFB00F78EBC /* CommonMethod */,
+				DB45A604259118B300F78EBC /* BaseClass */,
 				DB5F69EB25896B9000093B7C /* Extensions */,
 				DB5F69DA25895A6D00093B7C /* Constants */,
 			);
@@ -257,6 +292,7 @@
 			children = (
 				DB5F69EC25896BA500093B7C /* ButtonExtensions.swift */,
 				F3462696258A97B1002A72B0 /* viewExtensions.swift */,
+				DB45A62825912A4900F78EBC /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -404,9 +440,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB45A62925912A4900F78EBC /* StringExtensions.swift in Sources */,
 				F30C9EE7258B798700233EFB /* CircularProgress.swift in Sources */,
 				F309469B2590E64700C26A05 /* HomeVCCell.swift in Sources */,
 				DB5F69CE25894BDB00093B7C /* AppDelegate.swift in Sources */,
+				DB45A63E259147A200F78EBC /* ViewExtension.swift in Sources */,
 				F326D3CC2590969E009A6BA7 /* RoutineCell.swift in Sources */,
 				F30946A22590F02700C26A05 /* HomeCollectionReusableView.swift in Sources */,
 				F3462683258A8A26002A72B0 /* AgeVC.swift in Sources */,
@@ -415,6 +453,7 @@
 				F37028F8258C696E00A91FF3 /* PaymentVC.swift in Sources */,
 				F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */,
 				F3A69CBB258E56E700A3E6D0 /* PauseVC.swift in Sources */,
+				DB45A606259118C000F78EBC /* BaseClass.swift in Sources */,
 				F35BBD44258B31C5001037D9 /* LoadingVC.swift in Sources */,
 				F326D3C425909163009A6BA7 /* RoutineVC.swift in Sources */,
 				F346268D258A8A9D002A72B0 /* ScheduleVC.swift in Sources */,
@@ -425,6 +464,7 @@
 				F3462697258A97B1002A72B0 /* viewExtensions.swift in Sources */,
 				F30946952590E62200C26A05 /* HomeVc.swift in Sources */,
 				DB5F69ED25896BA500093B7C /* ButtonExtensions.swift in Sources */,
+				DB45A61525911B0B00F78EBC /* CommonMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
