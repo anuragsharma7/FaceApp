@@ -29,6 +29,8 @@
 		F30C9EE7258B798700233EFB /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C9EE6258B798700233EFB /* CircularProgress.swift */; };
 		F326D3C425909163009A6BA7 /* RoutineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326D3C325909163009A6BA7 /* RoutineVC.swift */; };
 		F326D3CC2590969E009A6BA7 /* RoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326D3CB2590969E009A6BA7 /* RoutineCell.swift */; };
+		F34331612591AE7C00F823DB /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F343315F2591AE7C00F823DB /* HeaderCollectionReusableView.swift */; };
+		F34331622591AE7C00F823DB /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F34331602591AE7C00F823DB /* HeaderCollectionReusableView.xib */; };
 		F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346267D258A89D5002A72B0 /* ObjectiveVC.swift */; };
 		F3462683258A8A26002A72B0 /* AgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462682258A8A26002A72B0 /* AgeVC.swift */; };
 		F3462688258A8A5F002A72B0 /* HowYouEverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462687258A8A5F002A72B0 /* HowYouEverVC.swift */; };
@@ -86,6 +88,8 @@
 		F30C9EE6258B798700233EFB /* CircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
 		F326D3C325909163009A6BA7 /* RoutineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineVC.swift; sourceTree = "<group>"; };
 		F326D3CB2590969E009A6BA7 /* RoutineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCell.swift; sourceTree = "<group>"; };
+		F343315F2591AE7C00F823DB /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		F34331602591AE7C00F823DB /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		F346267D258A89D5002A72B0 /* ObjectiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveVC.swift; sourceTree = "<group>"; };
 		F3462682258A8A26002A72B0 /* AgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeVC.swift; sourceTree = "<group>"; };
 		F3462687258A8A5F002A72B0 /* HowYouEverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowYouEverVC.swift; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 				F30946992590E64700C26A05 /* HomeVCCell.swift */,
 				F30946A02590F02700C26A05 /* HomeCollectionReusableView.swift */,
 				F30946A12590F02700C26A05 /* HomeCollectionReusableView.xib */,
+				F343315F2591AE7C00F823DB /* HeaderCollectionReusableView.swift */,
+				F34331602591AE7C00F823DB /* HeaderCollectionReusableView.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB5F6989258949BF00093B7C /* LaunchScreen.storyboard in Resources */,
+				F34331622591AE7C00F823DB /* HeaderCollectionReusableView.xib in Resources */,
 				DB5F6986258949BF00093B7C /* Assets.xcassets in Resources */,
 				F30946A32590F02700C26A05 /* HomeCollectionReusableView.xib in Resources */,
 				DB5F6984258949BC00093B7C /* Main.storyboard in Resources */,
@@ -458,6 +465,7 @@
 				F326D3C425909163009A6BA7 /* RoutineVC.swift in Sources */,
 				F346268D258A8A9D002A72B0 /* ScheduleVC.swift in Sources */,
 				F35BBD37258B204A001037D9 /* ConsistencyVC.swift in Sources */,
+				F34331612591AE7C00F823DB /* HeaderCollectionReusableView.swift in Sources */,
 				F30946752590A25800C26A05 /* RoutineCell2.swift in Sources */,
 				DB5F69DC25895A7800093B7C /* Constants.swift in Sources */,
 				DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */,

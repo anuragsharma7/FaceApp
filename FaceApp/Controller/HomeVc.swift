@@ -26,6 +26,8 @@ class HomeVc: BaseClass {
         
         collectionView.register(UINib(nibName: "HomeCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionReusableView.identifier)
         
+        collectionView.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier)
+        
     }
     
 }
@@ -34,7 +36,7 @@ class HomeVc: BaseClass {
 
 extension HomeVc: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,11 +49,43 @@ extension HomeVc: UICollectionViewDelegate,UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader{
         
         let headerView = self.collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionReusableView.identifier, for: indexPath) as! HomeCollectionReusableView
         
-        return headerView
+        let secondHeaderView = self.collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
+        
+        if indexPath.section == 0{
+            return headerView
+        }
+        else if indexPath.section == 1{
+            return secondHeaderView
+            
+        }
+        
+        
+}
+        return UICollectionReusableView()
     }
+//        var reusableview = UICollectionReusableView()
+//        if (kind == UICollectionView.elementKindSectionHeader) {
+//            if indexPath.section == 0{
+//                return headerView
+//            }
+//
+//       }
+        
+//        if indexPath.section == 1 {
+//                   return headerView
+//        }
+//
+        //return secondHeaderView
+//}
+    
+    
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
@@ -59,9 +93,13 @@ extension HomeVc: UICollectionViewDelegate,UICollectionViewDataSource, UICollect
     }
      
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-
-        return CGSize(width: 100, height: 250)
+        return CGSize(width: 140, height: 250)
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
+        return 2
     }
     
 }
+
