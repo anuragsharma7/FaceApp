@@ -69,8 +69,8 @@ extension HomeVc: UICollectionViewDelegate,UICollectionViewDataSource, UICollect
             default:
                 return UICollectionReusableView()
             }
-            return UICollectionReusableView()
         }
+        return UICollectionReusableView()
     }
     
     //set header size
