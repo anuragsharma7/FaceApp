@@ -41,7 +41,7 @@ extension HomeVc: UICollectionViewDelegate,UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 2
+            return 4
         case 1:
             return 4
         default:
@@ -79,7 +79,7 @@ extension HomeVc: UICollectionViewDelegate,UICollectionViewDataSource, UICollect
         case 0:
             return CGSize(width: view.frame.size.width, height: 558)
         case 1:
-            return CGSize(width: view.frame.size.width, height: 90)
+            return CGSize(width: view.frame.size.width, height: 100)
         default:
             return CGSize()
         }
@@ -88,7 +88,13 @@ extension HomeVc: UICollectionViewDelegate,UICollectionViewDataSource, UICollect
     //Set item size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 140, height: 250)
+        
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 28
+    }
 }
+
 
