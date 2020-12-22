@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderCollectionReusableViewID" id="U6b-Vx-4bR" customClass="HeaderCollectionReusableView" customModule="FaceApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="377" height="251"/>
+            <rect key="frame" x="0.0" y="0.0" width="377" height="85"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIg-Ur-Hoc">
@@ -63,7 +63,7 @@
                 <constraint firstItem="ZIg-Ur-Hoc" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="ktP-q7-X37"/>
                 <constraint firstItem="ZIg-Ur-Hoc" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="lNM-zf-3ai"/>
             </constraints>
-            <point key="canvasLocation" x="60.14492753623189" y="138.95089285714286"/>
+            <point key="canvasLocation" x="60.14492753623189" y="83.370535714285708"/>
         </collectionReusableView>
     </objects>
     <resources>

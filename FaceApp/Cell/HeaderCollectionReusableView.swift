@@ -11,7 +11,6 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     static let identifier = "HeaderCollectionReusableViewID"
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
