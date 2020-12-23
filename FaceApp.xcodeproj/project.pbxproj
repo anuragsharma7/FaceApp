@@ -27,6 +27,12 @@
 		F30946A22590F02700C26A05 /* HomeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30946A02590F02700C26A05 /* HomeCollectionReusableView.swift */; };
 		F30946A32590F02700C26A05 /* HomeCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30946A12590F02700C26A05 /* HomeCollectionReusableView.xib */; };
 		F30C9EE7258B798700233EFB /* CircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C9EE6258B798700233EFB /* CircularProgress.swift */; };
+		F30F57182593560700A2D04B /* PaymentWithTrialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F57172593560700A2D04B /* PaymentWithTrialVC.swift */; };
+		F30F571D259364F000A2D04B /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F571C259364F000A2D04B /* ExerciseVC.swift */; };
+		F30F5722259387D200A2D04B /* StepAndBenefitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F5721259387D100A2D04B /* StepAndBenefitsVC.swift */; };
+		F30F5727259387F700A2D04B /* StepAndBenefitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F5726259387F700A2D04B /* StepAndBenefitsCell.swift */; };
+		F30F572D2593900600A2D04B /* ExercisePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F572B2593900600A2D04B /* ExercisePopUp.swift */; };
+		F30F572E2593900600A2D04B /* ExercisePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30F572C2593900600A2D04B /* ExercisePopUp.xib */; };
 		F31369432591F467004BAE0A /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31369422591F467004BAE0A /* TabBarVC.swift */; };
 		F31369482591F9BE004BAE0A /* ProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31369472591F9BE004BAE0A /* ProgressVC.swift */; };
 		F326D3C425909163009A6BA7 /* RoutineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326D3C325909163009A6BA7 /* RoutineVC.swift */; };
@@ -38,6 +44,11 @@
 		F3462688258A8A5F002A72B0 /* HowYouEverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462687258A8A5F002A72B0 /* HowYouEverVC.swift */; };
 		F346268D258A8A9D002A72B0 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346268C258A8A9D002A72B0 /* ScheduleVC.swift */; };
 		F3462697258A97B1002A72B0 /* viewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3462696258A97B1002A72B0 /* viewExtensions.swift */; };
+		F34E9661259300F600A6D11E /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E9660259300F600A6D11E /* ProgressCell.swift */; };
+		F34E966A259314AB00A6D11E /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E9669259314AB00A6D11E /* CircularProgressBar.swift */; };
+		F34E967125931F2200A6D11E /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E966F25931F2200A6D11E /* PopUpVC.swift */; };
+		F34E967225931F2200A6D11E /* PopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F34E967025931F2200A6D11E /* PopUpVC.xib */; };
+		F34E967A25932F2700A6D11E /* TakeAPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34E967925932F2700A6D11E /* TakeAPhotoVC.swift */; };
 		F35BBD37258B204A001037D9 /* ConsistencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BBD36258B204A001037D9 /* ConsistencyVC.swift */; };
 		F35BBD44258B31C5001037D9 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BBD43258B31C5001037D9 /* LoadingVC.swift */; };
 		F37028F8258C696E00A91FF3 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37028F7258C696E00A91FF3 /* PaymentVC.swift */; };
@@ -88,6 +99,12 @@
 		F30946A02590F02700C26A05 /* HomeCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionReusableView.swift; sourceTree = "<group>"; };
 		F30946A12590F02700C26A05 /* HomeCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionReusableView.xib; sourceTree = "<group>"; };
 		F30C9EE6258B798700233EFB /* CircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgress.swift; sourceTree = "<group>"; };
+		F30F57172593560700A2D04B /* PaymentWithTrialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWithTrialVC.swift; sourceTree = "<group>"; };
+		F30F571C259364F000A2D04B /* ExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
+		F30F5721259387D100A2D04B /* StepAndBenefitsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepAndBenefitsVC.swift; sourceTree = "<group>"; };
+		F30F5726259387F700A2D04B /* StepAndBenefitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepAndBenefitsCell.swift; sourceTree = "<group>"; };
+		F30F572B2593900600A2D04B /* ExercisePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePopUp.swift; sourceTree = "<group>"; };
+		F30F572C2593900600A2D04B /* ExercisePopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExercisePopUp.xib; sourceTree = "<group>"; };
 		F31369422591F467004BAE0A /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		F31369472591F9BE004BAE0A /* ProgressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressVC.swift; sourceTree = "<group>"; };
 		F326D3C325909163009A6BA7 /* RoutineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineVC.swift; sourceTree = "<group>"; };
@@ -99,6 +116,11 @@
 		F3462687258A8A5F002A72B0 /* HowYouEverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowYouEverVC.swift; sourceTree = "<group>"; };
 		F346268C258A8A9D002A72B0 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		F3462696258A97B1002A72B0 /* viewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewExtensions.swift; sourceTree = "<group>"; };
+		F34E9660259300F600A6D11E /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
+		F34E9669259314AB00A6D11E /* CircularProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
+		F34E966F25931F2200A6D11E /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
+		F34E967025931F2200A6D11E /* PopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpVC.xib; sourceTree = "<group>"; };
+		F34E967925932F2700A6D11E /* TakeAPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeAPhotoVC.swift; sourceTree = "<group>"; };
 		F35BBD36258B204A001037D9 /* ConsistencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsistencyVC.swift; sourceTree = "<group>"; };
 		F35BBD43258B31C5001037D9 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		F37028F7258C696E00A91FF3 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
@@ -177,6 +199,7 @@
 		DB5F697B258949BC00093B7C /* FaceApp */ = {
 			isa = PBXGroup;
 			children = (
+				F34E966E25931E3F00A6D11E /* XIB */,
 				F3078E24258CD9480040A4BE /* Cell */,
 				DB5F69D925895A5B00093B7C /* Utilities */,
 				DB5F69AF258949E600093B7C /* AppDelegate */,
@@ -273,6 +296,12 @@
 				F30946942590E62200C26A05 /* HomeVc.swift */,
 				F31369422591F467004BAE0A /* TabBarVC.swift */,
 				F31369472591F9BE004BAE0A /* ProgressVC.swift */,
+				F34E9669259314AB00A6D11E /* CircularProgressBar.swift */,
+				F34E966F25931F2200A6D11E /* PopUpVC.swift */,
+				F34E967925932F2700A6D11E /* TakeAPhotoVC.swift */,
+				F30F57172593560700A2D04B /* PaymentWithTrialVC.swift */,
+				F30F571C259364F000A2D04B /* ExerciseVC.swift */,
+				F30F5721259387D100A2D04B /* StepAndBenefitsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -314,11 +343,23 @@
 				F30946742590A25800C26A05 /* RoutineCell2.swift */,
 				F30946992590E64700C26A05 /* HomeVCCell.swift */,
 				F30946A02590F02700C26A05 /* HomeCollectionReusableView.swift */,
-				F30946A12590F02700C26A05 /* HomeCollectionReusableView.xib */,
 				F343315F2591AE7C00F823DB /* HeaderCollectionReusableView.swift */,
-				F34331602591AE7C00F823DB /* HeaderCollectionReusableView.xib */,
+				F34E9660259300F600A6D11E /* ProgressCell.swift */,
+				F30F5726259387F700A2D04B /* StepAndBenefitsCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F34E966E25931E3F00A6D11E /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				F30946A12590F02700C26A05 /* HomeCollectionReusableView.xib */,
+				F34331602591AE7C00F823DB /* HeaderCollectionReusableView.xib */,
+				F34E967025931F2200A6D11E /* PopUpVC.xib */,
+				F30F572B2593900600A2D04B /* ExercisePopUp.swift */,
+				F30F572C2593900600A2D04B /* ExercisePopUp.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,8 +466,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB5F6989258949BF00093B7C /* LaunchScreen.storyboard in Resources */,
+				F34E967225931F2200A6D11E /* PopUpVC.xib in Resources */,
 				F34331622591AE7C00F823DB /* HeaderCollectionReusableView.xib in Resources */,
 				DB5F6986258949BF00093B7C /* Assets.xcassets in Resources */,
+				F30F572E2593900600A2D04B /* ExercisePopUp.xib in Resources */,
 				F30946A32590F02700C26A05 /* HomeCollectionReusableView.xib in Resources */,
 				DB5F6984258949BC00093B7C /* Main.storyboard in Resources */,
 			);
@@ -458,6 +501,8 @@
 				F309469B2590E64700C26A05 /* HomeVCCell.swift in Sources */,
 				DB5F69CE25894BDB00093B7C /* AppDelegate.swift in Sources */,
 				DB45A63E259147A200F78EBC /* ViewExtension.swift in Sources */,
+				F30F5722259387D200A2D04B /* StepAndBenefitsVC.swift in Sources */,
+				F34E9661259300F600A6D11E /* ProgressCell.swift in Sources */,
 				F31369482591F9BE004BAE0A /* ProgressVC.swift in Sources */,
 				F326D3CC2590969E009A6BA7 /* RoutineCell.swift in Sources */,
 				F30946A22590F02700C26A05 /* HomeCollectionReusableView.swift in Sources */,
@@ -467,20 +512,27 @@
 				F37028F8258C696E00A91FF3 /* PaymentVC.swift in Sources */,
 				F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */,
 				F3A69CBB258E56E700A3E6D0 /* PauseVC.swift in Sources */,
+				F30F572D2593900600A2D04B /* ExercisePopUp.swift in Sources */,
 				DB45A606259118C000F78EBC /* BaseClass.swift in Sources */,
 				F35BBD44258B31C5001037D9 /* LoadingVC.swift in Sources */,
 				F326D3C425909163009A6BA7 /* RoutineVC.swift in Sources */,
 				F346268D258A8A9D002A72B0 /* ScheduleVC.swift in Sources */,
 				F35BBD37258B204A001037D9 /* ConsistencyVC.swift in Sources */,
 				F34331612591AE7C00F823DB /* HeaderCollectionReusableView.swift in Sources */,
+				F30F57182593560700A2D04B /* PaymentWithTrialVC.swift in Sources */,
+				F30F571D259364F000A2D04B /* ExerciseVC.swift in Sources */,
 				F30946752590A25800C26A05 /* RoutineCell2.swift in Sources */,
+				F34E967A25932F2700A6D11E /* TakeAPhotoVC.swift in Sources */,
 				DB5F69DC25895A7800093B7C /* Constants.swift in Sources */,
+				F30F5727259387F700A2D04B /* StepAndBenefitsCell.swift in Sources */,
 				DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */,
 				F31369432591F467004BAE0A /* TabBarVC.swift in Sources */,
+				F34E967125931F2200A6D11E /* PopUpVC.swift in Sources */,
 				F3462697258A97B1002A72B0 /* viewExtensions.swift in Sources */,
 				F30946952590E62200C26A05 /* HomeVc.swift in Sources */,
 				DB5F69ED25896BA500093B7C /* ButtonExtensions.swift in Sources */,
 				DB45A61525911B0B00F78EBC /* CommonMethods.swift in Sources */,
+				F34E966A259314AB00A6D11E /* CircularProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

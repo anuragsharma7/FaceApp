@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExercisePopUp" customModule="FaceApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMj-Dh-jYL">
+                    <rect key="frame" x="20" y="218" width="374" height="460"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh4-iI-PHW">
+                            <rect key="frame" x="319" y="10" width="35" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="UxE-00-se3"/>
+                                <constraint firstAttribute="height" constant="45" id="ZeJ-ET-W8V"/>
+                            </constraints>
+                            <state key="normal" image="cross"/>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GX2-Dy-V4I">
+                            <rect key="frame" x="20" y="270" width="334" height="175"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnK-EU-hNy">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="80"/>
+                                    <color key="backgroundColor" systemColor="linkColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="334" id="6xk-6T-Sbr"/>
+                                        <constraint firstAttribute="height" constant="80" id="LAK-Dk-Z4Y"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <state key="normal" title="Get back to training">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFc-kk-j27">
+                                    <rect key="frame" x="0.0" y="95" width="334" height="80"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="334" id="Ajj-H8-pBh"/>
+                                        <constraint firstAttribute="height" constant="80" id="p0S-I1-ytC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <state key="normal" title="Yes, I'm giving up">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="175" id="Y9R-sH-Rco"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real men never give up!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq4-a5-dn0">
+                            <rect key="frame" x="63.5" y="109" width="247" height="92"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="92" id="Lz4-0y-83m"/>
+                                <constraint firstAttribute="width" constant="247" id="Vrv-BI-IAw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.8862745098" green="0.89411764709999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="GX2-Dy-V4I" firstAttribute="centerX" secondItem="oMj-Dh-jYL" secondAttribute="centerX" id="68I-fC-pJs"/>
+                        <constraint firstAttribute="bottom" secondItem="GX2-Dy-V4I" secondAttribute="bottom" constant="15" id="C0I-nm-UFK"/>
+                        <constraint firstAttribute="trailing" secondItem="GX2-Dy-V4I" secondAttribute="trailing" constant="20" id="FF4-rK-U8e"/>
+                        <constraint firstItem="GX2-Dy-V4I" firstAttribute="leading" secondItem="oMj-Dh-jYL" secondAttribute="leading" constant="20" id="KDu-PM-s18"/>
+                        <constraint firstItem="bh4-iI-PHW" firstAttribute="top" secondItem="oMj-Dh-jYL" secondAttribute="top" constant="10" id="f6l-3t-Hzb"/>
+                        <constraint firstItem="Lq4-a5-dn0" firstAttribute="centerX" secondItem="oMj-Dh-jYL" secondAttribute="centerX" id="m9R-WN-XKK"/>
+                        <constraint firstAttribute="height" constant="460" id="sDD-ZH-3He"/>
+                        <constraint firstAttribute="trailing" secondItem="bh4-iI-PHW" secondAttribute="trailing" constant="20" id="vEP-rG-DYZ"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish Exercise?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qv1-LP-Pnq">
+                    <rect key="frame" x="104.5" y="272" width="205" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="205" id="I02-rb-Nne"/>
+                        <constraint firstAttribute="height" constant="35" id="mPZ-vj-Hm0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="oMj-Dh-jYL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6dX-5r-126"/>
+                <constraint firstItem="qv1-LP-Pnq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="A6c-IF-hpM"/>
+                <constraint firstItem="oMj-Dh-jYL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="H5K-sT-e9b"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oMj-Dh-jYL" secondAttribute="trailing" constant="20" id="NjJ-ma-fUH"/>
+                <constraint firstItem="Lq4-a5-dn0" firstAttribute="top" secondItem="qv1-LP-Pnq" secondAttribute="bottom" constant="20" id="UtD-Zl-uDe"/>
+                <constraint firstItem="oMj-Dh-jYL" firstAttribute="top" secondItem="qv1-LP-Pnq" secondAttribute="bottom" constant="-89" id="VUY-X8-IH1"/>
+                <constraint firstItem="oMj-Dh-jYL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ggR-Zv-4TI"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="73.660714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cross" width="20" height="27"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

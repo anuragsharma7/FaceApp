@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RoutineVC: UIViewController {
+class RoutineVC: BaseClass {
    
 //MARK:- Variables
     var aboutArr = ["About this program","Expected results"]

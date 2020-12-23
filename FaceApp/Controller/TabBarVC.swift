@@ -12,7 +12,7 @@ class TabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UITabBar.appearance().tintColor = UIColor(red: 254/255.0, green: 105/255.0, blue: 51/255.0, alpha: 100.0)
+        UITabBar.appearance().tintColor = UIColor(red: 0/255.0, green: 106/255.0, blue: 235/255.0, alpha: 100.0)
 
            for i in 0 ..< self.tabBar.items!.count {
 
@@ -24,7 +24,7 @@ class TabBarVC: UITabBarController {
                    let firstTab = self.tabBar.items![i] as UITabBarItem
                  firstTab.image = UIImage(named: "progress")!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
                 firstTab.selectedImage = UIImage(named: "progress")!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-                firstTab.imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: 5, right: 0)
+                firstTab.imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: 2, right: 0)
                 firstTab.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -4)
 
 
@@ -35,7 +35,7 @@ class TabBarVC: UITabBarController {
                    let secondTab = self.tabBar.items![i] as UITabBarItem
                 secondTab.image = UIImage(named: "training")!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
                   secondTab.selectedImage = UIImage(named: "training")!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-                secondTab.imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: 5, right: 0)
+                secondTab.imageInsets = UIEdgeInsets(top: 3, left: 0, bottom: 2, right: 0)
                 secondTab.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -4)
 
 
