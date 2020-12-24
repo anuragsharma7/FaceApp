@@ -7,12 +7,18 @@
 
 import UIKit
 
-class ProgressVC: UIViewController {
+class ProgressVC: BaseClass {
 
 //MARK:- Outlets
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var progressBar: CircularProgressBar!
+    @IBOutlet weak var progressLabel: UILabel!
+    
+    @IBOutlet weak var imgView: UIImageView!
+    
+    @IBOutlet weak var yourPhotosLabel: UILabel!
+    
     
     
     /// Overall progress

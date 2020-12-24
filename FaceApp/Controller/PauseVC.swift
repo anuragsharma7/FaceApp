@@ -7,11 +7,21 @@
 
 import UIKit
 
-class PauseVC: UIViewController {
-    
-    
+class PauseVC: BaseClass {
     
 
+//MARK:- Outlets
+    
+@IBOutlet weak var timeToRestLabel: UILabel!
+@IBOutlet weak var crossBtn: UIButton!
+    
+@IBOutlet weak var nextBtn: UIButton!
+    
+@IBOutlet weak var previousBtn: UIButton!
+    
+
+//MARK:- View LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +36,21 @@ class PauseVC: UIViewController {
         //animate progress
         self.perform(#selector(animateProgress), with: nil, afterDelay: 1)
     }
+    
+    
+//Mark:- IBActions
+    
+    
+@IBAction func crossButton(_ sender: UIButton) {
+    }
+    
+@IBAction func nextButton(_ sender: UIButton) {
+    }
+    
+    
+@IBAction func previousButton(_ sender: UIButton) {
+    }
+
     
     //MARK:- Methods
     @objc func animateProgress() {

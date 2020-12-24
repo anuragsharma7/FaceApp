@@ -32,9 +32,11 @@
 		F30F5722259387D200A2D04B /* StepAndBenefitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F5721259387D100A2D04B /* StepAndBenefitsVC.swift */; };
 		F30F5727259387F700A2D04B /* StepAndBenefitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F5726259387F700A2D04B /* StepAndBenefitsCell.swift */; };
 		F30F572D2593900600A2D04B /* ExercisePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30F572B2593900600A2D04B /* ExercisePopUp.swift */; };
-		F30F572E2593900600A2D04B /* ExercisePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30F572C2593900600A2D04B /* ExercisePopUp.xib */; };
+		F30F572E2593900600A2D04B /* ExerciseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30F572C2593900600A2D04B /* ExerciseVC.xib */; };
 		F31369432591F467004BAE0A /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31369422591F467004BAE0A /* TabBarVC.swift */; };
 		F31369482591F9BE004BAE0A /* ProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31369472591F9BE004BAE0A /* ProgressVC.swift */; };
+		F31F245F2594B223001A09B3 /* ExercisePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31F245E2594B223001A09B3 /* ExercisePopUpVC.swift */; };
+		F31F24642594C84E001A09B3 /* ProgressPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31F24632594C84E001A09B3 /* ProgressPopUpVC.swift */; };
 		F326D3C425909163009A6BA7 /* RoutineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326D3C325909163009A6BA7 /* RoutineVC.swift */; };
 		F326D3CC2590969E009A6BA7 /* RoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F326D3CB2590969E009A6BA7 /* RoutineCell.swift */; };
 		F34331612591AE7C00F823DB /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F343315F2591AE7C00F823DB /* HeaderCollectionReusableView.swift */; };
@@ -104,9 +106,11 @@
 		F30F5721259387D100A2D04B /* StepAndBenefitsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepAndBenefitsVC.swift; sourceTree = "<group>"; };
 		F30F5726259387F700A2D04B /* StepAndBenefitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepAndBenefitsCell.swift; sourceTree = "<group>"; };
 		F30F572B2593900600A2D04B /* ExercisePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePopUp.swift; sourceTree = "<group>"; };
-		F30F572C2593900600A2D04B /* ExercisePopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExercisePopUp.xib; sourceTree = "<group>"; };
+		F30F572C2593900600A2D04B /* ExerciseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseVC.xib; sourceTree = "<group>"; };
 		F31369422591F467004BAE0A /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		F31369472591F9BE004BAE0A /* ProgressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressVC.swift; sourceTree = "<group>"; };
+		F31F245E2594B223001A09B3 /* ExercisePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePopUpVC.swift; sourceTree = "<group>"; };
+		F31F24632594C84E001A09B3 /* ProgressPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPopUpVC.swift; sourceTree = "<group>"; };
 		F326D3C325909163009A6BA7 /* RoutineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineVC.swift; sourceTree = "<group>"; };
 		F326D3CB2590969E009A6BA7 /* RoutineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCell.swift; sourceTree = "<group>"; };
 		F343315F2591AE7C00F823DB /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -302,6 +306,8 @@
 				F30F57172593560700A2D04B /* PaymentWithTrialVC.swift */,
 				F30F571C259364F000A2D04B /* ExerciseVC.swift */,
 				F30F5721259387D100A2D04B /* StepAndBenefitsVC.swift */,
+				F31F245E2594B223001A09B3 /* ExercisePopUpVC.swift */,
+				F31F24632594C84E001A09B3 /* ProgressPopUpVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -357,7 +363,7 @@
 				F34331602591AE7C00F823DB /* HeaderCollectionReusableView.xib */,
 				F34E967025931F2200A6D11E /* PopUpVC.xib */,
 				F30F572B2593900600A2D04B /* ExercisePopUp.swift */,
-				F30F572C2593900600A2D04B /* ExercisePopUp.xib */,
+				F30F572C2593900600A2D04B /* ExerciseVC.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -469,7 +475,7 @@
 				F34E967225931F2200A6D11E /* PopUpVC.xib in Resources */,
 				F34331622591AE7C00F823DB /* HeaderCollectionReusableView.xib in Resources */,
 				DB5F6986258949BF00093B7C /* Assets.xcassets in Resources */,
-				F30F572E2593900600A2D04B /* ExercisePopUp.xib in Resources */,
+				F30F572E2593900600A2D04B /* ExerciseVC.xib in Resources */,
 				F30946A32590F02700C26A05 /* HomeCollectionReusableView.xib in Resources */,
 				DB5F6984258949BC00093B7C /* Main.storyboard in Resources */,
 			);
@@ -509,6 +515,7 @@
 				F3462683258A8A26002A72B0 /* AgeVC.swift in Sources */,
 				DB5F697F258949BC00093B7C /* SceneDelegate.swift in Sources */,
 				F3462688258A8A5F002A72B0 /* HowYouEverVC.swift in Sources */,
+				F31F245F2594B223001A09B3 /* ExercisePopUpVC.swift in Sources */,
 				F37028F8258C696E00A91FF3 /* PaymentVC.swift in Sources */,
 				F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */,
 				F3A69CBB258E56E700A3E6D0 /* PauseVC.swift in Sources */,
@@ -526,6 +533,7 @@
 				DB5F69DC25895A7800093B7C /* Constants.swift in Sources */,
 				F30F5727259387F700A2D04B /* StepAndBenefitsCell.swift in Sources */,
 				DB5F69E425895C3300093B7C /* WelcomeVC.swift in Sources */,
+				F31F24642594C84E001A09B3 /* ProgressPopUpVC.swift in Sources */,
 				F31369432591F467004BAE0A /* TabBarVC.swift in Sources */,
 				F34E967125931F2200A6D11E /* PopUpVC.swift in Sources */,
 				F3462697258A97B1002A72B0 /* viewExtensions.swift in Sources */,

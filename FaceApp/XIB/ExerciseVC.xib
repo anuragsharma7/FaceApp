@@ -48,6 +48,9 @@
                                             <integer key="value" value="15"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="getBackTrainingButton:" destination="-1" eventType="touchUpInside" id="UGi-8x-svv"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFc-kk-j27">
                                     <rect key="frame" x="0.0" y="95" width="334" height="80"/>
@@ -65,6 +68,9 @@
                                             <integer key="value" value="15"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="giveUpButton:" destination="-1" eventType="touchUpInside" id="axT-Hp-b4E"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>

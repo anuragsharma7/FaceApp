@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ba9-zm-XPK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KaK-3g-Jph">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -1609,6 +1609,9 @@ and simple exercises</string>
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="cross"/>
+                                <connections>
+                                    <action selector="crossButton:" destination="NEE-py-KMa" eventType="touchUpInside" id="MIh-UE-hjH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time To Rest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFv-1a-e55">
                                 <rect key="frame" x="104" y="94" width="206" height="72"/>
@@ -1639,6 +1642,9 @@ and simple exercises</string>
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextButton:" destination="NEE-py-KMa" eventType="touchUpInside" id="1Nd-v3-aEk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-V2-GOW">
                                         <rect key="frame" x="0.0" y="110" width="374" height="80"/>
@@ -1656,6 +1662,9 @@ and simple exercises</string>
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="previousButton:" destination="NEE-py-KMa" eventType="touchUpInside" id="x0g-3u-m6O"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1672,6 +1681,12 @@ and simple exercises</string>
                             <constraint firstItem="x68-sL-h29" firstAttribute="top" secondItem="cGR-GU-3m1" secondAttribute="top" constant="34" id="zlj-Mz-4vl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="crossBtn" destination="x68-sL-h29" id="gey-Tk-d3k"/>
+                        <outlet property="nextBtn" destination="k3l-Sw-Aa7" id="xUn-gz-LdA"/>
+                        <outlet property="previousBtn" destination="hxk-V2-GOW" id="jVZ-C4-NGA"/>
+                        <outlet property="timeToRestLabel" destination="lFv-1a-e55" id="7mA-FK-6bH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYp-XD-t06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1863,6 +1878,9 @@ and simple exercises</string>
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startWorkOutButton:" destination="bEA-5H-eXI" eventType="touchUpInside" id="i3P-9n-d9E"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RDw-eC-pkl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
@@ -1879,6 +1897,9 @@ and simple exercises</string>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="chevron.backward.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="backButton:" destination="bEA-5H-eXI" eventType="touchUpInside" id="Q6h-LX-vYB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gp6-xO-1LI"/>
@@ -1903,12 +1924,20 @@ and simple exercises</string>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="backBtn" destination="xyT-1P-q8P" id="GCA-aa-Rgm"/>
+                        <outlet property="calendarImgView" destination="WIB-Cy-rEM" id="5z8-IS-QcC"/>
+                        <outlet property="daysLabel" destination="kvr-hA-ZYY" id="8Db-43-cTm"/>
+                        <outlet property="headerview" destination="xNH-Hj-hmW" id="YxW-HF-osE"/>
+                        <outlet property="imgView" destination="RDw-eC-pkl" id="smi-GL-ZmG"/>
+                        <outlet property="minutesLabel" destination="ZFU-TC-a0C" id="8A5-9b-gT9"/>
+                        <outlet property="startWorkOutBtn" destination="UD6-ES-ioR" id="19p-1Z-83b"/>
                         <outlet property="tableView" destination="6fl-hl-e2Z" id="LKx-ZI-lDq"/>
+                        <outlet property="watchImgView" destination="Lj8-CI-l5Y" id="ZzW-Lj-FSa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRY-mi-5re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3707" y="-384"/>
+            <point key="canvasLocation" x="3705.7971014492755" y="-384.375"/>
         </scene>
         <!--Home Vc-->
         <scene sceneID="a3P-jj-0K3">
@@ -2042,6 +2071,9 @@ and simple exercises</string>
                                     <constraint firstAttribute="height" constant="45" id="aPc-Rp-5ad"/>
                                 </constraints>
                                 <state key="normal" image="cross"/>
+                                <connections>
+                                    <action selector="backButton:" destination="bwd-e8-bZs" eventType="touchUpInside" id="cwN-eX-5ER"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trackprogress" translatesAutoresizingMaskIntoConstraints="NO" id="j1l-PX-W5K">
                                 <rect key="frame" x="87" y="64" width="240" height="220"/>
@@ -2068,6 +2100,9 @@ and simple exercises</string>
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="takePictureButton:" destination="bwd-e8-bZs" eventType="touchUpInside" id="ILj-TW-Xza"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfK-vK-bDt">
                                         <rect key="frame" x="0.0" y="95" width="374" height="80"/>
@@ -2084,6 +2119,9 @@ and simple exercises</string>
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="noThanksButton:" destination="bwd-e8-bZs" eventType="touchUpInside" id="Xxb-DC-XOR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -2103,6 +2141,9 @@ and simple exercises</string>
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="todayButton:" destination="bwd-e8-bZs" eventType="touchUpInside" id="7gw-Ry-rZh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjx-1M-vTz">
                                 <rect key="frame" x="214" y="403" width="180" height="180"/>
@@ -2120,6 +2161,9 @@ and simple exercises</string>
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextWorkOutButton:" destination="bwd-e8-bZs" eventType="touchUpInside" id="xbO-lj-W7x"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track your progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fex-WM-kw0">
                                 <rect key="frame" x="109" y="304" width="196" height="26"/>
@@ -2149,6 +2193,15 @@ and simple exercises</string>
                             <constraint firstItem="fex-WM-kw0" firstAttribute="centerX" secondItem="yof-aQ-Bbh" secondAttribute="centerX" id="u3i-DQ-HQX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backBtnOutlet" destination="VYY-9R-ywD" id="Vd7-fY-pR2"/>
+                        <outlet property="nextWorkOutBtnOutlet" destination="mjx-1M-vTz" id="K7v-7p-sAi"/>
+                        <outlet property="noThanksBtnOutlet" destination="zfK-vK-bDt" id="yUS-hJ-t6k"/>
+                        <outlet property="progressImgView" destination="j1l-PX-W5K" id="Dar-Az-07V"/>
+                        <outlet property="takeApictureBtnOutlet" destination="4Sg-bJ-JSe" id="HPK-oa-bqL"/>
+                        <outlet property="todayBtnOutlet" destination="elH-Zw-DbC" id="RqP-pD-9fy"/>
+                        <outlet property="trackProgressLabel" destination="fex-WM-kw0" id="N3L-hI-XkV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGb-Oe-Jt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2169,6 +2222,9 @@ and simple exercises</string>
                                     <constraint firstAttribute="height" constant="45" id="hBO-Zy-K7M"/>
                                 </constraints>
                                 <state key="normal" image="cross"/>
+                                <connections>
+                                    <action selector="backButton:" destination="s5Y-vg-ZQj" eventType="touchUpInside" id="l6I-vP-fGn"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqu-Td-Zgm">
                                 <rect key="frame" x="206" y="64" width="2" height="205"/>
@@ -2430,6 +2486,9 @@ and simple exercises</string>
                                         <state key="normal" title="Weekly">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="weeklyButton:" destination="s5Y-vg-ZQj" eventType="touchUpInside" id="qGb-kM-zPu"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free for 3 days, then 4.99$/week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rth-v5-s5q">
                                         <rect key="frame" x="42" y="30" width="250.5" height="32"/>
@@ -2450,6 +2509,9 @@ and simple exercises</string>
                                         <state key="normal" title="Monthly">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="monthlyButton:" destination="s5Y-vg-ZQj" eventType="touchUpInside" id="7gI-jf-lcm"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 12.99$/mo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoJ-Ih-fEd">
                                         <rect key="frame" x="124" y="106" width="86" height="21"/>
@@ -2471,6 +2533,9 @@ and simple exercises</string>
                                         <state key="normal" title="Annualy">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="annualyButton:" destination="s5Y-vg-ZQj" eventType="touchUpInside" id="hlQ-dx-zLn"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 12.99$/year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICu-Md-7Ee">
                                         <rect key="frame" x="116" y="178" width="102" height="28"/>
@@ -2533,6 +2598,9 @@ and simple exercises</string>
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tryNowButton:" destination="s5Y-vg-ZQj" eventType="touchUpInside" id="yjB-LF-qEP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restore " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqo-es-F6x">
                                 <rect key="frame" x="179.5" y="815" width="55" height="20"/>
@@ -2594,6 +2662,31 @@ and simple exercises</string>
                             <constraint firstItem="lqo-es-F6x" firstAttribute="top" secondItem="OZh-6C-ZEm" secondAttribute="bottom" constant="29" id="zis-GX-L8t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="allExerciseView" destination="EeH-80-ODD" id="a5W-wz-h17"/>
+                        <outlet property="annualyBtnOutlet" destination="R1J-e1-K2y" id="UK6-ya-HmS"/>
+                        <outlet property="backBtnOutlet" destination="Ax1-bB-ssy" id="Qrk-SF-Uuv"/>
+                        <outlet property="cancelAnyTimeView" destination="d77-tq-8yh" id="B7R-fX-myG"/>
+                        <outlet property="customWorkOutView" destination="5kI-ai-JrM" id="ZFu-al-1Qg"/>
+                        <outlet property="lineLabel" destination="lqu-Td-Zgm" id="RM5-t7-Z91"/>
+                        <outlet property="mainView" destination="WJv-95-Gy3" id="dJs-Aq-zzQ"/>
+                        <outlet property="monthlyBtnOutlet" destination="YXM-Hk-iHr" id="ZEg-wg-tiL"/>
+                        <outlet property="newLifeStartLabel" destination="jZb-v9-crp" id="FJ7-sc-F6V"/>
+                        <outlet property="noInterruptionView" destination="RFg-52-Wt8" id="9bj-qb-KBJ"/>
+                        <outlet property="notCommitmentLabel" destination="8ua-iB-svv" id="XcB-Ft-xdj"/>
+                        <outlet property="restoreLabel" destination="lqo-es-F6x" id="8H1-ri-PO9"/>
+                        <outlet property="star1ImgView" destination="9m1-Hb-X8V" id="cNa-OF-8hL"/>
+                        <outlet property="star2ImgView" destination="g33-hr-FEx" id="qAc-a5-IkE"/>
+                        <outlet property="star3ImgView" destination="Lxj-Hc-kms" id="xRa-lK-t1b"/>
+                        <outlet property="star4ImgView" destination="dhc-Ix-p9w" id="i7i-hn-sgd"/>
+                        <outlet property="star5ImgView" destination="B4y-R1-rmb" id="fj0-zS-F2I"/>
+                        <outlet property="tAndCLabel" destination="Nb8-VG-Vbe" id="iLe-vu-tjP"/>
+                        <outlet property="trialImgView" destination="obz-0b-C2f" id="QCN-9c-B57"/>
+                        <outlet property="tryNowBtnOutlet" destination="OZh-6C-ZEm" id="1hN-tI-CLq"/>
+                        <outlet property="unLockLabel" destination="dpe-9m-x78" id="oLE-2x-aig"/>
+                        <outlet property="unlimitedUseView" destination="SGi-tL-CaD" id="EJe-Su-VZT"/>
+                        <outlet property="weeklyBtnOutlet" destination="D03-hW-mgt" id="MOV-iz-RUa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ab1-QD-GSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2621,6 +2714,9 @@ and simple exercises</string>
                                             <constraint firstAttribute="height" constant="45" id="gQT-Do-fR0"/>
                                         </constraints>
                                         <state key="normal" image="cross"/>
+                                        <connections>
+                                            <action selector="crossButton:" destination="GV1-Fh-ggj" eventType="touchUpInside" id="QF3-fw-Xmn"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAC-DH-tkl">
                                         <rect key="frame" x="184.5" y="30" width="45" height="40"/>
@@ -2740,6 +2836,9 @@ and simple exercises</string>
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nextButton:" destination="GV1-Fh-ggj" eventType="touchUpInside" id="X0t-Uz-IZi"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN0-2c-Mcc">
                                                 <rect key="frame" x="20" y="120" width="280" height="80"/>
@@ -2757,6 +2856,9 @@ and simple exercises</string>
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="previousButton:" destination="GV1-Fh-ggj" eventType="touchUpInside" id="RY5-Kh-xSG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2793,10 +2895,15 @@ and simple exercises</string>
                             <constraint firstItem="R5Y-FD-VzM" firstAttribute="trailing" secondItem="iA8-BM-HXm" secondAttribute="trailing" id="w9l-T9-SgB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="headerImgVIew" destination="JGz-dD-N7z" id="Cx8-fy-HUV"/>
+                        <outlet property="numberLabel" destination="NAC-DH-tkl" id="t5y-b8-2sa"/>
+                        <outlet property="playBtnOutlet" destination="99r-a8-fds" id="C87-gT-Lzx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwt-nY-9cC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9067" y="-528"/>
+            <point key="canvasLocation" x="9066.6666666666679" y="-528.34821428571422"/>
         </scene>
         <!--StepAndBenefitsVC-->
         <scene sceneID="91N-T7-Xqm">
@@ -3038,6 +3145,241 @@ and simple exercises</string>
             </objects>
             <point key="canvasLocation" x="9712" y="-528"/>
         </scene>
+        <!--ExercisePopUpVC-->
+        <scene sceneID="XsR-3h-L7P">
+            <objects>
+                <viewController storyboardIdentifier="ExercisePopUpVC" title="ExercisePopUpVC" id="SLg-DY-ReZ" customClass="ExercisePopUpVC" customModule="FaceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JV2-dP-wMO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1c7-xa-IBp">
+                                <rect key="frame" x="40" y="172" width="334" height="420"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A1-YK-Fke">
+                                        <rect key="frame" x="279" y="10" width="35" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="2pH-3L-wHQ"/>
+                                            <constraint firstAttribute="height" constant="45" id="j3B-Kk-mI7"/>
+                                        </constraints>
+                                        <state key="normal" image="cross"/>
+                                        <connections>
+                                            <action selector="crossButton:" destination="SLg-DY-ReZ" eventType="touchUpInside" id="bFK-Qk-7qx"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2tg-GW-ncl">
+                                        <rect key="frame" x="20" y="230" width="294" height="175"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAC-F3-aEf">
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="80"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="Get back to training">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="getBackTrainingButton:" destination="SLg-DY-ReZ" eventType="touchUpInside" id="CUF-ZL-9CX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ai-Yo-5rA">
+                                                <rect key="frame" x="0.0" y="95" width="294" height="80"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="Yes, I'm giving up">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="givingUpButton:" destination="SLg-DY-ReZ" eventType="touchUpInside" id="jfj-gm-8L0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="6Ai-Yo-5rA" secondAttribute="trailing" id="JMF-pX-Q0e"/>
+                                            <constraint firstItem="IAC-F3-aEf" firstAttribute="top" secondItem="2tg-GW-ncl" secondAttribute="top" id="MqL-AQ-J75"/>
+                                            <constraint firstAttribute="trailing" secondItem="IAC-F3-aEf" secondAttribute="trailing" id="T0b-Cn-YNN"/>
+                                            <constraint firstItem="6Ai-Yo-5rA" firstAttribute="top" secondItem="IAC-F3-aEf" secondAttribute="bottom" constant="15" id="YWL-GP-McZ"/>
+                                            <constraint firstAttribute="height" constant="175" id="d2c-PE-WQ5"/>
+                                            <constraint firstAttribute="bottom" secondItem="6Ai-Yo-5rA" secondAttribute="bottom" id="eAc-Nh-nqf"/>
+                                            <constraint firstItem="6Ai-Yo-5rA" firstAttribute="leading" secondItem="2tg-GW-ncl" secondAttribute="leading" id="qMK-s5-EsA"/>
+                                            <constraint firstItem="IAC-F3-aEf" firstAttribute="leading" secondItem="2tg-GW-ncl" secondAttribute="leading" id="qYC-Fu-RIA"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real men never give up!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igf-CW-bMQ">
+                                        <rect key="frame" x="43.5" y="60" width="247" height="92"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="92" id="0hL-cQ-Bih"/>
+                                            <constraint firstAttribute="width" constant="247" id="dgX-p2-WVO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8862745098" green="0.89411764709999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5A1-YK-Fke" firstAttribute="top" secondItem="1c7-xa-IBp" secondAttribute="top" constant="10" id="6ca-AY-kea"/>
+                                    <constraint firstItem="Igf-CW-bMQ" firstAttribute="centerX" secondItem="1c7-xa-IBp" secondAttribute="centerX" id="A54-8o-SsB"/>
+                                    <constraint firstItem="2tg-GW-ncl" firstAttribute="centerX" secondItem="1c7-xa-IBp" secondAttribute="centerX" id="BFy-Ez-76Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="2tg-GW-ncl" secondAttribute="bottom" constant="15" id="BLb-Gc-0Ge"/>
+                                    <constraint firstItem="Igf-CW-bMQ" firstAttribute="top" secondItem="1c7-xa-IBp" secondAttribute="top" constant="60" id="Kqy-vj-zXV"/>
+                                    <constraint firstAttribute="trailing" secondItem="5A1-YK-Fke" secondAttribute="trailing" constant="20" id="XdC-DU-gim"/>
+                                    <constraint firstAttribute="trailing" secondItem="2tg-GW-ncl" secondAttribute="trailing" constant="20" id="bRC-kQ-gP1"/>
+                                    <constraint firstItem="2tg-GW-ncl" firstAttribute="leading" secondItem="1c7-xa-IBp" secondAttribute="leading" constant="20" id="kbZ-pJ-hK4"/>
+                                    <constraint firstAttribute="height" constant="420" id="nyh-ok-yqs"/>
+                                    <constraint firstItem="2tg-GW-ncl" firstAttribute="top" secondItem="Igf-CW-bMQ" secondAttribute="bottom" constant="78" id="t9Q-jU-0zS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="owO-Cz-XfT"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1c7-xa-IBp" firstAttribute="leading" secondItem="owO-Cz-XfT" secondAttribute="leading" constant="40" id="06x-mj-uDK"/>
+                            <constraint firstItem="1c7-xa-IBp" firstAttribute="centerX" secondItem="JV2-dP-wMO" secondAttribute="centerX" id="3mk-IG-BEY"/>
+                            <constraint firstItem="1c7-xa-IBp" firstAttribute="centerY" secondItem="JV2-dP-wMO" secondAttribute="centerY" constant="-66" id="FS6-Z1-7gy"/>
+                            <constraint firstItem="owO-Cz-XfT" firstAttribute="trailing" secondItem="1c7-xa-IBp" secondAttribute="trailing" constant="40" id="sk9-gf-V6x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="crossBtnOutlet" destination="5A1-YK-Fke" id="93U-Fr-5PF"/>
+                        <outlet property="gettingBackBtnOutlet" destination="IAC-F3-aEf" id="dKq-wO-cLi"/>
+                        <outlet property="givingUpBtnOutlet" destination="6Ai-Yo-5rA" id="cwy-e3-7Ya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38L-Rx-6TS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10384" y="-528"/>
+        </scene>
+        <!--PrgressPopUpVC-->
+        <scene sceneID="Hss-RV-5nt">
+            <objects>
+                <viewController title="PrgressPopUpVC" id="gNz-Nx-pDR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B19-3d-loi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIc-d6-5gF">
+                                <rect key="frame" x="20" y="223" width="374" height="450"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aimez - notri vouse appli?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hot-rb-RxR">
+                                        <rect key="frame" x="37" y="184" width="300" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Kun-Tq-cYU"/>
+                                            <constraint firstAttribute="width" constant="300" id="i1J-3h-IOP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merci de nous laisser un avis rapide!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3L-eD-qTA">
+                                        <rect key="frame" x="52" y="237" width="270" height="73"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="fft-dc-GHt"/>
+                                            <constraint firstAttribute="height" constant="73" id="p92-Gx-6tB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Dcl-TM-ddc">
+                                        <rect key="frame" x="42" y="330" width="290" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8A-LU-cwZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="80"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="ZbB-I6-q0g"/>
+                                                    <constraint firstAttribute="height" constant="80" id="ky8-C0-9Pn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="no">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SV4-oC-1Qb">
+                                                <rect key="frame" x="160" y="0.0" width="130" height="80"/>
+                                                <color key="backgroundColor" red="1" green="0.38431372549999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="BYa-Eq-qMW"/>
+                                                    <constraint firstAttribute="height" constant="80" id="z63-bn-Puj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="yes!">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="290" id="g26-yv-3tD"/>
+                                            <constraint firstAttribute="height" constant="80" id="yTF-eo-Spk"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb" translatesAutoresizingMaskIntoConstraints="NO" id="oLc-M7-2aW">
+                                        <rect key="frame" x="77" y="35" width="220" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="bZN-Nh-LaD"/>
+                                            <constraint firstAttribute="height" constant="130" id="uVr-2V-zaD"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8862745098" green="0.89411764709999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="2F2-d9-4wV"/>
+                                    <constraint firstItem="e3L-eD-qTA" firstAttribute="centerX" secondItem="TIc-d6-5gF" secondAttribute="centerX" id="5LT-Sj-1RS"/>
+                                    <constraint firstItem="e3L-eD-qTA" firstAttribute="top" secondItem="hot-rb-RxR" secondAttribute="bottom" constant="8" symbolic="YES" id="5oy-XF-rT2"/>
+                                    <constraint firstItem="oLc-M7-2aW" firstAttribute="top" secondItem="TIc-d6-5gF" secondAttribute="top" constant="35" id="6QC-88-RFZ"/>
+                                    <constraint firstItem="Dcl-TM-ddc" firstAttribute="centerX" secondItem="TIc-d6-5gF" secondAttribute="centerX" id="BqW-Yb-1Jv"/>
+                                    <constraint firstAttribute="width" constant="374" id="DbE-Xa-cc7"/>
+                                    <constraint firstItem="hot-rb-RxR" firstAttribute="top" secondItem="oLc-M7-2aW" secondAttribute="bottom" constant="19" id="Gc1-If-QX4"/>
+                                    <constraint firstItem="oLc-M7-2aW" firstAttribute="centerX" secondItem="TIc-d6-5gF" secondAttribute="centerX" id="WIk-y6-Y5m"/>
+                                    <constraint firstItem="hot-rb-RxR" firstAttribute="centerX" secondItem="TIc-d6-5gF" secondAttribute="centerX" id="lCV-fq-cZW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dcl-TM-ddc" secondAttribute="bottom" constant="40" id="sro-kJ-stb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kDy-ga-OvS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kDy-ga-OvS" firstAttribute="trailing" secondItem="TIc-d6-5gF" secondAttribute="trailing" constant="20" id="HRW-yL-Bfp"/>
+                            <constraint firstItem="TIc-d6-5gF" firstAttribute="centerX" secondItem="B19-3d-loi" secondAttribute="centerX" id="SiW-B7-KIV"/>
+                            <constraint firstItem="TIc-d6-5gF" firstAttribute="leading" secondItem="kDy-ga-OvS" secondAttribute="leading" constant="20" id="k4F-Ey-gY7"/>
+                            <constraint firstItem="TIc-d6-5gF" firstAttribute="centerY" secondItem="B19-3d-loi" secondAttribute="centerY" id="yel-Kd-MGQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gx3-I4-7sm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11038" y="-528"/>
+        </scene>
         <!--ProgressVC-->
         <scene sceneID="5bt-Jx-9Mz">
             <objects>
@@ -3179,12 +3521,15 @@ and simple exercises</string>
                     <navigationItem key="navigationItem" id="y76-eb-BWx"/>
                     <connections>
                         <outlet property="collectionView" destination="EBa-u2-Beg" id="jEq-ZJ-e5U"/>
+                        <outlet property="imgView" destination="Nke-76-Cje" id="imR-T3-ZYm"/>
                         <outlet property="progressBar" destination="gqs-II-0uv" id="9Sw-9I-aej"/>
+                        <outlet property="progressLabel" destination="MCm-am-TQO" id="jRg-Yc-Xcx"/>
+                        <outlet property="yourPhotosLabel" destination="hAZ-YD-mwD" id="ExA-AL-iBq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSY-RH-jqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6750.7246376811599" y="256.47321428571428"/>
+            <point key="canvasLocation" x="6733" y="275"/>
         </scene>
         <!--TabBarVC-->
         <scene sceneID="maj-Ht-1Ru">
@@ -3266,6 +3611,7 @@ and simple exercises</string>
         <image name="sampleImage" width="574" height="408"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="stopwatch" catalog="system" width="121" height="128"/>
+        <image name="thumb" width="149" height="144"/>
         <image name="trackprogress" width="199" height="204"/>
         <image name="training" width="35" height="33"/>
         <image name="videoplay" width="135" height="125"/>

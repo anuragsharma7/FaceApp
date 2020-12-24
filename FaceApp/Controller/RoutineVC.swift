@@ -20,9 +20,17 @@ class RoutineVC: BaseClass {
 // MARK:- Outlets
     
 @IBOutlet weak var tableView: UITableView!
+@IBOutlet weak var imgView: UIImageView!
+@IBOutlet weak var backBtn: UIButton!
+@IBOutlet weak var headerview: UIView!
+@IBOutlet weak var daysLabel: UILabel!
+@IBOutlet weak var calendarImgView: UIImageView!
+@IBOutlet weak var minutesLabel: UILabel!
+@IBOutlet weak var watchImgView: UIImageView!
+@IBOutlet weak var startWorkOutBtn: UIButton!
     
-
-//MARK:- View LifeCycle
+    
+    //MARK:- View LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +38,14 @@ class RoutineVC: BaseClass {
 
         
     }
-    
 
+//MARK:- IBActions
+@IBAction func backButton(_ sender: UIButton) {
+    }
     
-
+    @IBAction func startWorkOutButton(_ sender: UIButton) {
+    }
+    
 }
 
 //MARK:- Extension for TableView DataSource And Delegate

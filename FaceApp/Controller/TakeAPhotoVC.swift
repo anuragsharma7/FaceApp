@@ -7,20 +7,54 @@
 
 import UIKit
 
-class TakeAPhotoVC: UIViewController {
-
+class TakeAPhotoVC: BaseClass {
+    
+//MARK:- Outlets
+@IBOutlet weak var progressImgView: UIImageView!
+    
+@IBOutlet weak var trackProgressLabel: UILabel!
+    
+    
+@IBOutlet weak var backBtnOutlet: UIButton!
+    
+@IBOutlet weak var todayBtnOutlet: UIButton!
+    
+    
+    @IBOutlet weak var nextWorkOutBtnOutlet: UIButton!
+    
+    
+    @IBOutlet weak var takeApictureBtnOutlet: UIButton!
+    
+    
+    @IBOutlet weak var noThanksBtnOutlet: UIButton!
+    
+    
+    
+//MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+//MARK:- IBActions
     
-    class func instance() -> TakeAPhotoVC {
-              let className = String(describing: self)
-              return kMainStoryboard.instantiateViewController(withIdentifier: className) as! TakeAPhotoVC
-          }
-
+    @IBAction func backButton(_ sender: UIButton) {
+    }
     
-
+    @IBAction func todayButton(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func nextWorkOutButton(_ sender: UIButton) {
+    }
+  
+    
+    @IBAction func takePictureButton(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func noThanksButton(_ sender: UIButton) {
+    }
+    
 }
