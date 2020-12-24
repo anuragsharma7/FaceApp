@@ -26,7 +26,7 @@ class PauseVC: BaseClass {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view, typically from a nib.
-        let circularProgress = CircularProgress(frame: CGRect(x: 10.0, y: 30.0, width: 140.0, height: 140.0))
+        let circularProgress = CircularProgress(frame: CGRect(x: 10.0, y: 30.0, width: 280.0, height: 280.0))
         circularProgress.progressColor = UIColor(red: 52.0/255.0, green: 141.0/255.0, blue: 252.0/255.0, alpha: 1.0)
         circularProgress.trackColor = UIColor(red: 33.0/255.0, green: 34.0/255.0, blue: 35.0/255.0, alpha: 0.6)
         circularProgress.tag = 101
