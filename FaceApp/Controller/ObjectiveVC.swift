@@ -15,33 +15,20 @@ class ObjectiveVC: BaseClass {
     @IBOutlet weak var slider3Label: UILabel!
     
     @IBOutlet weak var chooseYrObjLabel: UILabel!
-    
     @IBOutlet weak var selectMultipleLabel: UILabel!
-    
     @IBOutlet weak var jawlineImgView: UIImageView!
-    
     @IBOutlet weak var hairLossImgView: UIImageView!
-    
     @IBOutlet weak var dandruffsImgView: UIImageView!
-    
     @IBOutlet weak var wrinklesImgView: UIImageView!
-    
-    
     @IBOutlet weak var continueBtn: UIButton!
-    
-    
-    
+     
     //MARK:- View LifeCycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+       
     }
     
-    
     //MARK:- IBAction
-    
     @IBAction func continueButton(_ sender: UIButton) {
         self.navigationController?.pushViewController(AgeVC.instance(), animated: true)
     }
