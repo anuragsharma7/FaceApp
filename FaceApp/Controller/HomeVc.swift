@@ -87,11 +87,28 @@ extension HomeVc: UICollectionViewDelegate,UICollectionViewDataSource, UICollect
     
     //Set item size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 140, height: 250)
+        
+        //let yourWidth = collectionView.bounds.width/2.0
+          // let yourHeight = yourWidth
+
+          // return CGSize(width: yourWidth, height: yourHeight)
+        
+        //let width = (self.view.frame.size.width - 12 * 3) / 3 //some width
+           // let height = width * 1.5 //ratio
+           // return CGSize(width: width, height: height)
+        
+        //return CGSize(width: 192, height: 250)
+        let width = (self.view.frame.size.width - 12 * 3) / 3 //some width
+        let height = width * 1.5  //ratio
+            return CGSize(width: 165, height: 250)
+    
+        
+        
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 28
+        return 20
     }
 }
 

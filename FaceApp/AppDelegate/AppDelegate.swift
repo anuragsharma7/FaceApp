@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CommonMethods.setRootViewController()
         
         UNUserNotificationCenter.current().delegate = self
-
+        FirebaseApp.configure()
         return true
     }
     

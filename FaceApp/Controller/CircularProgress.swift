@@ -22,7 +22,7 @@ class CircularProgress: UIView {
         createCircularPath()
     }
     
-    var progressColor:UIColor = UIColor.red {
+    var progressColor:UIColor = UIColor.green {
         didSet {
             progressLayer.strokeColor = progressColor.cgColor
         }
@@ -37,6 +37,7 @@ class CircularProgress: UIView {
     fileprivate func createCircularPath() {
         self.backgroundColor = UIColor.clear
         self.layer.cornerRadius = self.frame.size.width/2.0
+
         let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 1.5)/2, startAngle: CGFloat(-0.5 * Double.pi), endAngle: CGFloat(1.5 * Double.pi), clockwise: true)
         
         tracklayer.path = circlePath.cgPath
@@ -48,12 +49,15 @@ class CircularProgress: UIView {
         
         progressLayer.path = circlePath.cgPath
         progressLayer.fillColor = UIColor.clear.cgColor
-        progressLayer.strokeColor = progressColor.cgColor
-        progressLayer.lineWidth = 5.0
-        progressLayer.strokeEnd = 1.0
+        progressLayer.strokeColor = UIColor.red.cgColor
+        progressLayer.lineWidth = 10.0
+        progressLayer.lineCap = .round
+        progressLayer.strokeEnd = 0.25
         layer.addSublayer(progressLayer)
         
     }
+    
+    
     
     func setProgressWithAnimation(duration: TimeInterval, value: Float) {
         
@@ -66,5 +70,7 @@ class CircularProgress: UIView {
         progressLayer.strokeEnd = CGFloat(value)
         progressLayer.add(animation, forKey: "animateCircle")
     }
+    
+
 
 }

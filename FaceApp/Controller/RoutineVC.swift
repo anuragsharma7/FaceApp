@@ -30,12 +30,18 @@ class RoutineVC: BaseClass {
 @IBOutlet weak var startWorkOutBtn: UIButton!
     
     
+    @IBOutlet weak var mainView: UIView!
+    
     //MARK:- View LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.layer.cornerRadius = 40.0
-
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+       super.viewWillLayoutSubviews()
+        mainView.layer.roundCorners(corners: [.topLeft, .topRight], radius: 40)
         
     }
 
@@ -90,3 +96,15 @@ extension RoutineVC: UITableViewDelegate,UITableViewDataSource{
 //    }
     
 }
+extension CALayer {
+  func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+    let maskPath = UIBezierPath(roundedRect: bounds,
+                                byRoundingCorners: corners,
+                                cornerRadii: CGSize(width: radius, height: radius))
+
+    let shape = CAShapeLayer()
+    shape.path = maskPath.cgPath
+    mask = shape
+  }
+}
+
