@@ -49,11 +49,20 @@ class PaymentWithTrialVC: BaseClass {
 @IBOutlet weak var restoreLabel: UILabel!
 @IBOutlet weak var tAndCLabel: UILabel!
     
+@IBOutlet weak var spaceBetweenSVAndMainView: NSLayoutConstraint!
+    
+    
 //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        spaceBetweenSVAndMainView?.constant = 45
+        if DEVICE_HEIGHT == 667 {
+            spaceBetweenSVAndMainView?.constant = 45
+            }
+        else {
+            //spaceBetweenSVAndMainView.constant = 173
+        }
+        
     }
     
 //MARK:- IBActions

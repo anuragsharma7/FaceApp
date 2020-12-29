@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Purchases
 
 class WelcomeVC: BaseClass {
     
@@ -20,6 +21,8 @@ class WelcomeVC: BaseClass {
     //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
     }
     
     //  MARK:-IBAction

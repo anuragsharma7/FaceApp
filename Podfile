@@ -8,6 +8,7 @@ target 'FaceApp' do
   # Pods for FaceApp
 pod 'Purchases', '3.8.0'
 pod 'Firebase/Analytics'
+pod 'FirebaseAuth'
 
   target 'FaceAppTests' do
     inherit! :search_paths
