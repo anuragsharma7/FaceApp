@@ -47,9 +47,14 @@ class RoutineVC: BaseClass {
 
 //MARK:- IBActions
 @IBAction func backButton(_ sender: UIButton) {
+    navigationController?.popViewController(animated: true)
+
+    dismiss(animated: true, completion: nil)
     }
     
     @IBAction func startWorkOutButton(_ sender: UIButton) {
+        
+        self.navigationController?.pushViewController(PauseVC.instance(), animated: true)
     }
     
 }

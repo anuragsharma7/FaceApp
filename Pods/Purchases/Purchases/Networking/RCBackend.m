@@ -17,6 +17,7 @@
 #import "RCLogUtils.h"
 #import "RCSystemInfo.h"
 #import "RCHTTPStatusCodes.h"
+@import PurchasesCoreSwift;
 
 #define RC_HAS_KEY(dictionary, key) (dictionary[key] == nil || dictionary[key] != [NSNull null])
 NSErrorUserInfoKey const RCSuccessfullySyncedKey = @"successfullySynced";
@@ -295,6 +296,12 @@ presentedOfferingIdentifier:(nullable NSString *)offeringIdentifier
                       completion:(RCOfferingsResponseHandler)completion
 {
     NSString *escapedAppUserID = [self escapedAppUserID:appUserID];
+    if (!escapedAppUserID || [escapedAppUserID isEqualToString:@""]) {
+        RCWarnLog(@"called getOfferings with an empty appUserID!");
+        completion(nil, RCPurchasesErrorUtils.missingAppUserIDError);
+        return;
+    }
+
     NSString *path = [NSString stringWithFormat:@"/subscribers/%@/offerings", escapedAppUserID];
 
     if ([self addCallback:completion forKey:path]) {

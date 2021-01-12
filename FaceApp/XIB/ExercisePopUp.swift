@@ -22,6 +22,4 @@ class ExercisePopUp: BaseClass {
     @IBAction func giveUpButton(_ sender: UIButton) {
     }
     
-    
-
 }

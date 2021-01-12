@@ -9,13 +9,24 @@ import UIKit
 
 class WorkOutVC: BaseClass {
 
+    @IBOutlet weak var wantMoreBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        wantMoreBtn.isHidden = false
+        
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func continueBtn(_ sender: UIButton) {
+        self.navigationController?.pushViewController(TakeAPhotoVC.instance(), animated: true)
+    }
+    
+    @IBAction func wantMoreBtn(_ sender: UIButton) {
+        
+        self.navigationController?.pushViewController(PaymentWithTrialVC.instance(), animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

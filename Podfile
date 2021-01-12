@@ -6,9 +6,16 @@ target 'FaceApp' do
   use_frameworks!
 
   # Pods for FaceApp
-pod 'Purchases', '3.8.0'
+#pod 'Purchases', '3.8.0'
+pod 'Purchases', '3.9.2'
 pod 'Firebase/Analytics'
 pod 'FirebaseAuth'
+pod 'Firebase/Messaging'
+pod 'Firebase/Firestore'
+pod 'Firebase/Database'
+pod 'Firebase/Core'
+pod 'Firebase/Storage'
+
 
   target 'FaceAppTests' do
     inherit! :search_paths

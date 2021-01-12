@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GV1-Fh-ggj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GV1-Fh-ggj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -124,7 +125,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2893" y="-368"/>
+            <point key="canvasLocation" x="-2912" y="-362"/>
         </scene>
         <!--ObjectiveVC-->
         <scene sceneID="gQi-Ya-kVb">
@@ -395,7 +396,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="609-6L-IGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2162.3188405797105" y="-362.27678571428572"/>
+            <point key="canvasLocation" x="-2212" y="-362"/>
         </scene>
         <!--AgeVC-->
         <scene sceneID="Fwk-yf-Egx">
@@ -1321,6 +1322,9 @@ and simple exercises</string>
                                     <constraint firstAttribute="width" constant="35" id="LMq-Br-x1H"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="cross"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="IsJ-8h-ti1" eventType="touchUpInside" id="E2a-Ca-4Uk"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UD7-dg-zhn">
                                 <rect key="frame" x="146.5" y="803" width="121.5" height="34"/>
@@ -1647,6 +1651,9 @@ and simple exercises</string>
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueBtn:" destination="g52-sZ-1bW" eventType="touchUpInside" id="8Q8-T7-lUi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay3-w1-auE">
                                 <rect key="frame" x="20" y="765" width="374" height="80"/>
@@ -1664,6 +1671,9 @@ and simple exercises</string>
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="wantMoreBtn:" destination="g52-sZ-1bW" eventType="touchUpInside" id="esp-os-k5R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9wl-hB-E3A"/>
@@ -1688,10 +1698,13 @@ and simple exercises</string>
                             <constraint firstItem="7Y3-JA-Opg" firstAttribute="top" secondItem="6cW-Df-nKW" secondAttribute="bottom" constant="8" id="znJ-bo-6V1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="wantMoreBtn" destination="ay3-w1-auE" id="ROn-qh-cOw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPw-bd-dps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2359" y="-362"/>
+            <point key="canvasLocation" x="2425" y="64"/>
         </scene>
         <!--PauseVC-->
         <scene sceneID="GJL-QH-4UJ">
@@ -1825,7 +1838,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYp-XD-t06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3149" y="-362"/>
+            <point key="canvasLocation" x="3078" y="64"/>
         </scene>
         <!--RoutineVC-->
         <scene sceneID="5Vu-oi-58q">
@@ -2085,7 +2098,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRY-mi-5re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3925" y="-368"/>
+            <point key="canvasLocation" x="3725" y="64"/>
         </scene>
         <!--HomeVc-->
         <scene sceneID="a3P-jj-0K3">
@@ -2096,9 +2109,9 @@ and simple exercises</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Bq-dF-4Ci">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oo5-yQ-ulO">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Oo5-yQ-ulO">
                                     <size key="itemSize" width="192" height="349"/>
                                     <size key="headerReferenceSize" width="50" height="500"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -2181,6 +2194,9 @@ and simple exercises</string>
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="unlockAllBtnForPay:" destination="PA1-lr-APP" eventType="touchUpInside" id="rYl-AA-x1D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j4b-nO-hrv"/>
@@ -2198,11 +2214,12 @@ and simple exercises</string>
                     <navigationItem key="navigationItem" id="PXl-kh-JFQ"/>
                     <connections>
                         <outlet property="collectionView" destination="3Bq-dF-4Ci" id="r3m-ja-bfj"/>
+                        <outlet property="proUnlockButton" destination="FtF-8Y-XQj" id="hLg-uw-WlZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7P-le-ffe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6899" y="-528"/>
+            <point key="canvasLocation" x="6659" y="-528"/>
         </scene>
         <!--TakeAPhotoVC-->
         <scene sceneID="3sU-H8-zhg">
@@ -2318,14 +2335,24 @@ and simple exercises</string>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trackprogress" translatesAutoresizingMaskIntoConstraints="NO" id="j1l-PX-W5K">
                                         <rect key="frame" x="0.0" y="0.0" width="199" height="204"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="204" id="A66-B8-gXM"/>
+                                            <constraint firstAttribute="width" constant="199" id="TPL-Hx-RWP"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track your progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fex-WM-kw0">
                                         <rect key="frame" x="1.5" y="215" width="196" height="25.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25.5" id="sS9-yI-juk"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="fex-WM-kw0" firstAttribute="top" secondItem="j1l-PX-W5K" secondAttribute="bottom" constant="11" id="Dvn-gk-38P"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Dw-ZT-Myd"/>
@@ -2338,6 +2365,7 @@ and simple exercises</string>
                             <constraint firstItem="WEh-iL-eup" firstAttribute="centerX" secondItem="yof-aQ-Bbh" secondAttribute="centerX" id="j3i-74-dbg"/>
                             <constraint firstItem="TqY-Yq-evN" firstAttribute="centerX" secondItem="yof-aQ-Bbh" secondAttribute="centerX" id="k4V-1Q-nrL"/>
                             <constraint firstItem="TqY-Yq-evN" firstAttribute="top" secondItem="yof-aQ-Bbh" secondAttribute="top" constant="25" id="l6p-VK-cAy"/>
+                            <constraint firstItem="4Sg-bJ-JSe" firstAttribute="top" secondItem="elH-Zw-DbC" secondAttribute="bottom" constant="50" id="mID-th-MTS"/>
                             <constraint firstItem="VYY-9R-ywD" firstAttribute="leading" secondItem="8Dw-ZT-Myd" secondAttribute="leading" constant="20" id="oOD-ix-sFg"/>
                             <constraint firstItem="ygM-Nf-BhA" firstAttribute="top" secondItem="WEh-iL-eup" secondAttribute="bottom" constant="50" id="rNm-we-vVa"/>
                         </constraints>
@@ -2354,7 +2382,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGb-Oe-Jt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7658" y="-528"/>
+            <point key="canvasLocation" x="7425" y="-533"/>
         </scene>
         <!--PaymentWithTrialVC-->
         <scene sceneID="scu-GB-pcS">
@@ -2365,10 +2393,10 @@ and simple exercises</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax1-bB-ssy">
-                                <rect key="frame" x="10" y="10" width="35" height="35"/>
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="Wdp-l2-ocF"/>
-                                    <constraint firstAttribute="height" constant="35" id="hBO-Zy-K7M"/>
+                                    <constraint firstAttribute="width" constant="50" id="Wdp-l2-ocF"/>
+                                    <constraint firstAttribute="height" constant="50" id="hBO-Zy-K7M"/>
                                 </constraints>
                                 <state key="normal" image="cross"/>
                                 <connections>
@@ -2461,7 +2489,7 @@ and simple exercises</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1J-e1-K2y">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1J-e1-K2y">
                                         <rect key="frame" x="1" y="146" width="318" height="70"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -2492,7 +2520,7 @@ and simple exercises</string>
                                             <constraint firstAttribute="width" constant="64" id="VFX-ha-iXY"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXM-Hk-iHr">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXM-Hk-iHr">
                                         <rect key="frame" x="1" y="74" width="318" height="70"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -2978,7 +3006,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwt-nY-9cC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8996" y="-528"/>
+            <point key="canvasLocation" x="9070" y="-528"/>
         </scene>
         <!--StepAndBenefitsVC-->
         <scene sceneID="91N-T7-Xqm">
@@ -3463,20 +3491,20 @@ and simple exercises</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCm-am-TQO">
-                                <rect key="frame" x="155" y="103" width="104.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCm-am-TQO">
+                                <rect key="frame" x="155" y="15" width="104.5" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Progress-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nke-76-Cje">
-                                <rect key="frame" x="20" y="148" width="374" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Progress-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nke-76-Cje">
+                                <rect key="frame" x="20" y="60" width="374" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="NHW-ck-4df"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6p-jX-IvP">
-                                <rect key="frame" x="40" y="321" width="334" height="234"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U6p-jX-IvP">
+                                <rect key="frame" x="40" y="233" width="334" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ava-EV-g5Y">
                                         <rect key="frame" x="103" y="15" width="128.5" height="25.5"/>
@@ -3536,8 +3564,8 @@ and simple exercises</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAZ-YD-mwD">
-                                <rect key="frame" x="150" y="570" width="114" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAZ-YD-mwD">
+                                <rect key="frame" x="150" y="375" width="114" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -3625,7 +3653,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSY-RH-jqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6731.884057971015" y="273.88392857142856"/>
+            <point key="canvasLocation" x="6080" y="281"/>
         </scene>
         <!--TabBarVC-->
         <scene sceneID="maj-Ht-1Ru">
@@ -3645,16 +3673,15 @@ and simple exercises</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4Z-hv-j30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5737.68115942029" y="-528.34821428571422"/>
+            <point key="canvasLocation" x="5287" y="-528"/>
         </scene>
         <!--Training-->
         <scene sceneID="NKH-Yd-DFy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PeQ-Wv-7C8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="PeQ-Wv-7C8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Training" image="training" id="8AU-XB-Cxe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wJ9-n6-CVe">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3664,16 +3691,15 @@ and simple exercises</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHP-tM-fF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6164" y="-528"/>
+            <point key="canvasLocation" x="5981" y="-528"/>
         </scene>
         <!--ProgressVC-->
         <scene sceneID="Tym-E9-B6Z">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kjv-Bn-Fhv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kjv-Bn-Fhv" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="ProgressVC" image="progress" id="L2c-u1-rer"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4vM-iy-ioQ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3683,7 +3709,7 @@ and simple exercises</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ii7-MI-iqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6009" y="275"/>
+            <point key="canvasLocation" x="5287" y="281"/>
         </scene>
     </scenes>
     <resources>

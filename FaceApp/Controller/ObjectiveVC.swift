@@ -103,8 +103,8 @@ class ObjectiveVC: BaseClass {
     
     //MARK:- IBAction
     @IBAction func continueButton(_ sender: UIButton) {
-        //self.navigationController?.pushViewController(AgeVC.instance(), animated: true)
-        continueButtonTapped()
+        self.navigationController?.pushViewController(AgeVC.instance(), animated: true)
+        //continueButtonTapped()
     }
     
     @objc fileprivate func continueButtonTapped(){

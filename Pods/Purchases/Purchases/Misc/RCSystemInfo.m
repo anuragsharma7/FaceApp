@@ -6,6 +6,7 @@
 #import "RCSystemInfo.h"
 #import "RCCrossPlatformSupport.h"
 #import "RCLogUtils.h"
+@import PurchasesCoreSwift;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -48,7 +49,7 @@ static BOOL _forceUniversalAppStore = NO;
 }
 
 + (NSString *)frameworkVersion {
-    return @"3.8.0";
+    return @"3.9.2";
 }
 
 + (NSString *)systemVersion {
@@ -61,8 +62,22 @@ static BOOL _forceUniversalAppStore = NO;
     return version ?: @"";
 }
 
++ (NSString *)buildVersion {
+    NSString *version = NSBundle.mainBundle.infoDictionary[@"CFBundleVersion"];
+    return version ?: @"";
+}
+
 + (NSString *)platformHeader {
     return self.forceUniversalAppStore ? @"iOS" : PLATFORM_HEADER;
+}
+
++ (nullable NSString *)identifierForVendor {
+#if UI_DEVICE_AVAILABLE
+    return UIDevice.currentDevice.identifierForVendor.UUIDString;
+#elif WKINTERFACE_DEVICE_AVAILABLE
+    return WKInterfaceDevice.currentDevice.identifierForVendor.UUIDString;
+#endif
+    return nil;
 }
 
 + (NSURL *)defaultServerHostURL {

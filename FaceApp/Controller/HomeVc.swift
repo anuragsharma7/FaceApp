@@ -4,8 +4,11 @@
 //
 //  Created by Divya Pathak on 21/12/20.
 //
-
+import Purchases
 import UIKit
+import FirebaseFirestore
+import FirebaseDatabase
+
 
 class HomeVc: BaseClass {
     
@@ -16,6 +19,10 @@ class HomeVc: BaseClass {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private let database = Database.database().reference()
+    
+    var postData = [String]()
+    @IBOutlet weak var proUnlockButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +35,37 @@ class HomeVc: BaseClass {
         
         collectionView.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier)
     }
+    
+    
+    
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // CHeck entitlements and show pro Conten0t
+        Purchases.shared.purchaserInfo { (purchaserInfo, error) in
+            if purchaserInfo?.entitlements.all["pro"]?.isActive == true {
+                // User is "pro"
+                self.proUnlockButton.removeFromSuperview()
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    @IBAction func unlockAllBtnForPay(_ sender: Any) {
+        self.navigationController?.pushViewController(PaymentWithTrialVC.instance(), animated: true)
+    }
 }
+
+
+
+
+
 
 //MARK:- Extension for CollectionView DataSource and Delegates
 
@@ -101,14 +138,42 @@ extension HomeVc: UICollectionViewDelegate,UICollectionViewDataSource, UICollect
         let width = (self.view.frame.size.width - 12 * 3) / 3 //some width
         let height = width * 1.5  //ratio
             return CGSize(width: 165, height: 250)
-    
-        
-        
-    
+   
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch indexPath.section {
+        case 0:
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC
+            self.navigationController?.pushViewController(vc!, animated: true)
+            
+            
+        case 1:
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC
+            self.navigationController?.pushViewController(vc!, animated: true)
+            
+            break
+           
+            
+        default:
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC
+            self.navigationController?.pushViewController(vc!, animated: true)
+            
+            
+        }
+        
+        
+        
+        
+        
     }
 }
 

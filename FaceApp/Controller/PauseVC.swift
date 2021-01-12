@@ -47,6 +47,7 @@ class PauseVC: BaseClass {
     }
     
 @IBAction func nextButton(_ sender: UIButton) {
+    self.navigationController?.pushViewController(WorkOutVC.instance(), animated: true)
     }
     
     

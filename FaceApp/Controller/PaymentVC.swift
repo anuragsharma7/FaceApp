@@ -61,8 +61,16 @@ class PaymentVC: BaseClass {
     //MARK:- IBActions
     
     @IBAction func continueButton(_ sender: UIButton) {
-        self.navigationController?.pushViewController(HomeVc.instance(), animated: true)
+        self.navigationController?.pushViewController(/*HomeVc*/TabBarVC.instance(), animated: true)
     }
+    
+    @IBAction func backBtn(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     
     //MARK:- Methods
     
