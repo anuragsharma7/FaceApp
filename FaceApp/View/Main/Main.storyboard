@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GV1-Fh-ggj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nnG-3f-O7O">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -226,15 +226,41 @@ and simple exercises</string>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7n-wB-Esx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="187.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="jawlinCheckButton:" destination="lhs-yJ-FMk" eventType="touchUpInside" id="jrB-u5-Sbj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E6L-hw-TRe">
+                                                        <rect key="frame" x="149.5" y="10.5" width="22" height="21"/>
+                                                        <color key="tintColor" red="0.0" green="0.61176470589999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="22" id="Qrv-he-hmj"/>
+                                                            <constraint firstAttribute="height" constant="22" id="UtE-dY-671"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="lb2-aX-0Jp" firstAttribute="centerX" secondItem="w7T-0x-jDE" secondAttribute="centerX" id="2IT-EZ-els"/>
+                                                    <constraint firstItem="lb2-aX-0Jp" firstAttribute="top" secondItem="H7n-wB-Esx" secondAttribute="bottom" id="3mH-BY-fTx"/>
+                                                    <constraint firstItem="H7n-wB-Esx" firstAttribute="top" secondItem="w7T-0x-jDE" secondAttribute="top" id="8RZ-mB-c2N"/>
+                                                    <constraint firstItem="E6L-hw-TRe" firstAttribute="top" secondItem="w7T-0x-jDE" secondAttribute="top" constant="10" id="AZX-Hq-o3K"/>
                                                     <constraint firstAttribute="height" constant="247" id="Asi-F5-1mn"/>
                                                     <constraint firstAttribute="width" constant="179.5" id="HLk-1c-0XH"/>
+                                                    <constraint firstItem="H7n-wB-Esx" firstAttribute="leading" secondItem="w7T-0x-jDE" secondAttribute="leading" id="MoS-41-pux"/>
                                                     <constraint firstItem="lb2-aX-0Jp" firstAttribute="centerX" secondItem="w7T-0x-jDE" secondAttribute="centerX" id="UDT-SV-CRf"/>
                                                     <constraint firstItem="lb2-aX-0Jp" firstAttribute="centerX" secondItem="w7T-0x-jDE" secondAttribute="centerX" id="UHP-Gg-nTU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="E6L-hw-TRe" secondAttribute="trailing" constant="8" id="ZEk-ca-Pkd"/>
                                                     <constraint firstItem="lb2-aX-0Jp" firstAttribute="top" secondItem="bia-RF-HZu" secondAttribute="bottom" constant="8.5" id="ajr-v9-afQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="H7n-wB-Esx" secondAttribute="trailing" id="j8d-Ar-qb4"/>
                                                     <constraint firstItem="bia-RF-HZu" firstAttribute="leading" secondItem="w7T-0x-jDE" secondAttribute="leading" id="mjS-Ja-Atu"/>
                                                     <constraint firstAttribute="trailing" secondItem="bia-RF-HZu" secondAttribute="trailing" id="uhq-3O-GdB"/>
                                                     <constraint firstItem="bia-RF-HZu" firstAttribute="top" secondItem="w7T-0x-jDE" secondAttribute="top" id="yUi-Tb-i3a"/>
@@ -256,15 +282,41 @@ and simple exercises</string>
                                                             <constraint firstAttribute="height" constant="179" id="r1b-M7-2eT"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oau-ap-mew">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="187.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="jawlinCheckButton:" destination="lhs-yJ-FMk" eventType="touchUpInside" id="8ww-4B-ahO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Ww-kU-O0T">
+                                                        <rect key="frame" x="149.5" y="10.5" width="22" height="21"/>
+                                                        <color key="tintColor" red="0.0" green="0.61176470589999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="22" id="dD8-3c-vU8"/>
+                                                            <constraint firstAttribute="height" constant="22" id="gFS-PV-bN1"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Oau-ap-mew" secondAttribute="trailing" id="5t5-61-92d"/>
+                                                    <constraint firstItem="nN4-jm-odW" firstAttribute="top" secondItem="Oau-ap-mew" secondAttribute="bottom" id="6cq-eD-jq6"/>
+                                                    <constraint firstItem="Oau-ap-mew" firstAttribute="leading" secondItem="zZH-mm-Zp9" secondAttribute="leading" id="DSS-OL-duA"/>
                                                     <constraint firstItem="Jwf-1I-kYt" firstAttribute="top" secondItem="zZH-mm-Zp9" secondAttribute="top" id="NvO-Oc-TRh"/>
                                                     <constraint firstItem="Jwf-1I-kYt" firstAttribute="leading" secondItem="zZH-mm-Zp9" secondAttribute="leading" id="PcP-1w-iBV"/>
                                                     <constraint firstAttribute="trailing" secondItem="Jwf-1I-kYt" secondAttribute="trailing" id="Q74-3l-XzL"/>
+                                                    <constraint firstItem="3Ww-kU-O0T" firstAttribute="top" secondItem="zZH-mm-Zp9" secondAttribute="top" constant="10" id="Sby-kE-d38"/>
                                                     <constraint firstItem="nN4-jm-odW" firstAttribute="top" secondItem="Jwf-1I-kYt" secondAttribute="bottom" constant="8.5" id="TTv-fA-kYd"/>
                                                     <constraint firstAttribute="trailing" secondItem="Jwf-1I-kYt" secondAttribute="trailing" id="Z5d-Bf-Ogr"/>
+                                                    <constraint firstItem="Oau-ap-mew" firstAttribute="top" secondItem="zZH-mm-Zp9" secondAttribute="top" id="d0C-Go-GAP"/>
                                                     <constraint firstItem="nN4-jm-odW" firstAttribute="centerX" secondItem="zZH-mm-Zp9" secondAttribute="centerX" id="iSM-So-5Vb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3Ww-kU-O0T" secondAttribute="trailing" constant="8" id="nEK-di-oKz"/>
                                                     <constraint firstItem="Jwf-1I-kYt" firstAttribute="top" secondItem="zZH-mm-Zp9" secondAttribute="top" id="s1i-5b-7cr"/>
                                                 </constraints>
                                             </view>
@@ -290,14 +342,40 @@ and simple exercises</string>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0z-sT-m3h">
+                                                        <rect key="frame" x="0.0" y="0.0" width="178" height="187.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="jawlinCheckButton:" destination="lhs-yJ-FMk" eventType="touchUpInside" id="rcD-sl-pi7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="okJ-KS-yMt">
+                                                        <rect key="frame" x="148" y="10.5" width="22" height="21"/>
+                                                        <color key="tintColor" red="0.0" green="0.61176470589999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22" id="esg-fo-b71"/>
+                                                            <constraint firstAttribute="width" constant="22" id="yKy-QE-ZGT"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="t0z-sT-m3h" firstAttribute="leading" secondItem="Sfk-sm-yVW" secondAttribute="leading" id="0Iz-hr-zqm"/>
                                                     <constraint firstItem="bod-VZ-G9a" firstAttribute="centerX" secondItem="Sfk-sm-yVW" secondAttribute="centerX" id="1iI-NV-4tR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="t0z-sT-m3h" secondAttribute="trailing" id="2VO-wx-jej"/>
                                                     <constraint firstItem="yET-D2-qUv" firstAttribute="centerX" secondItem="bod-VZ-G9a" secondAttribute="centerX" id="AF2-54-kh0"/>
                                                     <constraint firstItem="yET-D2-qUv" firstAttribute="top" secondItem="Sfk-sm-yVW" secondAttribute="top" id="ALu-iQ-UXX"/>
                                                     <constraint firstItem="yET-D2-qUv" firstAttribute="leading" secondItem="Sfk-sm-yVW" secondAttribute="leading" id="Fsz-tf-sOy"/>
                                                     <constraint firstItem="bod-VZ-G9a" firstAttribute="top" secondItem="yET-D2-qUv" secondAttribute="bottom" constant="8.5" id="PFu-zL-fDT"/>
+                                                    <constraint firstItem="bod-VZ-G9a" firstAttribute="top" secondItem="t0z-sT-m3h" secondAttribute="bottom" id="Zfx-Dy-QuA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="okJ-KS-yMt" secondAttribute="trailing" constant="8" id="e70-3B-iOK"/>
+                                                    <constraint firstItem="okJ-KS-yMt" firstAttribute="top" secondItem="Sfk-sm-yVW" secondAttribute="top" constant="10" id="mc1-2P-cqi"/>
+                                                    <constraint firstItem="t0z-sT-m3h" firstAttribute="top" secondItem="Sfk-sm-yVW" secondAttribute="top" id="ufO-Iv-EtY"/>
                                                     <constraint firstAttribute="height" constant="247" id="xy4-nr-TZf"/>
                                                 </constraints>
                                             </view>
@@ -316,16 +394,42 @@ and simple exercises</string>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCJ-Tb-fRz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="178" height="187.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="jawlinCheckButton:" destination="lhs-yJ-FMk" eventType="touchUpInside" id="28u-X3-8PM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AUO-zc-LtA">
+                                                        <rect key="frame" x="148" y="10.5" width="22" height="21"/>
+                                                        <color key="tintColor" red="0.0" green="0.61176470589999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="22" id="L5N-DF-h8O"/>
+                                                            <constraint firstAttribute="height" constant="22" id="jXf-Gl-nw3"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="oKb-my-OiC" secondAttribute="trailing" id="040-T9-Ic5"/>
+                                                    <constraint firstItem="KCJ-Tb-fRz" firstAttribute="leading" secondItem="ZOI-TS-lBj" secondAttribute="leading" id="0Fc-iT-xxT"/>
+                                                    <constraint firstItem="Dvx-74-yFU" firstAttribute="top" secondItem="KCJ-Tb-fRz" secondAttribute="bottom" id="AyW-Re-b3f"/>
                                                     <constraint firstAttribute="trailing" secondItem="oKb-my-OiC" secondAttribute="trailing" id="CPc-VE-6h1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AUO-zc-LtA" secondAttribute="trailing" constant="8" id="DqZ-GR-jdu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KCJ-Tb-fRz" secondAttribute="trailing" id="Ikw-4v-elt"/>
                                                     <constraint firstItem="Dvx-74-yFU" firstAttribute="top" secondItem="oKb-my-OiC" secondAttribute="bottom" constant="8.5" id="QdQ-ym-cQm"/>
                                                     <constraint firstItem="oKb-my-OiC" firstAttribute="leading" secondItem="ZOI-TS-lBj" secondAttribute="leading" id="SbC-Ae-SfT"/>
+                                                    <constraint firstItem="AUO-zc-LtA" firstAttribute="top" secondItem="ZOI-TS-lBj" secondAttribute="top" constant="10" id="aew-HY-E77"/>
                                                     <constraint firstItem="oKb-my-OiC" firstAttribute="top" secondItem="ZOI-TS-lBj" secondAttribute="top" id="ayV-ji-zjI"/>
                                                     <constraint firstItem="Dvx-74-yFU" firstAttribute="centerX" secondItem="ZOI-TS-lBj" secondAttribute="centerX" id="wSh-kD-iZz"/>
                                                     <constraint firstItem="oKb-my-OiC" firstAttribute="top" secondItem="ZOI-TS-lBj" secondAttribute="top" id="xxA-7y-up6"/>
+                                                    <constraint firstItem="KCJ-Tb-fRz" firstAttribute="top" secondItem="ZOI-TS-lBj" secondAttribute="top" id="yPT-gd-4eO"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -384,19 +488,27 @@ and simple exercises</string>
                     <connections>
                         <outlet property="chooseYrObjLabel" destination="ehv-LU-988" id="SwN-bN-e4W"/>
                         <outlet property="continueBtn" destination="PFD-pZ-Ll8" id="B6a-fh-dqV"/>
+                        <outlet property="dandruffsBtn" destination="t0z-sT-m3h" id="fgG-Pk-G9R"/>
+                        <outlet property="dandruffsCheckImg" destination="okJ-KS-yMt" id="I5D-5j-lkf"/>
                         <outlet property="dandruffsImgView" destination="yET-D2-qUv" id="xrf-g5-ba9"/>
+                        <outlet property="hairLossCheckImg" destination="3Ww-kU-O0T" id="dLE-yf-l6a"/>
                         <outlet property="hairLossImgView" destination="Jwf-1I-kYt" id="NRM-A7-LCI"/>
+                        <outlet property="hairLossbBtn" destination="Oau-ap-mew" id="5Ns-aj-Pbv"/>
+                        <outlet property="jawlinBtn" destination="H7n-wB-Esx" id="Xxt-jY-1mE"/>
+                        <outlet property="jawlinCheckImg" destination="E6L-hw-TRe" id="5JQ-rg-rbm"/>
                         <outlet property="jawlineImgView" destination="bia-RF-HZu" id="DnM-7b-DOO"/>
                         <outlet property="selectMultipleLabel" destination="ngR-VH-LM3" id="4LE-WL-5oA"/>
                         <outlet property="slider1Label" destination="qxF-eA-j4O" id="T9V-6O-O6E"/>
                         <outlet property="slider2Label" destination="pFt-Em-Edo" id="il7-gN-Xst"/>
                         <outlet property="slider3Label" destination="FSC-ai-iEw" id="WJQ-PZ-p3C"/>
+                        <outlet property="wrinklesBtn" destination="KCJ-Tb-fRz" id="kx4-c4-TZp"/>
+                        <outlet property="wrinklesCheckImg" destination="AUO-zc-LtA" id="Qkh-e5-NLK"/>
                         <outlet property="wrinklesImgView" destination="oKb-my-OiC" id="wch-NG-F2a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="609-6L-IGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2212" y="-362"/>
+            <point key="canvasLocation" x="-2214.4927536231885" y="-362.27678571428572"/>
         </scene>
         <!--AgeVC-->
         <scene sceneID="Fwk-yf-Egx">
@@ -463,7 +575,7 @@ and simple exercises</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" borderStyle="roundedRect" placeholder="25" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weo-Nt-Fzx">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="25" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weo-Nt-Fzx">
                                 <rect key="frame" x="171" y="272.5" width="72" height="51.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -472,7 +584,7 @@ and simple exercises</string>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sU-K8-lkV">
                                 <rect key="frame" x="152" y="329" width="110" height="2"/>
@@ -616,7 +728,7 @@ and simple exercises</string>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMV-kp-6LZ">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="75"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.17254901960784313" green="0.1764705882352941" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="350" id="1HW-cm-Ii6"/>
                                             <constraint firstAttribute="height" constant="75" id="FgS-TZ-FR0"/>
@@ -634,7 +746,7 @@ and simple exercises</string>
                                             <action selector="regularButton:" destination="GZs-NK-B7X" eventType="touchUpInside" id="jDX-Qa-WxQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFy-EN-F3Y">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFy-EN-F3Y">
                                         <rect key="frame" x="0.0" y="105" width="350" height="75"/>
                                         <color key="backgroundColor" red="0.12941176470588234" green="0.13333333333333333" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -657,10 +769,10 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="triedLongTimeAgoButton:" destination="GZs-NK-B7X" eventType="touchUpInside" id="jEb-7u-xjK"/>
+                                            <action selector="regularButton:" destination="GZs-NK-B7X" eventType="touchUpInside" id="Du9-oE-pzi"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIp-xH-Nix">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIp-xH-Nix">
                                         <rect key="frame" x="0.0" y="210" width="350" height="75"/>
                                         <color key="backgroundColor" red="0.12941176470588234" green="0.13333333333333333" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -677,7 +789,7 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="neverButton:" destination="GZs-NK-B7X" eventType="touchUpInside" id="f2P-Ly-wun"/>
+                                            <action selector="regularButton:" destination="GZs-NK-B7X" eventType="touchUpInside" id="Jfg-kJ-Qql"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -745,7 +857,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="7Wn-Hf-7mh"/>
+                                                    <action selector="day1Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="7DY-WL-qnO"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehU-R8-CaF">
@@ -774,7 +886,7 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="So6-3j-Rub">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="So6-3j-Rub">
                                         <rect key="frame" x="53" y="0.0" width="47" height="80"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-0t-FRx">
@@ -787,7 +899,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="Yh7-CH-hem"/>
+                                                    <action selector="day2Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="xho-h4-fZt"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m48-Ox-KsB">
@@ -801,7 +913,7 @@ and simple exercises</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="backgroundColor" red="0.17254901960784313" green="0.1764705882352941" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="m48-Ox-KsB" secondAttribute="bottom" constant="5" id="MAF-1a-XCk"/>
                                             <constraint firstItem="m48-Ox-KsB" firstAttribute="centerX" secondItem="So6-3j-Rub" secondAttribute="centerX" id="PUY-NH-HqR"/>
@@ -816,7 +928,7 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89q-V2-cbf">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89q-V2-cbf">
                                         <rect key="frame" x="106" y="0.0" width="47" height="80"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3h-aY-lY8">
@@ -829,7 +941,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="1n3-iZ-y0f"/>
+                                                    <action selector="day3Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="20I-vG-hfr"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI4-5p-VOe">
@@ -858,7 +970,7 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1v-PK-Zff">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1v-PK-Zff">
                                         <rect key="frame" x="159" y="0.0" width="47" height="80"/>
                                         <subviews>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXl-kB-nfo">
@@ -871,7 +983,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="tVl-kA-Fw9"/>
+                                                    <action selector="day4Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="CuD-Zj-FHl"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvM-La-l9a">
@@ -885,7 +997,7 @@ and simple exercises</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="backgroundColor" red="0.17254901960784313" green="0.1764705882352941" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="47" id="8CQ-JI-fyP"/>
                                             <constraint firstAttribute="height" constant="80" id="Zfe-6V-gaI"/>
@@ -900,7 +1012,7 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-VO-4nd">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-VO-4nd">
                                         <rect key="frame" x="212" y="0.0" width="47" height="80"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0n-kA-GqK">
@@ -913,7 +1025,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="beD-Uz-dQV"/>
+                                                    <action selector="day5Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="bk4-ua-ep8"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nS-Mw-1cr">
@@ -942,7 +1054,7 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8B-a0-2Ou">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8B-a0-2Ou">
                                         <rect key="frame" x="265" y="0.0" width="47" height="80"/>
                                         <subviews>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWl-TT-ljw">
@@ -955,7 +1067,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="x3T-ZG-MkK"/>
+                                                    <action selector="day6Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="aTt-tD-dsp"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSu-c5-0pR">
@@ -984,7 +1096,7 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwt-Ey-rBt">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwt-Ey-rBt">
                                         <rect key="frame" x="318" y="0.0" width="47" height="80"/>
                                         <subviews>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnD-Pc-p2U">
@@ -997,7 +1109,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="Go1-56-phs"/>
+                                                    <action selector="day7Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="4iS-WL-g2P"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3f-Vq-WBD">
@@ -1294,6 +1406,17 @@ and simple exercises</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWd-pG-CtV">
+                                <rect key="frame" x="206" y="0.0" width="2" height="193"/>
+                                <color key="backgroundColor" red="0.42745098039215684" green="0.082352941176470587" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="QGV-af-EQq"/>
+                                    <constraint firstAttribute="width" constant="2" id="XFR-8D-bSx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your personnolized course is ready" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIn-gW-uBx">
                                 <rect key="frame" x="77.5" y="214" width="259" height="65"/>
                                 <constraints>
@@ -1305,7 +1428,7 @@ and simple exercises</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSc-BA-nLz">
-                                <rect key="frame" x="20" y="20" width="35" height="45"/>
+                                <rect key="frame" x="20" y="30" width="35" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="4b2-cX-Nbx"/>
                                     <constraint firstAttribute="width" constant="35" id="LMq-Br-x1H"/>
@@ -1544,9 +1667,11 @@ and simple exercises</string>
                             <constraint firstItem="0xh-Y2-AU1" firstAttribute="leading" secondItem="Xlp-U9-xne" secondAttribute="leading" constant="32" id="11F-jD-Uin"/>
                             <constraint firstItem="UD7-dg-zhn" firstAttribute="top" secondItem="N57-eW-L0f" secondAttribute="bottom" constant="11" id="3Qi-gK-ldF"/>
                             <constraint firstItem="bIn-gW-uBx" firstAttribute="top" secondItem="Xlp-U9-xne" secondAttribute="top" constant="170" id="52V-Vj-ahU"/>
+                            <constraint firstItem="yWd-pG-CtV" firstAttribute="top" secondItem="Gvk-LC-CrM" secondAttribute="top" id="FvF-oW-V4s"/>
                             <constraint firstItem="Xlp-U9-xne" firstAttribute="bottom" secondItem="UD7-dg-zhn" secondAttribute="bottom" constant="25" id="M8U-bn-9HL"/>
                             <constraint firstItem="bIn-gW-uBx" firstAttribute="leading" secondItem="Xlp-U9-xne" secondAttribute="leading" constant="77.5" id="T26-c7-WZP"/>
                             <constraint firstItem="F3o-Kh-l2S" firstAttribute="top" secondItem="bIn-gW-uBx" secondAttribute="bottom" constant="8" id="UeG-LQ-bcs"/>
+                            <constraint firstItem="yWd-pG-CtV" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="Ukw-FE-Jea"/>
                             <constraint firstItem="bIn-gW-uBx" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="XfG-jW-iqD"/>
                             <constraint firstItem="UD7-dg-zhn" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="Ykw-GQ-UUq"/>
                             <constraint firstItem="ldG-Gk-utp" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="auO-I6-r5s"/>
@@ -1556,12 +1681,13 @@ and simple exercises</string>
                             <constraint firstItem="0xh-Y2-AU1" firstAttribute="top" secondItem="F3o-Kh-l2S" secondAttribute="bottom" constant="30" id="p4F-Lb-qMI"/>
                             <constraint firstItem="ZSc-BA-nLz" firstAttribute="leading" secondItem="Xlp-U9-xne" secondAttribute="leading" constant="20" id="qWw-mR-GQD"/>
                             <constraint firstItem="N57-eW-L0f" firstAttribute="top" secondItem="ldG-Gk-utp" secondAttribute="bottom" constant="8" id="qh0-QO-4Rv"/>
-                            <constraint firstItem="ZSc-BA-nLz" firstAttribute="top" secondItem="Gvk-LC-CrM" secondAttribute="top" constant="20" id="rFb-EY-87V"/>
+                            <constraint firstItem="ZSc-BA-nLz" firstAttribute="top" secondItem="Gvk-LC-CrM" secondAttribute="top" constant="30" id="rFb-EY-87V"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="continueBtn" destination="ldG-Gk-utp" id="nUc-h6-bVW"/>
                         <outlet property="freeTrialLabel" destination="N57-eW-L0f" id="O5H-Y6-pq3"/>
+                        <outlet property="lineLabel" destination="yWd-pG-CtV" id="qWF-fz-fbW"/>
                         <outlet property="personilizedLabel" destination="bIn-gW-uBx" id="5ew-nJ-WLp"/>
                         <outlet property="privacyLabel" destination="44D-JO-ucM" id="CaL-j4-fWi"/>
                         <outlet property="restoreLabel" destination="Utj-V1-ahr" id="mEQ-UR-xLS"/>
@@ -1570,16 +1696,11 @@ and simple exercises</string>
                         <outlet property="star3ImgView" destination="Utq-6A-YN4" id="yc5-JA-9PF"/>
                         <outlet property="star4ImgView" destination="pOi-9x-V2I" id="t5g-0g-KXf"/>
                         <outlet property="star5ImgView" destination="bgB-5l-ywz" id="TwW-VI-i02"/>
-                        <outlet property="view1" destination="ywp-pa-3QM" id="lul-pF-I7y"/>
-                        <outlet property="view2" destination="BQV-oz-Prk" id="lew-JZ-clA"/>
-                        <outlet property="view3" destination="yXh-M5-57G" id="qSu-nS-mfi"/>
-                        <outlet property="view4" destination="Mk9-gB-pMY" id="70x-vp-efZ"/>
-                        <outlet property="view5" destination="4TV-bR-5km" id="1X1-wJ-cTd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7H-qI-Ief" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="-362"/>
+            <point key="canvasLocation" x="1734.7826086956522" y="-362.27678571428572"/>
         </scene>
         <!--WorkOutVC-->
         <scene sceneID="gfe-Sz-8e6">
@@ -1600,6 +1721,9 @@ and simple exercises</string>
                                         </constraints>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="cross"/>
+                                        <connections>
+                                            <action selector="crossBtn:" destination="g52-sZ-1bW" eventType="touchUpInside" id="oH2-BM-yWj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8862745098" green="0.89411764709999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -2330,6 +2454,11 @@ and simple exercises</string>
                                             <constraint firstAttribute="height" constant="204" id="A66-B8-gXM"/>
                                             <constraint firstAttribute="width" constant="199" id="TPL-Hx-RWP"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track your progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fex-WM-kw0">
                                         <rect key="frame" x="1.5" y="215" width="196" height="25.5"/>
@@ -3482,20 +3611,23 @@ and simple exercises</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCm-am-TQO">
-                                <rect key="frame" x="155" y="15" width="104.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCm-am-TQO">
+                                <rect key="frame" x="154.5" y="129" width="105" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="VU1-Z0-Yyt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Progress-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nke-76-Cje">
-                                <rect key="frame" x="20" y="60" width="374" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Progress-1" translatesAutoresizingMaskIntoConstraints="NO" id="Nke-76-Cje">
+                                <rect key="frame" x="20" y="148" width="374" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="NHW-ck-4df"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U6p-jX-IvP">
-                                <rect key="frame" x="40" y="233" width="334" height="127"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6p-jX-IvP">
+                                <rect key="frame" x="40" y="321" width="334" height="234"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ava-EV-g5Y">
                                         <rect key="frame" x="103" y="15" width="128.5" height="25.5"/>
@@ -3517,7 +3649,7 @@ and simple exercises</string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqs-II-0uv">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqs-II-0uv" customClass="ProgressVCCircularProgress" customModule="FaceApp" customModuleProvider="target">
                                         <rect key="frame" x="102" y="53" width="130" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -3555,8 +3687,8 @@ and simple exercises</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAZ-YD-mwD">
-                                <rect key="frame" x="150" y="375" width="114" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAZ-YD-mwD">
+                                <rect key="frame" x="150" y="570" width="114" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -3618,15 +3750,13 @@ and simple exercises</string>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hAZ-YD-mwD" firstAttribute="centerX" secondItem="bKm-YQ-bvW" secondAttribute="centerX" id="1zy-tg-vFq"/>
-                            <constraint firstItem="MCm-am-TQO" firstAttribute="top" secondItem="J93-oX-68W" secondAttribute="top" constant="15" id="35r-Ss-TXh"/>
                             <constraint firstItem="U6p-jX-IvP" firstAttribute="top" secondItem="Nke-76-Cje" secondAttribute="bottom" constant="-27" id="5t6-Uk-YYb"/>
-                            <constraint firstItem="Nke-76-Cje" firstAttribute="top" secondItem="MCm-am-TQO" secondAttribute="bottom" constant="15" id="CnJ-zW-Map"/>
+                            <constraint firstItem="MCm-am-TQO" firstAttribute="centerX" secondItem="bKm-YQ-bvW" secondAttribute="centerX" id="C3b-ug-Q9d"/>
                             <constraint firstItem="J93-oX-68W" firstAttribute="bottom" secondItem="EBa-u2-Beg" secondAttribute="bottom" constant="8" id="K08-9d-iXy"/>
                             <constraint firstItem="EBa-u2-Beg" firstAttribute="leading" secondItem="J93-oX-68W" secondAttribute="leading" constant="20" id="P4p-gf-ELe"/>
                             <constraint firstItem="EBa-u2-Beg" firstAttribute="top" secondItem="hAZ-YD-mwD" secondAttribute="bottom" constant="8" id="PJ2-Xr-puu"/>
-                            <constraint firstItem="MCm-am-TQO" firstAttribute="top" secondItem="J93-oX-68W" secondAttribute="top" constant="15" id="SlO-Oc-hbI"/>
                             <constraint firstItem="Nke-76-Cje" firstAttribute="leading" secondItem="J93-oX-68W" secondAttribute="leading" constant="20" id="X8b-z5-Vif"/>
-                            <constraint firstItem="MCm-am-TQO" firstAttribute="centerX" secondItem="bKm-YQ-bvW" secondAttribute="centerX" id="cvQ-U5-Ig0"/>
+                            <constraint firstItem="Nke-76-Cje" firstAttribute="top" secondItem="MCm-am-TQO" secondAttribute="bottom" constant="-30" id="dgU-0U-aMU"/>
                             <constraint firstItem="J93-oX-68W" firstAttribute="trailing" secondItem="Nke-76-Cje" secondAttribute="trailing" constant="20" id="k3O-aG-X5r"/>
                             <constraint firstItem="hAZ-YD-mwD" firstAttribute="top" secondItem="U6p-jX-IvP" secondAttribute="bottom" constant="15" id="nkX-pY-TNy"/>
                             <constraint firstItem="J93-oX-68W" firstAttribute="trailing" secondItem="EBa-u2-Beg" secondAttribute="trailing" constant="20" id="rle-Xk-2NC"/>
@@ -3637,14 +3767,14 @@ and simple exercises</string>
                     <connections>
                         <outlet property="collectionView" destination="EBa-u2-Beg" id="jEq-ZJ-e5U"/>
                         <outlet property="imgView" destination="Nke-76-Cje" id="imR-T3-ZYm"/>
-                        <outlet property="progressBar" destination="gqs-II-0uv" id="9Sw-9I-aej"/>
+                        <outlet property="newProgressBar" destination="gqs-II-0uv" id="Mm2-do-RJb"/>
                         <outlet property="progressLabel" destination="MCm-am-TQO" id="jRg-Yc-Xcx"/>
                         <outlet property="yourPhotosLabel" destination="hAZ-YD-mwD" id="ExA-AL-iBq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSY-RH-jqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6080" y="281"/>
+            <point key="canvasLocation" x="6079.7101449275369" y="279.91071428571428"/>
         </scene>
         <!--TabBarVC-->
         <scene sceneID="maj-Ht-1Ru">
@@ -3656,6 +3786,7 @@ and simple exercises</string>
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.17254901959999999" green="0.1764705882" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="PeQ-Wv-7C8" kind="relationship" relationship="viewControllers" id="H1M-df-Gea"/>
@@ -3711,6 +3842,7 @@ and simple exercises</string>
         <image name="Wrinkles" width="178" height="178"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.backward.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="cross" width="20" height="27"/>
