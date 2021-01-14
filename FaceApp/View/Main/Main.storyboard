@@ -857,7 +857,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day1Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="7DY-WL-qnO"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="8fw-lh-X6L"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehU-R8-CaF">
@@ -899,7 +899,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day2Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="xho-h4-fZt"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="28x-gs-5y2"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m48-Ox-KsB">
@@ -941,7 +941,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day3Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="20I-vG-hfr"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="dmE-58-alJ"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI4-5p-VOe">
@@ -983,7 +983,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day4Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="CuD-Zj-FHl"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="oL2-50-bv8"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvM-La-l9a">
@@ -1025,7 +1025,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day5Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="bk4-ua-ep8"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="iCg-gn-ULW"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nS-Mw-1cr">
@@ -1067,7 +1067,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day6Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="aTt-tD-dsp"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="FOA-Hw-7B5"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSu-c5-0pR">
@@ -1109,7 +1109,7 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day7Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="4iS-WL-g2P"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="g6d-YV-aBv"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3f-Vq-WBD">
@@ -1406,17 +1406,6 @@ and simple exercises</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWd-pG-CtV">
-                                <rect key="frame" x="206" y="0.0" width="2" height="193"/>
-                                <color key="backgroundColor" red="0.42745098039215684" green="0.082352941176470587" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="QGV-af-EQq"/>
-                                    <constraint firstAttribute="width" constant="2" id="XFR-8D-bSx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your personnolized course is ready" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIn-gW-uBx">
                                 <rect key="frame" x="77.5" y="214" width="259" height="65"/>
                                 <constraints>
@@ -1667,11 +1656,9 @@ and simple exercises</string>
                             <constraint firstItem="0xh-Y2-AU1" firstAttribute="leading" secondItem="Xlp-U9-xne" secondAttribute="leading" constant="32" id="11F-jD-Uin"/>
                             <constraint firstItem="UD7-dg-zhn" firstAttribute="top" secondItem="N57-eW-L0f" secondAttribute="bottom" constant="11" id="3Qi-gK-ldF"/>
                             <constraint firstItem="bIn-gW-uBx" firstAttribute="top" secondItem="Xlp-U9-xne" secondAttribute="top" constant="170" id="52V-Vj-ahU"/>
-                            <constraint firstItem="yWd-pG-CtV" firstAttribute="top" secondItem="Gvk-LC-CrM" secondAttribute="top" id="FvF-oW-V4s"/>
                             <constraint firstItem="Xlp-U9-xne" firstAttribute="bottom" secondItem="UD7-dg-zhn" secondAttribute="bottom" constant="25" id="M8U-bn-9HL"/>
                             <constraint firstItem="bIn-gW-uBx" firstAttribute="leading" secondItem="Xlp-U9-xne" secondAttribute="leading" constant="77.5" id="T26-c7-WZP"/>
                             <constraint firstItem="F3o-Kh-l2S" firstAttribute="top" secondItem="bIn-gW-uBx" secondAttribute="bottom" constant="8" id="UeG-LQ-bcs"/>
-                            <constraint firstItem="yWd-pG-CtV" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="Ukw-FE-Jea"/>
                             <constraint firstItem="bIn-gW-uBx" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="XfG-jW-iqD"/>
                             <constraint firstItem="UD7-dg-zhn" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="Ykw-GQ-UUq"/>
                             <constraint firstItem="ldG-Gk-utp" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="auO-I6-r5s"/>
@@ -1687,7 +1674,6 @@ and simple exercises</string>
                     <connections>
                         <outlet property="continueBtn" destination="ldG-Gk-utp" id="nUc-h6-bVW"/>
                         <outlet property="freeTrialLabel" destination="N57-eW-L0f" id="O5H-Y6-pq3"/>
-                        <outlet property="lineLabel" destination="yWd-pG-CtV" id="qWF-fz-fbW"/>
                         <outlet property="personilizedLabel" destination="bIn-gW-uBx" id="5ew-nJ-WLp"/>
                         <outlet property="privacyLabel" destination="44D-JO-ucM" id="CaL-j4-fWi"/>
                         <outlet property="restoreLabel" destination="Utj-V1-ahr" id="mEQ-UR-xLS"/>
@@ -1696,6 +1682,11 @@ and simple exercises</string>
                         <outlet property="star3ImgView" destination="Utq-6A-YN4" id="yc5-JA-9PF"/>
                         <outlet property="star4ImgView" destination="pOi-9x-V2I" id="t5g-0g-KXf"/>
                         <outlet property="star5ImgView" destination="bgB-5l-ywz" id="TwW-VI-i02"/>
+                        <outlet property="view1" destination="ywp-pa-3QM" id="EcL-69-I9z"/>
+                        <outlet property="view2" destination="BQV-oz-Prk" id="2g5-wK-OMg"/>
+                        <outlet property="view3" destination="4TV-bR-5km" id="z0g-Sx-ohp"/>
+                        <outlet property="view4" destination="yXh-M5-57G" id="iYr-Xq-i3x"/>
+                        <outlet property="view5" destination="Mk9-gB-pMY" id="NaG-MQ-6JB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7H-qI-Ief" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3842,7 +3833,7 @@ and simple exercises</string>
         <image name="Wrinkles" width="178" height="178"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="checkmark.circle.fill" catalog="system" width="32" height="32"/>
         <image name="chevron.backward.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="cross" width="20" height="27"/>
