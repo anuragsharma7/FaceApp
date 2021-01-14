@@ -13,7 +13,6 @@ class PaymentVC: BaseClass {
     //    var timer = Timer()
     //    var counter = 0
     
-    
     //MARK:-
     @IBOutlet weak var lineLabel: UILabel!
     @IBOutlet weak var personilizedLabel: UILabel!
@@ -44,7 +43,12 @@ class PaymentVC: BaseClass {
     @IBOutlet weak var restoreLabel: UILabel!
     @IBOutlet weak var privacyLabel: UILabel!
     
+    @IBOutlet weak var view1: UIView!
+    @IBOutlet weak var view2: UIView!
+    @IBOutlet weak var view4: UIView!
     
+    @IBOutlet weak var view5: UIView!
+    @IBOutlet weak var view3: UIView!
     //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +58,26 @@ class PaymentVC: BaseClass {
          allExerciseLabel.blink()
          unlimitedLabel.blink()
          cancelLabel.blink()*/
-         
+        Animation(customView: view1)
+        Animation(customView: view2)
+        Animation(customView: view3)
+        Animation(customView: view4)
+        Animation(customView: view5)
+
     }
     
+    
+    func Animation(customView: UIView)  {
+        UIView.animate(withDuration: 3.0, delay: 0.0, options: .curveEaseInOut, animations: {
+            
+             customView.transform = CGAffineTransform(translationX: customView.bounds.origin.x + 300, y: customView.bounds.origin.y)
+    
+        }, completion: nil)
+        
+        customView.transform = .identity
+ 
+    }
+   
     
     //MARK:- IBActions
     
@@ -70,8 +91,7 @@ class PaymentVC: BaseClass {
         dismiss(animated: true, completion: nil)
         
     }
-    
-    
+ 
     //MARK:- Methods
     
     override func didReceiveMemoryWarning() {

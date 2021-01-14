@@ -30,6 +30,10 @@ extension UIColor {
     }
 }
 
+struct userDefaultKey {
+    static let dayArr = "dayArr"
+}
+
 //font constants
 extension UIFont {
     class var textStyle: UIFont {

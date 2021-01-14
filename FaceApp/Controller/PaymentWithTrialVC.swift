@@ -9,64 +9,64 @@ import UIKit
 import StoreKit
 
 class PaymentWithTrialVC: BaseClass {
-   
-//MARK:- Outlets
-@IBOutlet weak var backBtnOutlet: UIButton!
-@IBOutlet weak var unLockLabel: UILabel!
     
-@IBOutlet weak var newLifeStartLabel: UILabel!
+    //MARK:- Outlets
+    @IBOutlet weak var backBtnOutlet: UIButton!
+    @IBOutlet weak var unLockLabel: UILabel!
     
-@IBOutlet weak var star1ImgView: UIImageView!
+    @IBOutlet weak var newLifeStartLabel: UILabel!
     
-@IBOutlet weak var star2ImgView: UIImageView!
+    @IBOutlet weak var star1ImgView: UIImageView!
     
-@IBOutlet weak var star3ImgView: UIImageView!
-@IBOutlet weak var star4ImgView: UIImageView!
+    @IBOutlet weak var star2ImgView: UIImageView!
     
-@IBOutlet weak var star5ImgView: UIImageView!
+    @IBOutlet weak var star3ImgView: UIImageView!
+    @IBOutlet weak var star4ImgView: UIImageView!
     
-@IBOutlet weak var noInterruptionView: UIView!
-@IBOutlet weak var customWorkOutView: UIView!
+    @IBOutlet weak var star5ImgView: UIImageView!
+//
+//    @IBOutlet weak var noInterruptionView: UIView!
+//    @IBOutlet weak var customWorkOutView: UIView!
+//
+//    @IBOutlet weak var allExerciseView: UIView!
+//    @IBOutlet weak var unlimitedUseView: UIView!
+//
+//    @IBOutlet weak var cancelAnyTimeView: UIView!
+    @IBOutlet weak var mainView: UIView!
     
-@IBOutlet weak var allExerciseView: UIView!
-@IBOutlet weak var unlimitedUseView: UIView!
+    @IBOutlet weak var trialImgView: UIImageView!
     
-@IBOutlet weak var cancelAnyTimeView: UIView!
-@IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var notCommitmentLabel: UILabel!
     
-@IBOutlet weak var trialImgView: UIImageView!
+    @IBOutlet weak var tryNowBtnOutlet: UIButton!
     
-@IBOutlet weak var notCommitmentLabel: UILabel!
+    @IBOutlet weak var weeklyBtnOutlet: UIButton!
     
-@IBOutlet weak var tryNowBtnOutlet: UIButton!
+    @IBOutlet weak var monthlyBtnOutlet: UIButton!
+    @IBOutlet weak var annualyBtnOutlet: UIButton!
     
-@IBOutlet weak var weeklyBtnOutlet: UIButton!
+    @IBOutlet weak var lineLabel: UILabel!
     
-@IBOutlet weak var monthlyBtnOutlet: UIButton!
-@IBOutlet weak var annualyBtnOutlet: UIButton!
+    @IBOutlet weak var restoreLabel: UILabel!
+    @IBOutlet weak var tAndCLabel: UILabel!
     
-@IBOutlet weak var lineLabel: UILabel!
-
-@IBOutlet weak var restoreLabel: UILabel!
-@IBOutlet weak var tAndCLabel: UILabel!
-    
-@IBOutlet weak var spaceBetweenSVAndMainView: NSLayoutConstraint!
+//    @IBOutlet weak var spaceBetweenSVAndMainView: NSLayoutConstraint!
     
     
-   // var myProduct: SKProduct?
+    // var myProduct: SKProduct?
     
     var packagesAvailableForPurchases = [Purchases.Package]()
     
     
-//MARK:- View LifeCycle
+    //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // fetchProducts()
+        // fetchProducts()
         
         Purchases.shared.offerings { [self] (offerings, error) in
             if let offerings = offerings {
-              // Display current offering with offerings.current
+                // Display current offering with offerings.current
                 
                 let offer = offerings.current
                 let packages = offer?.availablePackages
@@ -77,10 +77,10 @@ class PaymentWithTrialVC: BaseClass {
                 // Loop through packages
                 for i in 0...packages!.count - 1{
                     
-                   // Get a reference to the package
+                    // Get a reference to the package
                     
                     let package = packages![i]
-                    print("Packes ====>",package)
+                    print("Packages ====>",package)
                     // Store a reference to the package at the same index as we are going to tag the button with
                     self.packagesAvailableForPurchases.append(package)
                     
@@ -125,78 +125,71 @@ class PaymentWithTrialVC: BaseClass {
                         break
                     }
                     
-
-                 //   self.monthlyBtnOutlet.tag = i
-                    
-
-                    
-                    
                 }
                 
-                
-          }
+            }
         }
         
         
-        spaceBetweenSVAndMainView?.constant = 45
+       // spaceBetweenSVAndMainView?.constant = 45
         if DEVICE_HEIGHT == 667 {
-            spaceBetweenSVAndMainView?.constant = 45
-            }
+          //  spaceBetweenSVAndMainView?.constant = 45
+        }
         else {
             //spaceBetweenSVAndMainView.constant = 173
         }
         
     }
     
-//MARK:- Functions
+    //MARK:- Functions
     
     func pop()  {
         navigationController?.popViewController(animated: true)
-
+        
         dismiss(animated: true, completion: nil)
     }
     
-//MARK:- IBActions
+    //MARK:- IBActions
     
     @IBAction func backButton(_ sender: UIButton) {
         pop()
     }
     
-@IBAction func weeklyButton(_ sender: UIButton) {
-    
-    let package = self.packagesAvailableForPurchases[0]
-  //  let package = self.packagesAvailableForPurchases
-    Purchases.shared.purchasePackage(package) { (transaction, purchaserInfo, error, userCancelled) in
-        if purchaserInfo?.entitlements.all["pro"]?.isActive == true {
-            // Unlock that great "pro" content
-
-
-            self.navigationController?.pushViewController(HomeVc.instance(), animated: true)
-            self.dismiss(animated: true, completion: nil)
+    @IBAction func weeklyButton(_ sender: UIButton) {
+        
+        guard self.packagesAvailableForPurchases.count != 0 else { return }
+        
+        let package = self.packagesAvailableForPurchases[0]
+        //  let package = self.packagesAvailableForPurchases
+        Purchases.shared.purchasePackage(package) { (transaction, purchaserInfo, error, userCancelled) in
+            if purchaserInfo?.entitlements.all["pro"]?.isActive == true {
+                // Unlock that great "pro" content
+                
+                
+                self.navigationController?.pushViewController(HomeVc.instance(), animated: true)
+                self.dismiss(animated: true, completion: nil)
+            }
         }
+        
+        
+        self.navigationController?.pushViewController(HomeVc.instance(), animated: true)
     }
     
-    
-    
-    
-    self.navigationController?.pushViewController(HomeVc.instance(), animated: true)
-    }
-    
-@IBAction func monthlyButton(_ sender: UIButton) {
-  
-    let package = self.packagesAvailableForPurchases[sender.tag]
-    Purchases.shared.purchasePackage(package) { (transaction, purchaserInfo, error, userCancelled) in
-        if purchaserInfo?.entitlements.all["pro"]?.isActive == true {
-            // Unlock that great "pro" content
-            
-            self.dismiss(animated: true, completion: nil)
+    @IBAction func monthlyButton(_ sender: UIButton) {
+        
+        let package = self.packagesAvailableForPurchases[sender.tag]
+        Purchases.shared.purchasePackage(package) { (transaction, purchaserInfo, error, userCancelled) in
+            if purchaserInfo?.entitlements.all["pro"]?.isActive == true {
+                // Unlock that great "pro" content
+                
+                self.dismiss(animated: true, completion: nil)
+            }
         }
-    }
-    
+        
     }
     
     @IBAction func annualyButton(_ sender: UIButton) {
-       
+        
         let package = self.packagesAvailableForPurchases[sender.tag]
         Purchases.shared.purchasePackage(package) { (transaction, purchaserInfo, error, userCancelled) in
             if purchaserInfo?.entitlements.all["pro"]?.isActive == true {
@@ -209,9 +202,9 @@ class PaymentWithTrialVC: BaseClass {
     }
     
     @IBAction func tryNowButton(_ sender: UIButton) {
-   
+        
         self.navigationController?.pushViewController(RoutineVC.instance(), animated: true)
     }
-   
+    
     
 }

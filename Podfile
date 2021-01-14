@@ -8,14 +8,14 @@ target 'FaceApp' do
   # Pods for FaceApp
 #pod 'Purchases', '3.8.0'
 pod 'Purchases', '3.9.2'
-pod 'Firebase/Analytics'
-pod 'FirebaseAuth'
-pod 'Firebase/Messaging'
-pod 'Firebase/Firestore'
-pod 'Firebase/Database'
-pod 'Firebase/Core'
-pod 'Firebase/Storage'
-
+pod 'Firebase/Analytics','7.3.0'
+pod 'FirebaseAuth','7.3.0'
+pod 'Firebase/Messaging','7.3.0'
+#pod 'Firebase/Firestore'
+pod 'Firebase/Database','7.3.0'
+pod 'Firebase/Core','7.3.0'
+pod 'Firebase/Storage','7.3.0'
+pod 'FirebaseFirestore', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => '7.3.0'
 
   target 'FaceAppTests' do
     inherit! :search_paths

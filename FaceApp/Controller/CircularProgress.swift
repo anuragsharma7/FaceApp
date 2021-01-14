@@ -65,7 +65,7 @@ class CircularProgress: UIView {
         animation.duration = duration
         // Animate from 0 (no circle) to 1 (full circle)
         animation.fromValue = 0
-        animation.toValue = 0.25
+        animation.toValue = 1.5
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         progressLayer.strokeEnd = CGFloat(value)
         progressLayer.add(animation, forKey: "animateCircle")

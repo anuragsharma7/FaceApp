@@ -737,7 +737,7 @@ and simple exercises</string>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oss-Lb-3Bo">
                                                 <rect key="frame" x="8.5" y="3" width="30" height="30"/>
-                                                <color key="backgroundColor" red="0.12941176470588234" green="0.13333333333333333" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="NoE-rk-rOa"/>
                                                     <constraint firstAttribute="height" constant="30" id="quh-26-Ynu"/>
@@ -745,10 +745,10 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day1Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="7DY-WL-qnO"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="7Wn-Hf-7mh"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehU-R8-CaF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehU-R8-CaF">
                                                 <rect key="frame" x="8.5" y="45" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="DPG-pa-pUL"/>
@@ -774,12 +774,12 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="So6-3j-Rub">
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="So6-3j-Rub">
                                         <rect key="frame" x="53" y="0.0" width="47" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-0t-FRx">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-0t-FRx">
                                                 <rect key="frame" x="8.5" y="3" width="30" height="30"/>
-                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="AXm-yK-MRD"/>
                                                     <constraint firstAttribute="width" constant="30" id="tmR-zb-8xz"/>
@@ -787,10 +787,10 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day2Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="xho-h4-fZt"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="Yh7-CH-hem"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m48-Ox-KsB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m48-Ox-KsB">
                                                 <rect key="frame" x="8.5" y="45" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="YyY-4o-MUx"/>
@@ -816,12 +816,12 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89q-V2-cbf">
+                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89q-V2-cbf">
                                         <rect key="frame" x="106" y="0.0" width="47" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3h-aY-lY8">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3h-aY-lY8">
                                                 <rect key="frame" x="8.5" y="3" width="30" height="30"/>
-                                                <color key="backgroundColor" red="0.12941176469999999" green="0.1333333333" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="KB1-W1-AXX"/>
                                                     <constraint firstAttribute="height" constant="30" id="ibj-Zx-KLV"/>
@@ -829,10 +829,10 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day3Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="20I-vG-hfr"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="1n3-iZ-y0f"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI4-5p-VOe">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI4-5p-VOe">
                                                 <rect key="frame" x="8.5" y="45" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="0cy-A7-WXs"/>
@@ -858,12 +858,12 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1v-PK-Zff">
+                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1v-PK-Zff">
                                         <rect key="frame" x="159" y="0.0" width="47" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXl-kB-nfo">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXl-kB-nfo">
                                                 <rect key="frame" x="8.5" y="3" width="30" height="30"/>
-                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="1Bc-KY-7Qn"/>
                                                     <constraint firstAttribute="width" constant="30" id="1ZU-jH-9aA"/>
@@ -871,10 +871,10 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day4Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="CuD-Zj-FHl"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="tVl-kA-Fw9"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvM-La-l9a">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvM-La-l9a">
                                                 <rect key="frame" x="8.5" y="45" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="BG6-cX-FdT"/>
@@ -900,12 +900,12 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-VO-4nd">
+                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-VO-4nd">
                                         <rect key="frame" x="212" y="0.0" width="47" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0n-kA-GqK">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0n-kA-GqK">
                                                 <rect key="frame" x="8.5" y="3" width="30" height="30"/>
-                                                <color key="backgroundColor" red="0.12941176469999999" green="0.1333333333" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="O24-NT-hox"/>
                                                     <constraint firstAttribute="width" constant="30" id="n5v-ED-avO"/>
@@ -913,10 +913,10 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day5Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="bk4-ua-ep8"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="beD-Uz-dQV"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nS-Mw-1cr">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nS-Mw-1cr">
                                                 <rect key="frame" x="8.5" y="45" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="BF0-mj-BrR"/>
@@ -942,12 +942,12 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8B-a0-2Ou">
+                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8B-a0-2Ou">
                                         <rect key="frame" x="265" y="0.0" width="47" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWl-TT-ljw">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWl-TT-ljw">
                                                 <rect key="frame" x="8.5" y="3" width="30" height="30"/>
-                                                <color key="backgroundColor" red="0.12941176469999999" green="0.1333333333" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="6hc-13-j9U"/>
                                                     <constraint firstAttribute="height" constant="30" id="Jlm-Nl-vnB"/>
@@ -955,10 +955,10 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day6Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="aTt-tD-dsp"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="x3T-ZG-MkK"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSu-c5-0pR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSu-c5-0pR">
                                                 <rect key="frame" x="8.5" y="45" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Ezd-DT-smY"/>
@@ -984,12 +984,12 @@ and simple exercises</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwt-Ey-rBt">
+                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwt-Ey-rBt">
                                         <rect key="frame" x="318" y="0.0" width="47" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnD-Pc-p2U">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnD-Pc-p2U">
                                                 <rect key="frame" x="8.5" y="3" width="30" height="30"/>
-                                                <color key="backgroundColor" red="0.12941176469999999" green="0.1333333333" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="UN1-kP-gfI"/>
                                                     <constraint firstAttribute="width" constant="30" id="mzO-cr-NDf"/>
@@ -997,10 +997,10 @@ and simple exercises</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="day7Button:" destination="nnG-3f-O7O" eventType="touchUpInside" id="4iS-WL-g2P"/>
+                                                    <action selector="daysButton:" destination="nnG-3f-O7O" eventType="touchUpInside" id="Go1-56-phs"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3f-Vq-WBD">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3f-Vq-WBD">
                                                 <rect key="frame" x="8.5" y="45" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="6bN-11-Q4F"/>
@@ -1294,17 +1294,6 @@ and simple exercises</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWd-pG-CtV">
-                                <rect key="frame" x="206" y="0.0" width="2" height="193"/>
-                                <color key="backgroundColor" red="0.42745098039215684" green="0.082352941176470587" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="QGV-af-EQq"/>
-                                    <constraint firstAttribute="width" constant="2" id="XFR-8D-bSx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your personnolized course is ready" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIn-gW-uBx">
                                 <rect key="frame" x="77.5" y="214" width="259" height="65"/>
                                 <constraints>
@@ -1555,11 +1544,9 @@ and simple exercises</string>
                             <constraint firstItem="0xh-Y2-AU1" firstAttribute="leading" secondItem="Xlp-U9-xne" secondAttribute="leading" constant="32" id="11F-jD-Uin"/>
                             <constraint firstItem="UD7-dg-zhn" firstAttribute="top" secondItem="N57-eW-L0f" secondAttribute="bottom" constant="11" id="3Qi-gK-ldF"/>
                             <constraint firstItem="bIn-gW-uBx" firstAttribute="top" secondItem="Xlp-U9-xne" secondAttribute="top" constant="170" id="52V-Vj-ahU"/>
-                            <constraint firstItem="yWd-pG-CtV" firstAttribute="top" secondItem="Gvk-LC-CrM" secondAttribute="top" id="FvF-oW-V4s"/>
                             <constraint firstItem="Xlp-U9-xne" firstAttribute="bottom" secondItem="UD7-dg-zhn" secondAttribute="bottom" constant="25" id="M8U-bn-9HL"/>
                             <constraint firstItem="bIn-gW-uBx" firstAttribute="leading" secondItem="Xlp-U9-xne" secondAttribute="leading" constant="77.5" id="T26-c7-WZP"/>
                             <constraint firstItem="F3o-Kh-l2S" firstAttribute="top" secondItem="bIn-gW-uBx" secondAttribute="bottom" constant="8" id="UeG-LQ-bcs"/>
-                            <constraint firstItem="yWd-pG-CtV" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="Ukw-FE-Jea"/>
                             <constraint firstItem="bIn-gW-uBx" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="XfG-jW-iqD"/>
                             <constraint firstItem="UD7-dg-zhn" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="Ykw-GQ-UUq"/>
                             <constraint firstItem="ldG-Gk-utp" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="auO-I6-r5s"/>
@@ -1575,7 +1562,6 @@ and simple exercises</string>
                     <connections>
                         <outlet property="continueBtn" destination="ldG-Gk-utp" id="nUc-h6-bVW"/>
                         <outlet property="freeTrialLabel" destination="N57-eW-L0f" id="O5H-Y6-pq3"/>
-                        <outlet property="lineLabel" destination="yWd-pG-CtV" id="qWF-fz-fbW"/>
                         <outlet property="personilizedLabel" destination="bIn-gW-uBx" id="5ew-nJ-WLp"/>
                         <outlet property="privacyLabel" destination="44D-JO-ucM" id="CaL-j4-fWi"/>
                         <outlet property="restoreLabel" destination="Utj-V1-ahr" id="mEQ-UR-xLS"/>
@@ -1584,11 +1570,16 @@ and simple exercises</string>
                         <outlet property="star3ImgView" destination="Utq-6A-YN4" id="yc5-JA-9PF"/>
                         <outlet property="star4ImgView" destination="pOi-9x-V2I" id="t5g-0g-KXf"/>
                         <outlet property="star5ImgView" destination="bgB-5l-ywz" id="TwW-VI-i02"/>
+                        <outlet property="view1" destination="ywp-pa-3QM" id="lul-pF-I7y"/>
+                        <outlet property="view2" destination="BQV-oz-Prk" id="lew-JZ-clA"/>
+                        <outlet property="view3" destination="yXh-M5-57G" id="qSu-nS-mfi"/>
+                        <outlet property="view4" destination="Mk9-gB-pMY" id="70x-vp-efZ"/>
+                        <outlet property="view5" destination="4TV-bR-5km" id="1X1-wJ-cTd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7H-qI-Ief" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734.7826086956522" y="-362.27678571428572"/>
+            <point key="canvasLocation" x="1796" y="-362"/>
         </scene>
         <!--WorkOutVC-->
         <scene sceneID="gfe-Sz-8e6">

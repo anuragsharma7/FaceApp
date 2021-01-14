@@ -52,24 +52,24 @@ class LoadingVC: BaseClass {
     //MARK:- Methods
     @objc func animateProgress() {
         let cp = self.view.viewWithTag(101) as! CircularProgress
-        cp.setProgressWithAnimation(duration: 10, value: 1)
+        cp.setProgressWithAnimation(duration: 8, value: 1)
     }
     
     @objc func timerBegin() {
         print(count)
-        if count == 3 {
+        if count == 2 {
             animateWith(text: firstText)
         }
         
-        if count == 6 {
+        if count == 4 {
             animateWith(text: secondText)
         }
         
-        if count == 9 {
+        if count == 6 {
             animateWith(text: thirdText)
         }
         
-        if count > 10 {
+        if count > 8 {
             //keeps the label visible
             self.customisationLabel.alpha = 1
             //remove timer
