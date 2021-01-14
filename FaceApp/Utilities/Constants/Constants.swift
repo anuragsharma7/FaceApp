@@ -16,6 +16,12 @@ let DEVICE_HEIGHT = UIScreen.main.bounds.height
 let SAFE_AREA = AppDelegate.shared.window?.safeAreaInsets ?? UIEdgeInsets.zero
 let IS_IPHONE = UIDevice.current.userInterfaceIdiom == .phone
 
+
+
+struct userDefaultKeys {
+    static let objectiveArr = "objectiveArr"
+}
+
 //not using below code for now//
 
 //color constants

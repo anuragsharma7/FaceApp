@@ -24,17 +24,67 @@ class AgeVC: BaseClass {
     override func viewDidLoad() {
         super.viewDidLoad()
         ageText.delegate = self
+       
     }
+   
     
+    func checkMandatoryFields(){
+
+       //CHECK EMPTY FIELDS
+       if let age = ageText.text , age.isEmpty {
+           print("Mandatory fields are: ")
+           errorDisplay(userMessage: "Please enter the age.")
+           return
+       }
+
+       //CHECK SPACE ONLY FIELDS
+   }
+    
+    func errorDisplay(userMessage:String){
+
+        let myAlert = UIAlertController(title: "WOF", message: userMessage, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
+     }
     
     //MARK:- IBAction
     
     @IBAction func continueButton(_ sender: UIButton) {
+        checkMandatoryFields()
         self.navigationController?.pushViewController(HowYouEverVC.instance(), animated: true)
+        
+        
+        UserDefaults.standard.set(ageText.text, forKey:"ageKey")
+       
+       if let val = UserDefaults.standard.value(forKey: "ageKey") {
+           print(val)
+        
     }
     
+//     func checkMandatoryFields(){
+//
+//        //CHECK EMPTY FIELDS
+//        if let age = ageText.text , age.isEmpty {
+//            print("Mandatory fields are: ")
+//            errorDisplay(userMessage: "Please enter the age.")
+//            return
+//        }
+//
+//        //CHECK SPACE ONLY FIELDS
+//    }
+//    func errorDisplay(userMessage:String){
+//
+//        let myAlert = UIAlertController(title: "WOF", message: userMessage, preferredStyle: UIAlertController.Style.alert)
+//        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+//        myAlert.addAction(okAction)
+//        self.present(myAlert, animated: true, completion: nil)
+//     }
+    
+    
+    
 }
-
+}
 extension AgeVC: UITextFieldDelegate {
     
     func textField(_ textField: UITextField,
@@ -66,4 +116,9 @@ extension AgeVC: UITextFieldDelegate {
         
     }
     
+    
+    
+    
 }
+
+
