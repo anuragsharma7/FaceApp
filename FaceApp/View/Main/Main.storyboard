@@ -3758,7 +3758,7 @@ and simple exercises</string>
                     <connections>
                         <outlet property="collectionView" destination="EBa-u2-Beg" id="jEq-ZJ-e5U"/>
                         <outlet property="imgView" destination="Nke-76-Cje" id="imR-T3-ZYm"/>
-                        <outlet property="newProgressBar" destination="gqs-II-0uv" id="Mm2-do-RJb"/>
+                        <outlet property="progressBar" destination="gqs-II-0uv" id="HOy-Ff-QJW"/>
                         <outlet property="progressLabel" destination="MCm-am-TQO" id="jRg-Yc-Xcx"/>
                         <outlet property="yourPhotosLabel" destination="hAZ-YD-mwD" id="ExA-AL-iBq"/>
                     </connections>
