@@ -21,7 +21,6 @@ class ConsistencyVC: BaseClass {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     //MARK:- Methods

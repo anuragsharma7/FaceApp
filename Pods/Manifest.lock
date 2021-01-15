@@ -100,6 +100,9 @@ PODS:
   - Purchases (3.9.2):
     - PurchasesCoreSwift (= 3.9.2)
   - PurchasesCoreSwift (3.9.2)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
 
 DEPENDENCIES:
   - Firebase/Analytics (= 7.3.0)
@@ -110,6 +113,7 @@ DEPENDENCIES:
   - FirebaseAuth (= 7.3.0)
   - FirebaseFirestore (from `https://github.com/invertase/firestore-ios-sdk-frameworks.git`, tag `7.3.0`)
   - Purchases (= 3.9.2)
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
@@ -132,6 +136,7 @@ SPEC REPOS:
     - PromisesObjC
     - Purchases
     - PurchasesCoreSwift
+    - SDWebImage
 
 EXTERNAL SOURCES:
   FirebaseFirestore:
@@ -164,7 +169,8 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Purchases: d8a798c9c7552fe66b550bf314a143e94ffa70c8
   PurchasesCoreSwift: ea4eabae180416e580ac60366f41aa1fefec0693
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
 
-PODFILE CHECKSUM: a613dcbd7c7dc48bf77ba03fbc29fa330a3cb726
+PODFILE CHECKSUM: df0b949270b6bf76b123488fffbecb7ec304016c
 
 COCOAPODS: 1.10.1

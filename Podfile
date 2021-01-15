@@ -16,6 +16,8 @@ pod 'Firebase/Database','7.3.0'
 pod 'Firebase/Core','7.3.0'
 pod 'Firebase/Storage','7.3.0'
 pod 'FirebaseFirestore', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => '7.3.0'
+pod 'SDWebImage'
+
 
   target 'FaceAppTests' do
     inherit! :search_paths

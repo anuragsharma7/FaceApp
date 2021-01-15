@@ -12,7 +12,7 @@ class CommonMethods {
     
     ///Sets the root VC of the App
     class func setRootViewController() {
-        let VC = LoadingVC.instance()
+        let VC = WelcomeVC.instance()
         let navVC = UINavigationController(rootViewController: VC)
         navVC.isNavigationBarHidden = true
         navVC.view.frame = CGRect(x: 0, y: 0, width: DEVICE_WIDTH, height: DEVICE_HEIGHT)

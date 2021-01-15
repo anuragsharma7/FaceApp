@@ -67,7 +67,7 @@ class ScheduleVC: BaseClass {
     }
     
     //MARK:- Methods
-     
+    
     
     //MARK:- IBAction
     
@@ -78,7 +78,7 @@ class ScheduleVC: BaseClass {
             selectedDaysArr[sender.tag] = 0
             // UserDefaults.standard.set(sender.tag, forKey: "Monday")
             if day1View.backgroundColor == UIColor(red: 45/255, green: 127/255, blue: 240/255, alpha: 1.0)  {
-//                selectedDaysArr[sender.tag] = 0
+                //                selectedDaysArr[sender.tag] = 0
                 day1View.backgroundColor = .black
             }
             else {
@@ -87,7 +87,7 @@ class ScheduleVC: BaseClass {
             }
             break
         case 1:
-           // UserDefaults.standard.set(sender.tag, forKey: "Tuesday")
+            // UserDefaults.standard.set(sender.tag, forKey: "Tuesday")
             if day2View.backgroundColor == UIColor(red: 45/255, green: 127/255, blue: 240/255, alpha: 1.0)  {
                 selectedDaysArr[sender.tag] = 0
                 day2View.backgroundColor = .black
@@ -98,7 +98,7 @@ class ScheduleVC: BaseClass {
             }
             break
         case 2:
-           // UserDefaults.standard.set(sender.tag, forKey: "Wednesday")
+            // UserDefaults.standard.set(sender.tag, forKey: "Wednesday")
             if day3View.backgroundColor == UIColor(red: 45/255, green: 127/255, blue: 240/255, alpha: 1.0)  {
                 selectedDaysArr[sender.tag] = 0
                 day3View.backgroundColor = .black
@@ -109,7 +109,7 @@ class ScheduleVC: BaseClass {
             }
             break
         case 3:
-           // UserDefaults.standard.set(sender.tag, forKey: "Thursday")
+            // UserDefaults.standard.set(sender.tag, forKey: "Thursday")
             if day4View.backgroundColor == UIColor(red: 45/255, green: 127/255, blue: 240/255, alpha: 1.0)  {
                 selectedDaysArr[sender.tag] = 0
                 day4View.backgroundColor = .black
@@ -120,7 +120,7 @@ class ScheduleVC: BaseClass {
             }
             break
         case 4:
-           // UserDefaults.standard.set(sender.tag, forKey: "Friday")
+            // UserDefaults.standard.set(sender.tag, forKey: "Friday")
             if day5View.backgroundColor == UIColor(red: 45/255, green: 127/255, blue: 240/255, alpha: 1.0)  {
                 selectedDaysArr[sender.tag] = 0
                 day5View.backgroundColor = .black
@@ -131,7 +131,7 @@ class ScheduleVC: BaseClass {
             }
             break
         case 5:
-           // UserDefaults.standard.set(sender.tag, forKey: "Saturday")
+            // UserDefaults.standard.set(sender.tag, forKey: "Saturday")
             if day6View.backgroundColor == UIColor(red: 45/255, green: 127/255, blue: 240/255, alpha: 1.0)  {
                 selectedDaysArr[sender.tag] = 0
                 day6View.backgroundColor = .black
@@ -142,7 +142,7 @@ class ScheduleVC: BaseClass {
             }
             break
         case 6:
-           // UserDefaults.standard.set(sender.tag, forKey: "Sunday")
+            // UserDefaults.standard.set(sender.tag, forKey: "Sunday")
             if day7View.backgroundColor == UIColor(red: 45/255, green: 127/255, blue: 240/255, alpha: 1.0)  {
                 selectedDaysArr[sender.tag] = 0
                 day7View.backgroundColor = .black
@@ -153,7 +153,7 @@ class ScheduleVC: BaseClass {
             }
             break
         default:
-       
+            
             break
         }
         UserDefaults.standard.setValue(selectedDaysArr, forKey: "SelectedDays")
@@ -162,12 +162,12 @@ class ScheduleVC: BaseClass {
         
     }
     
-   
+    
     
     @IBAction func continueButton(_ sender: UIButton) {
         let consistVC = ConsistencyVC.instance()
         self.navigationController?.pushViewController(consistVC, animated: true)
     }
-
+    
     
 }

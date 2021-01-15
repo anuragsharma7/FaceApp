@@ -19,11 +19,7 @@ class BaseClass: UIViewController {
     ///
     /// - Returns: an instance of referenced class.
     class func instance() -> UIViewController {
-        
-        
         let className = String(describing: self)
-        
-        
         return kMainStoryboard.instantiateViewController(withIdentifier: className)
     }
     

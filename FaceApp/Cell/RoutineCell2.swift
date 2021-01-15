@@ -6,27 +6,35 @@
 //
 
 import UIKit
+import SDWebImage
 
 class RoutineCell2: UITableViewCell {
-
-//MARK:- Outlets
-@IBOutlet weak var playBtn: UIButton!
-@IBOutlet weak var marylineLabel: UILabel!
+    
+    //MARK:- Outlets
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var marylineLabel: UILabel!
+    @IBOutlet weak var imgVideo: UIImageView!
+    
+    var videos: Videos? {
+        didSet {
+            marylineLabel.text = videos!.name
+            self.imgVideo.sd_setImage(with: URL(string: videos!.videoUrl!), placeholderImage: Placeholders.UserProfile, options: SDWebImageOptions(rawValue: 0)) { (image, error, type, url) in
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
     
-//MARK:- IBActions
-@IBAction func playButton(_ sender: UIButton) {
+    //MARK:- IBActions
+    @IBAction func playButton(_ sender: UIButton) {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
 }
