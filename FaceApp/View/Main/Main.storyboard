@@ -1693,10 +1693,10 @@ and simple exercises</string>
             </objects>
             <point key="canvasLocation" x="1734.7826086956522" y="-362.27678571428572"/>
         </scene>
-        <!--WorkOutVC-->
+        <!--View Controller-->
         <scene sceneID="gfe-Sz-8e6">
             <objects>
-                <viewController storyboardIdentifier="WorkOutVC" title="WorkOutVC" id="g52-sZ-1bW" customClass="WorkOutVC" customModule="FaceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorkOutVC" id="g52-sZ-1bW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cxn-gT-ugy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3594,10 +3594,10 @@ and simple exercises</string>
             </objects>
             <point key="canvasLocation" x="11038" y="-528"/>
         </scene>
-        <!--ProgressVC-->
+        <!--View Controller-->
         <scene sceneID="5bt-Jx-9Mz">
             <objects>
-                <viewController storyboardIdentifier="ProgressVC" title="ProgressVC" id="8nT-MB-YCU" customClass="ProgressVC" customModule="FaceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8nT-MB-YCU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bKm-YQ-bvW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3697,7 +3697,7 @@ and simple exercises</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="ProgressCell" id="7PP-jd-LsH" customClass="ProgressCell" customModule="FaceApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="ProgressCellID" id="7PP-jd-LsH" customClass="ProgressCell" customModule="FaceApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1.5" width="145" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C2a-NO-GKn">
@@ -3727,7 +3727,7 @@ and simple exercises</string>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="145" height="200"/>
                                         <connections>
-                                            <outlet property="imgView" destination="BEo-tC-wOB" id="l5p-Mr-AcP"/>
+                                            <outlet property="uploadPhotoImgView" destination="BEo-tC-wOB" id="TId-fY-BEX"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -3833,7 +3833,7 @@ and simple exercises</string>
         <image name="Wrinkles" width="178" height="178"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="checkmark.circle.fill" catalog="system" width="32" height="32"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.backward.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="cross" width="20" height="27"/>

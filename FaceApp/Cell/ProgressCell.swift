@@ -8,11 +8,15 @@
 import UIKit
 
 class ProgressCell: UICollectionViewCell {
-    
+     
 //MARK:- Outlets
+  
+    @IBOutlet weak var uploadPhotoImgView: UIImageView!
     
-@IBOutlet weak var imgView: UIImageView!
-    
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
     
     
 }

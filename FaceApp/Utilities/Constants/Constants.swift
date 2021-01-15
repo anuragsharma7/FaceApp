@@ -10,11 +10,21 @@ import UIKit
 
 let kMainStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
+let kMain2Storyboard = UIStoryboard(name: "Main2", bundle: nil)
+
 // MARK:- Device Sizes
 let DEVICE_WIDTH = UIScreen.main.bounds.width
 let DEVICE_HEIGHT = UIScreen.main.bounds.height
 let SAFE_AREA = AppDelegate.shared.window?.safeAreaInsets ?? UIEdgeInsets.zero
 let IS_IPHONE = UIDevice.current.userInterfaceIdiom == .phone
+
+
+let AppName: String = {
+        if let infoDict = Bundle.main.infoDictionary, let value = infoDict["CFBundleDisplayName"] as? String {
+            return value
+        }
+        return ""
+    }()
 
 
 

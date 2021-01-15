@@ -23,6 +23,11 @@ class BaseClass: UIViewController {
         return kMainStoryboard.instantiateViewController(withIdentifier: className)
     }
     
+    class func instance2() -> UIViewController {
+        let className = String(describing: self)
+        return kMain2Storyboard.instantiateViewController(withIdentifier: className)
+    }
+    
     /// Will disable the effect of darm mode and our app will always run in light mode.
     func disableDarkModeReflection() {
         if #available(iOS 13.0, *) {

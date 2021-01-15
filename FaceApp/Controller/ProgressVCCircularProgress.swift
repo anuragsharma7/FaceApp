@@ -5,9 +5,10 @@
 //  Created by Divya Pathak on 17/12/20.
 //
 
+
 import UIKit
 
-class CircularProgress: UIView {
+class ProgressVCCircularProgress: UIView {
 
     fileprivate var progressLayer = CAShapeLayer()
     fileprivate var tracklayer = CAShapeLayer()
@@ -52,7 +53,7 @@ class CircularProgress: UIView {
         progressLayer.strokeColor = UIColor.red.cgColor
         progressLayer.lineWidth = 10.0
         progressLayer.lineCap = .round
-        progressLayer.strokeEnd = 0
+        progressLayer.strokeEnd = 0.25
         layer.addSublayer(progressLayer)
         
     }
@@ -65,7 +66,7 @@ class CircularProgress: UIView {
         animation.duration = duration
         // Animate from 0 (no circle) to 1 (full circle)
         animation.fromValue = 0
-        animation.toValue = 1.5
+        animation.toValue = 0.25
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         progressLayer.strokeEnd = CGFloat(value)
         progressLayer.add(animation, forKey: "animateCircle")

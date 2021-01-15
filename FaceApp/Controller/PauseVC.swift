@@ -12,7 +12,7 @@ class PauseVC: BaseClass {
 
 //MARK:- Outlets
     
-    @IBOutlet weak var circularProgress: CircularProgress!
+@IBOutlet weak var circularProgress: CircularProgress!
     
 @IBOutlet weak var timeToRestLabel: UILabel!
 @IBOutlet weak var crossBtn: UIButton!
@@ -37,6 +37,8 @@ class PauseVC: BaseClass {
         
         //animate progress
         self.perform(#selector(animateProgress), with: nil, afterDelay: 1)
+        
+        
     }
     
     
