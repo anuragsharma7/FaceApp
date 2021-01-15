@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 let kMainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+let kVideoStoryboard = UIStoryboard(name: "Video", bundle: nil)
+
 
 let kMain2Storyboard = UIStoryboard(name: "Main2", bundle: nil)
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nnG-3f-O7O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nnG-3f-O7O">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1944,7 +1944,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYp-XD-t06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3078" y="64"/>
+            <point key="canvasLocation" x="3093" y="64"/>
         </scene>
         <!--RoutineVC-->
         <scene sceneID="5Vu-oi-58q">
@@ -2325,7 +2325,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7P-le-ffe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6659" y="-528"/>
+            <point key="canvasLocation" x="6661" y="-533"/>
         </scene>
         <!--TakeAPhotoVC-->
         <scene sceneID="3sU-H8-zhg">
@@ -2906,7 +2906,7 @@ and simple exercises</string>
         <!--ExerciseVC-->
         <scene sceneID="7Zv-hE-LNq">
             <objects>
-                <viewController storyboardIdentifier="ExerciseVC" title="ExerciseVC" id="GV1-Fh-ggj" customClass="ExerciseVC" customModule="FaceApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ExerciseVC" id="GV1-Fh-ggj" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W73-p5-YL4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3015,7 +3015,7 @@ and simple exercises</string>
                                                     <constraint firstAttribute="width" constant="25" id="1Iu-ax-gp2"/>
                                                     <constraint firstAttribute="height" constant="29" id="5x0-Ew-smR"/>
                                                 </constraints>
-                                                <state key="normal" image="exclamationmark.circle.fill" catalog="system"/>
+                                                <state key="normal" image="training"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3141,6 +3141,9 @@ and simple exercises</string>
                                             <constraint firstAttribute="height" constant="45" id="naq-wk-Jrr"/>
                                         </constraints>
                                         <state key="normal" image="cross"/>
+                                        <connections>
+                                            <action selector="crossBtn:" destination="Ba9-zm-XPK" eventType="touchUpInside" id="hOB-t0-iaQ"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM0-nH-3TE">
                                         <rect key="frame" x="187" y="30" width="54" height="45"/>
@@ -3352,6 +3355,7 @@ and simple exercises</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="crossBtn" destination="wS0-l2-qUT" id="Ra1-NE-xgP"/>
                         <outlet property="tableView" destination="WHa-C2-TD2" id="lmy-K3-q4S"/>
                     </connections>
                 </viewController>
@@ -3371,10 +3375,10 @@ and simple exercises</string>
                                 <rect key="frame" x="40" y="172" width="334" height="420"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A1-YK-Fke">
-                                        <rect key="frame" x="279" y="10" width="35" height="45"/>
+                                        <rect key="frame" x="264" y="10" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="35" id="2pH-3L-wHQ"/>
-                                            <constraint firstAttribute="height" constant="45" id="j3B-Kk-mI7"/>
+                                            <constraint firstAttribute="width" constant="50" id="2pH-3L-wHQ"/>
+                                            <constraint firstAttribute="height" constant="50" id="j3B-Kk-mI7"/>
                                         </constraints>
                                         <state key="normal" image="cross"/>
                                         <connections>
@@ -3476,7 +3480,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38L-Rx-6TS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10384" y="-528"/>
+            <point key="canvasLocation" x="10393" y="-528"/>
         </scene>
         <!--PrgressPopUpVC-->
         <scene sceneID="Hss-RV-5nt">
@@ -3640,7 +3644,7 @@ and simple exercises</string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqs-II-0uv" customClass="ProgressVCCircularProgress" customModule="FaceApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqs-II-0uv" customClass="ProgressCircularProgress" customModule="FaceApp" customModuleProvider="target">
                                         <rect key="frame" x="102" y="53" width="130" height="130"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -3837,7 +3841,6 @@ and simple exercises</string>
         <image name="chevron.backward.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="cross" width="20" height="27"/>
-        <image name="exclamationmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="freetrial" width="79" height="56"/>
         <image name="img" width="122" height="121"/>
         <image name="key" width="30" height="35"/>

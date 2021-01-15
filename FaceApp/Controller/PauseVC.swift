@@ -46,6 +46,7 @@ class PauseVC: BaseClass {
     
     
 @IBAction func crossButton(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
     }
     
 @IBAction func nextButton(_ sender: UIButton) {

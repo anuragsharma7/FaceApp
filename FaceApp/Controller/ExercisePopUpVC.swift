@@ -29,13 +29,13 @@ class ExercisePopUpVC: BaseClass {
     
 //MARK:- IBActions
 @IBAction func crossButton(_ sender: UIButton) {
-    self.navigationController?.pushViewController(ExerciseVC.instance(), animated: true)
+//    self.navigationController?.pushViewController(ExerciseVC.instance(), animated: true)
     
-    
+    self.dismiss(animated: true, completion: nil)
     }
     
 @IBAction func getBackTrainingButton(_ sender: UIButton) {
-    self.navigationController?.pushViewController(ExerciseVC.instance(), animated: true)
+    self.dismiss(animated: true, completion: nil)
     
     }
     
@@ -43,8 +43,7 @@ class ExercisePopUpVC: BaseClass {
  @IBAction func givingUpButton(_ sender: UIButton) {
     
     
-    self.navigationController?.pushViewController(RoutineVC.instance(), animated: true)
-    
+    self.navigationController?.pushViewController(HomeVc.instance(), animated: true)
     }
     
     

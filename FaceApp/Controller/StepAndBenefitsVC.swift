@@ -13,6 +13,7 @@ class StepAndBenefitsVC: BaseClass {
     
 @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var crossBtn: UIButton!
     
 //MARK:- View LifeCycle
     
@@ -24,6 +25,10 @@ class StepAndBenefitsVC: BaseClass {
     }
     
 
+    @IBAction func crossBtn(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     
 
 }
