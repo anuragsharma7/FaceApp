@@ -121,6 +121,12 @@ extension HomeVc: UICollectionViewDataSource {
         case 0: //Routine section
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeVCCell.identifier, for: indexPath) as? HomeVCCell {
                 cell.routine = RoutineArr[indexPath.row]
+ 
+                cell.btnCell.tag = indexPath.row
+                cell.btnCell.addTarget(self,
+                                       action: #selector(self.yourFuncRoutine),
+                     for: .touchUpInside)
+                
                 return cell
             }
         case 1: //Targeted section
@@ -129,11 +135,32 @@ extension HomeVc: UICollectionViewDataSource {
                 cell.lblSubTitle.text = TargetedArr[indexPath.row].name
                 cell.imgBg.sd_setImage(with: URL(string: TargetedArr[indexPath.row].thumbImage!), placeholderImage: Placeholders.UserProfile, options: SDWebImageOptions(rawValue: 0)) { (image, error, type, url) in
                 }
+                cell.btnCell.tag = indexPath.row
+                cell.btnCell.addTarget(self,action: #selector(self.yourFuncTargeted),
+                     for: .touchUpInside)
                 return cell
             }
         default: break
         }
         return UICollectionViewCell()
+    }
+    
+    @objc func yourFuncRoutine(sender : UIButton) {
+        print("anurag1")
+        print(sender.tag)
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "RoutineVC") as! RoutineVC
+        vc.videosArr = RoutineArr[sender.tag].videos
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    @objc func yourFuncTargeted(sender : UIButton) {
+        print("anurag2")
+        print(sender.tag)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "RoutineVC") as! RoutineVC
+        vc.videosArr = TargetedArr[sender.tag].videos
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -154,24 +181,21 @@ extension HomeVc: UICollectionViewDataSource {
 }
 
 extension HomeVc: UICollectionViewDelegate {
-     
+ 
+    /* //not workin###
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("anurag")
-    }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        switch indexPath.section {
-//        case 0:
-//            let vc = storyboard?.instantiateViewController(withIdentifier: "RoutineVC") as! RoutineVC
-//            vc.videosArr = RoutineArr[indexPath.row].videos
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        case 1:
-//            let vc = storyboard?.instantiateViewController(withIdentifier: "RoutineVC") as! RoutineVC
-//            vc.videosArr = TargetedArr[indexPath.row].videos
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        default: break
-//        }
-//    }
+        switch indexPath.section {
+        case 0:
+            let vc = storyboard?.instantiateViewController(withIdentifier: "RoutineVC") as! RoutineVC
+            vc.videosArr = RoutineArr[indexPath.row].videos
+            self.navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            let vc = storyboard?.instantiateViewController(withIdentifier: "RoutineVC") as! RoutineVC
+            vc.videosArr = TargetedArr[indexPath.row].videos
+            self.navigationController?.pushViewController(vc, animated: true)
+        default: break
+        }
+    }*/
     
     //set header size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

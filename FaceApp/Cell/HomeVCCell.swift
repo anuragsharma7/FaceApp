@@ -17,6 +17,7 @@ class HomeVCCell: UICollectionViewCell {
     @IBOutlet weak var imgBg: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblSubTitle: UILabel!
+    @IBOutlet weak var btnCell: UIButton!
     
     //MARK:- Variable
 

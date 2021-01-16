@@ -1,8 +1,8 @@
 //
 //  ImagePicker.swift
 //
-//  Created by Vakul Saini on 18/04/19.
-//  Copyright © 2019 enAct eServices. All rights reserved.
+//  Created by Anurag on 18/04/19.
+//  Copyright. All rights reserved.
 //
 
 import UIKit
@@ -207,7 +207,7 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
         let cameraMediaType = AVMediaType.video
         let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: cameraMediaType)
 
-        let message = "Camera is needed to capture your profile photo.\nGo to settings -> `Hourful` and enable the Camera."
+        let message = "Camera is needed to capture your profile photo.\nGo to settings -> `\(AppName)` and enable the Camera."
         
         switch cameraAuthorizationStatus {
             case .denied: return (message, false, cameraAuthorizationStatus);

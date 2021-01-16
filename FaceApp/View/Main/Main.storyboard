@@ -1839,7 +1839,7 @@ and simple exercises</string>
                                 <rect key="frame" x="0.0" y="299" width="414" height="597"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6fl-hl-e2Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="597"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="443"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <view key="tableHeaderView" contentMode="scaleToFill" id="xNH-Hj-hmW">
@@ -2011,34 +2011,37 @@ and simple exercises</string>
                                             <outlet property="delegate" destination="bEA-5H-eXI" id="UV3-QL-V7r"/>
                                         </connections>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UD6-ES-ioR">
+                                        <rect key="frame" x="60" y="454" width="294" height="80"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="qVw-VM-oet"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Start Workout" image="play.circle" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startWorkOutButton:" destination="bEA-5H-eXI" eventType="touchUpInside" id="i3P-9n-d9E"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="UD6-ES-ioR" firstAttribute="leading" secondItem="1f5-Sg-NDc" secondAttribute="leading" constant="60" id="0Vg-Xi-ODf"/>
                                     <constraint firstItem="6fl-hl-e2Z" firstAttribute="leading" secondItem="1f5-Sg-NDc" secondAttribute="leading" id="6mT-WF-jga"/>
+                                    <constraint firstAttribute="bottom" secondItem="UD6-ES-ioR" secondAttribute="bottom" constant="63" id="8Eb-gj-vZs"/>
+                                    <constraint firstAttribute="trailing" secondItem="UD6-ES-ioR" secondAttribute="trailing" constant="60" id="V3Z-fT-svc"/>
                                     <constraint firstItem="6fl-hl-e2Z" firstAttribute="top" secondItem="1f5-Sg-NDc" secondAttribute="top" id="bVo-yh-Hiu"/>
+                                    <constraint firstItem="UD6-ES-ioR" firstAttribute="top" secondItem="6fl-hl-e2Z" secondAttribute="bottom" constant="11" id="cYE-Pi-PkX"/>
                                     <constraint firstAttribute="trailing" secondItem="6fl-hl-e2Z" secondAttribute="trailing" id="v4q-PU-euB"/>
-                                    <constraint firstAttribute="bottom" secondItem="6fl-hl-e2Z" secondAttribute="bottom" id="zR4-s6-gQZ"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UD6-ES-ioR">
-                                <rect key="frame" x="60" y="772" width="294" height="80"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="qVw-VM-oet"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Start Workout" image="play.circle" catalog="system"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startWorkOutButton:" destination="bEA-5H-eXI" eventType="touchUpInside" id="i3P-9n-d9E"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RDw-eC-pkl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2062,10 +2065,7 @@ and simple exercises</string>
                         <viewLayoutGuide key="safeArea" id="Gp6-xO-1LI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="UD6-ES-ioR" firstAttribute="leading" secondItem="Gp6-xO-1LI" secondAttribute="leading" constant="60" id="0y1-ee-mIC"/>
                             <constraint firstItem="xyT-1P-q8P" firstAttribute="top" secondItem="Gp6-xO-1LI" secondAttribute="top" constant="30" id="8K5-OU-yUe"/>
-                            <constraint firstItem="Gp6-xO-1LI" firstAttribute="trailing" secondItem="UD6-ES-ioR" secondAttribute="trailing" constant="60" id="D1Z-Re-ncc"/>
-                            <constraint firstItem="Gp6-xO-1LI" firstAttribute="bottom" secondItem="UD6-ES-ioR" secondAttribute="bottom" constant="10" id="GfL-Gd-tWM"/>
                             <constraint firstItem="RDw-eC-pkl" firstAttribute="leading" secondItem="Gp6-xO-1LI" secondAttribute="leading" id="MMO-95-zWc"/>
                             <constraint firstAttribute="trailing" secondItem="1f5-Sg-NDc" secondAttribute="trailing" id="O90-bo-wIX"/>
                             <constraint firstItem="Gp6-xO-1LI" firstAttribute="trailing" secondItem="RDw-eC-pkl" secondAttribute="trailing" id="OZd-8Z-JgA"/>
@@ -2073,7 +2073,6 @@ and simple exercises</string>
                             <constraint firstAttribute="bottom" secondItem="1f5-Sg-NDc" secondAttribute="bottom" id="RQV-ge-1ct"/>
                             <constraint firstItem="RDw-eC-pkl" firstAttribute="top" secondItem="Gp6-xO-1LI" secondAttribute="top" constant="-44" id="ZdP-mZ-FNr"/>
                             <constraint firstItem="1f5-Sg-NDc" firstAttribute="leading" secondItem="cUq-Fh-D1b" secondAttribute="leading" id="ZzA-ur-Nl0"/>
-                            <constraint firstItem="UD6-ES-ioR" firstAttribute="centerX" secondItem="cUq-Fh-D1b" secondAttribute="centerX" id="vo2-iF-wFi"/>
                             <constraint firstItem="1f5-Sg-NDc" firstAttribute="top" secondItem="RDw-eC-pkl" secondAttribute="bottom" id="xlS-kc-nfE"/>
                         </constraints>
                     </view>
@@ -2081,6 +2080,7 @@ and simple exercises</string>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="StartWorkoutBottmY" destination="8Eb-gj-vZs" id="kzC-IT-NWf"/>
                         <outlet property="backBtn" destination="xyT-1P-q8P" id="GCA-aa-Rgm"/>
                         <outlet property="calendarImgView" destination="WIB-Cy-rEM" id="5z8-IS-QcC"/>
                         <outlet property="daysLabel" destination="kvr-hA-ZYY" id="8Db-43-cTm"/>
@@ -2095,7 +2095,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRY-mi-5re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3725" y="64"/>
+            <point key="canvasLocation" x="3724.6376811594205" y="63.616071428571423"/>
         </scene>
         <!--HomeVc-->
         <scene sceneID="a3P-jj-0K3">
@@ -2134,7 +2134,7 @@ and simple exercises</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dandruffs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ok-NV-eg5">
-                                                    <rect key="frame" x="2" y="183" width="143" height="44"/>
+                                                    <rect key="frame" x="16" y="183" width="143" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="6W0-bs-3pv"/>
                                                     </constraints>
@@ -2143,7 +2143,7 @@ and simple exercises</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target zones and" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3F-Kg-XOE">
-                                                    <rect key="frame" x="2" y="210" width="143" height="38"/>
+                                                    <rect key="frame" x="16" y="210" width="143" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="143" id="feK-wq-z7w"/>
                                                         <constraint firstAttribute="height" constant="38" id="grP-t7-E7K"/>
@@ -2152,20 +2152,28 @@ and simple exercises</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJ2-dx-S9D">
+                                                    <rect key="frame" x="0.0" y="0.0" width="192" height="250"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="4ok-NV-eg5" firstAttribute="leading" secondItem="TH6-fH-mlL" secondAttribute="leading" constant="2" id="326-xI-3UG"/>
+                                                <constraint firstItem="4ok-NV-eg5" firstAttribute="leading" secondItem="TH6-fH-mlL" secondAttribute="leading" constant="16" id="326-xI-3UG"/>
                                                 <constraint firstItem="4ok-NV-eg5" firstAttribute="top" secondItem="uZl-ol-Cbx" secondAttribute="bottom" constant="-71" id="CJp-Ph-j5G"/>
-                                                <constraint firstItem="P3F-Kg-XOE" firstAttribute="leading" secondItem="TH6-fH-mlL" secondAttribute="leading" constant="2" id="bdK-g4-JEw"/>
+                                                <constraint firstItem="IJ2-dx-S9D" firstAttribute="top" secondItem="TH6-fH-mlL" secondAttribute="top" id="Nhi-Mw-UoO"/>
+                                                <constraint firstItem="P3F-Kg-XOE" firstAttribute="leading" secondItem="TH6-fH-mlL" secondAttribute="leading" constant="16" id="bdK-g4-JEw"/>
+                                                <constraint firstItem="IJ2-dx-S9D" firstAttribute="leading" secondItem="TH6-fH-mlL" secondAttribute="leading" id="ccW-6p-twX"/>
                                                 <constraint firstItem="uZl-ol-Cbx" firstAttribute="top" secondItem="TH6-fH-mlL" secondAttribute="top" id="iGj-Tc-FHV"/>
                                                 <constraint firstAttribute="trailing" secondItem="uZl-ol-Cbx" secondAttribute="trailing" id="jhC-l2-kWK"/>
                                                 <constraint firstItem="uZl-ol-Cbx" firstAttribute="leading" secondItem="TH6-fH-mlL" secondAttribute="leading" id="kgn-nz-75N"/>
-                                                <constraint firstAttribute="trailing" secondItem="4ok-NV-eg5" secondAttribute="trailing" constant="47" id="sUP-k2-nZ2"/>
+                                                <constraint firstAttribute="trailing" secondItem="IJ2-dx-S9D" secondAttribute="trailing" id="nL9-Uc-yyx"/>
+                                                <constraint firstAttribute="bottom" secondItem="IJ2-dx-S9D" secondAttribute="bottom" id="r3R-3y-hOF"/>
+                                                <constraint firstAttribute="trailing" secondItem="4ok-NV-eg5" secondAttribute="trailing" constant="33" id="sUP-k2-nZ2"/>
                                                 <constraint firstItem="P3F-Kg-XOE" firstAttribute="top" secondItem="uZl-ol-Cbx" secondAttribute="bottom" constant="-44" id="vNO-os-3sv"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="192" height="250"/>
                                         <connections>
+                                            <outlet property="btnCell" destination="IJ2-dx-S9D" id="fPS-Oq-B8h"/>
                                             <outlet property="imgBg" destination="uZl-ol-Cbx" id="EE1-vf-9cR"/>
                                             <outlet property="lblSubTitle" destination="P3F-Kg-XOE" id="6Ct-j9-OjL"/>
                                             <outlet property="lblTitle" destination="4ok-NV-eg5" id="nMp-7x-JHS"/>
@@ -2221,7 +2229,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7P-le-ffe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6749" y="-693"/>
+            <point key="canvasLocation" x="6747.826086956522" y="-693.08035714285711"/>
         </scene>
         <!--TakeAPhotoVC-->
         <scene sceneID="3sU-H8-zhg">
@@ -2821,6 +2829,9 @@ and simple exercises</string>
                                             <constraint firstAttribute="height" constant="45" id="naq-wk-Jrr"/>
                                         </constraints>
                                         <state key="normal" image="cross"/>
+                                        <connections>
+                                            <action selector="crossBtn:" destination="Ba9-zm-XPK" eventType="touchUpInside" id="NH7-jN-wgv"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM0-nH-3TE">
                                         <rect key="frame" x="187" y="30" width="54" height="45"/>
@@ -3032,6 +3043,7 @@ and simple exercises</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="crossBtn" destination="wS0-l2-qUT" id="52B-tK-rMa"/>
                         <outlet property="tableView" destination="WHa-C2-TD2" id="lmy-K3-q4S"/>
                     </connections>
                 </viewController>

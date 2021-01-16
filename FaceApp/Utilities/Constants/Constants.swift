@@ -11,7 +11,6 @@ import UIKit
 let kMainStoryboard = UIStoryboard(name: "Main", bundle: nil)
 let kVideoStoryboard = UIStoryboard(name: "Video", bundle: nil)
 
-
 let kMain2Storyboard = UIStoryboard(name: "Main2", bundle: nil)
 
 // MARK:- Device Sizes
@@ -22,13 +21,11 @@ let IS_IPHONE = UIDevice.current.userInterfaceIdiom == .phone
 
 
 let AppName: String = {
-        if let infoDict = Bundle.main.infoDictionary, let value = infoDict["CFBundleDisplayName"] as? String {
-            return value
-        }
-        return ""
-    }()
-
-
+    if let infoDict = Bundle.main.infoDictionary, let value = infoDict["CFBundleDisplayName"] as? String {
+        return value
+    }
+    return ""
+}()
 
 struct userDefaultKeys {
     static let objectiveArr = "objectiveArr"
@@ -58,4 +55,4 @@ extension UIFont {
         return UIFont(name: "AktivGroteskCorp-Bold", size: 40.0)!
     }
 }
- 
+

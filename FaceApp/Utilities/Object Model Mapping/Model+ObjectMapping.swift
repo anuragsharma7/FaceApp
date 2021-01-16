@@ -1,8 +1,8 @@
 //
 //  Model+ObjectMapping.swift
 //
-//  Created by Vakul Saini on 15/11/17.
-//  Copyright © 2017 enAct eServices. All rights reserved.
+//  Created by Anurag on 15/11/17.
+//  Copyright. All rights reserved.
 //
 
 import UIKit
