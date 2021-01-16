@@ -44,8 +44,9 @@ class PauseVC: BaseClass {
     
 //Mark:- IBActions
     
-    
+//Divya
 @IBAction func crossButton(_ sender: UIButton) {
+    self.navigationController?.popViewController(animated: true)
     self.dismiss(animated: true, completion: nil)
     }
     

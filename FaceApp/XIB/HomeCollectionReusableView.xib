@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionReusableViewID" id="U6b-Vx-4bR" customClass="HomeCollectionReusableView" customModule="FaceApp" customModuleProvider="target">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HomeCollectionReusablesID" reuseIdentifier="HomeCollectionReusablesID" id="U6b-Vx-4bR" customClass="HomeCollectionReusableView" customModule="FaceApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="377" height="558"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -85,6 +86,9 @@
                                             <integer key="value" value="15"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="startWorkoutButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="4IL-lQ-ofB"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start workout" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ5-EQ-VwH">
                                     <rect key="frame" x="89" y="86.5" width="155" height="23"/>
@@ -180,6 +184,9 @@
                 <constraint firstItem="MCy-1X-DHR" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="20" id="x23-Vl-Xpi"/>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="BE4-D1-jyK" secondAttribute="trailing" id="yrl-WW-TxE"/>
             </constraints>
+            <connections>
+                <outlet property="startWorkoutBtn" destination="JOJ-zS-T7O" id="Eoq-tq-obK"/>
+            </connections>
             <point key="canvasLocation" x="29.710144927536234" y="121.875"/>
         </collectionReusableView>
     </objects>

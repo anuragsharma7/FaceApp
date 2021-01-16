@@ -8,11 +8,28 @@
 import UIKit
 
 class HomeCollectionReusableView: UICollectionReusableView {
-    static let identifier = "HomeCollectionReusableViewID"
+    //Divya
+    static let identifier = "HomeCollectionReusablesID"
+    
+    
+    //MARK:- IBoutlets
+    
+    @IBOutlet weak var startWorkoutBtn: UIButton!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    
+    
+//MARK:- IBAction
+    
+    @IBAction func startWorkoutButton(_ sender: UIButton) {
+        
+
     }
     
     class func view() -> UICollectionReusableView {

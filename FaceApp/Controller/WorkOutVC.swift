@@ -31,8 +31,16 @@ class WorkOutVC: BaseClass {
                 }
             }
         }
+  
     
     
+    
+    //Divya
+    @IBAction func crossBtn(_ sender: UIButton) {
+        
+        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func continueBtn(_ sender: UIButton) {
         self.navigationController?.pushViewController(TakeAPhotoVC.instance(), animated: true)

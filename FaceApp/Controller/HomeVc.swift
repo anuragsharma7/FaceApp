@@ -46,6 +46,8 @@ class HomeVc: BaseClass {
         getTargetDocument()
         setCollectionDelegate()
         registerHeaderNib()
+   
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,6 +59,9 @@ class HomeVc: BaseClass {
             }
         }
     }
+    
+    
+    
     
     //MARK:- IBAction:-
     @IBAction func unlockAllBtnForPay(_ sender: Any) {
@@ -168,6 +173,8 @@ extension HomeVc: UICollectionViewDataSource {
             switch indexPath.section {
             case 0:
                 let headerView = self.collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeCollectionReusableView.identifier, for: indexPath) as! HomeCollectionReusableView
+                //Divya
+                headerView.startWorkoutBtn.addTarget(self, action: #selector(startWorkOutAction), for: .touchUpInside)
                 return headerView
             case 1:
                 let secondHeaderView = self.collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
@@ -177,6 +184,14 @@ extension HomeVc: UICollectionViewDataSource {
             }
         }
         return UICollectionReusableView()
+    }
+    
+    //Divya
+    
+    @objc func startWorkOutAction() {
+        print("startWorkOutAction called")
+        self.navigationController?.pushViewController(RoutineVC.instance(), animated: true)
+        print("startWorkOutAction called")
     }
 }
 

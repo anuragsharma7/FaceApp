@@ -988,7 +988,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R32NH4G5PD;
 				INFOPLIST_FILE = FaceApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1012,7 +1012,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R32NH4G5PD;
 				INFOPLIST_FILE = FaceApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
