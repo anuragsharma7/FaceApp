@@ -82,7 +82,10 @@ class PaymentVC: BaseClass {
     //MARK:- IBActions
     
     @IBAction func continueButton(_ sender: UIButton) {
-        self.navigationController?.pushViewController(/*HomeVc*/TabBarVC.instance(), animated: true)
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(/*HomeVc*/TabBarVC.instance(), animated: true)
+        }
+       
     }
     
     @IBAction func backBtn(_ sender: UIButton) {

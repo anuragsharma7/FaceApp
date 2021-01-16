@@ -37,8 +37,7 @@ class RoutineVC: BaseClass {
     override func viewDidLoad() {
         super.viewDidLoad()
         getVideos()
-        
-        
+         
     }
     
     override func viewWillLayoutSubviews() {
@@ -58,7 +57,7 @@ class RoutineVC: BaseClass {
     }
     
     @IBAction func startWorkOutButton(_ sender: UIButton) {
-        self.navigationController?.pushViewController(PauseVC.instance(), animated: true)
+        self.navigationController?.pushViewController(ExerciseVC.instance(), animated: true)
     }
     
     //MARK:- Methods

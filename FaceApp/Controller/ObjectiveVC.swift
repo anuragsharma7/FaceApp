@@ -103,7 +103,7 @@ class ObjectiveVC: BaseClass {
                     return
                 }
             //Loop through packages
-                for i in 0...packages!.count{
+                for i in 0...packages!.count-1 {
                     
                 //Get a refrence to the package
                     let package = packages![i]

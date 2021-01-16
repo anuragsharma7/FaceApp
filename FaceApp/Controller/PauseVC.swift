@@ -51,14 +51,17 @@ class PauseVC: BaseClass {
     }
     
 @IBAction func nextButton(_ sender: UIButton) {
-    self.navigationController?.pushViewController(WorkOutVC.instance(), animated: true)
+//    self.dismiss(animated: true, completion: {
+//       
+//    })
+    self.present(WorkOutVC.instance(), animated: true, completion: nil)
+    
     }
     
     
 @IBAction func previousButton(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
     }
-
-    
     //MARK:- Methods
     @objc func animateProgress() {
         let cp = self.view.viewWithTag(101) as! CircularProgress
