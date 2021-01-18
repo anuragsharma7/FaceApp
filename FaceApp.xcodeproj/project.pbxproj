@@ -67,6 +67,7 @@
 		F3801C1425B07B83001006F3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3801C1325B07B83001006F3 /* ImagePicker.swift */; };
 		F3A69CBB258E56E700A3E6D0 /* PauseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CBA258E56E700A3E6D0 /* PauseVC.swift */; };
 		F3B3A29625B18D9A004875F3 /* ProgressCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B3A29525B18D9A004875F3 /* ProgressCell2.swift */; };
+		F3B646DB25B5578100A9CF82 /* ButtonProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B646DA25B5578100A9CF82 /* ButtonProgressVC.swift */; };
 		FD02F31425B06E29002D7857 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD02F31325B06E29002D7857 /* Video.storyboard */; };
 		FD8547E625AD884A008BF60F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD8547E525AD884A008BF60F /* GoogleService-Info.plist */; };
 		FD85481325ADD13D008BF60F /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD85481225ADD13D008BF60F /* FirebaseHelper.swift */; };
@@ -164,6 +165,7 @@
 		F3801C1325B07B83001006F3 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F3A69CBA258E56E700A3E6D0 /* PauseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseVC.swift; sourceTree = "<group>"; };
 		F3B3A29525B18D9A004875F3 /* ProgressCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell2.swift; sourceTree = "<group>"; };
+		F3B646DA25B5578100A9CF82 /* ButtonProgressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonProgressVC.swift; sourceTree = "<group>"; };
 		FD02F31325B06E29002D7857 /* Video.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
 		FD8547E525AD884A008BF60F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD85481225ADD13D008BF60F /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				F31F245E2594B223001A09B3 /* ExercisePopUpVC.swift */,
 				F31F24632594C84E001A09B3 /* ProgressPopUpVC.swift */,
 				F321E57D2595CDD100A0C3DA /* WorkOutVC.swift */,
+				F3B646DA25B5578100A9CF82 /* ButtonProgressVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				F346267E258A89D5002A72B0 /* ObjectiveVC.swift in Sources */,
 				F3A69CBB258E56E700A3E6D0 /* PauseVC.swift in Sources */,
 				F333AB2F25B0822E00994846 /* UIViewController+Extras.swift in Sources */,
+				F3B646DB25B5578100A9CF82 /* ButtonProgressVC.swift in Sources */,
 				FD85481C25ADD3EC008BF60F /* VideosModel.swift in Sources */,
 				F30F572D2593900600A2D04B /* ExercisePopUp.swift in Sources */,
 				DB45A606259118C000F78EBC /* BaseClass.swift in Sources */,

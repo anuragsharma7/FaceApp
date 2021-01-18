@@ -11,6 +11,12 @@ import AVKit
 
 class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     
+    //MARK:- Variables
+    var playerController = AVPlayerViewController()
+    var player:AVPlayer?
+      let video1URL = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    var currentProgressTime:Float = 0.0
+    
 //MARK:- Outlets
     
 @IBOutlet weak var numberLabel: UILabel!
@@ -21,13 +27,27 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     @IBOutlet weak var playImage: UIImageView!
     
     @IBOutlet weak var videoView: UIView!
+  
     
-  var playerController = AVPlayerViewController()
+    @IBOutlet weak var progressView: ButtonProgressVC!
+    
+    
+    
+  //var playerController = AVPlayerViewController()
     
 //MARK:- View LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //ProgressBar
+        progressView.progressColor = UIColor(red: 52.0/255.0, green: 141.0/255.0, blue: 252.0/255.0, alpha: 1.0)
+         progressView.trackColor = UIColor(red: 34.0/255.0, green: 34.0/255.0, blue: 34.0/255.0, alpha: 0.6)
+        progressView.tag = 101
+         //animate progress
+        self.perform(#selector(animateProgress), with: nil, afterDelay: 1)
+        
+        
+        
         let data = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
         print("====================================+++++++++++++++++++++++++++++++++++++",getVideoDuration(from: URL(string: data)!))
         self.playImage.isHidden = false
@@ -62,33 +82,116 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
         }
     }
     
+    
+    @objc func animateProgress() {
+        let cp = self.view.viewWithTag(101) as! ButtonProgressVC
+        cp.setProgressWithAnimation(duration: 10, value: 0.25)
+    }
+    
+    
+    //Functions
+      
+      func initPlayer()  {
+              if let play = player {
+                  print("playing")
+                  play.play()
+              } else {
+                  print("player allocated")
+                  let videoURL = URL(string: video1URL)
+                  player = AVPlayer(url: videoURL!)
+                  let playerLayer = AVPlayerLayer(player: player)
+                      playerLayer.frame = self.videoView.bounds
+                      self.videoView.layer.addSublayer(playerLayer)
+                  print("playing")
+                  let currentItem:AVPlayerItem = player!.currentItem!
+                  print("currentItem=============>",currentItem)
+                  let currentTime:TimeInterval = CMTimeGetSeconds(currentItem.currentTime())
+                  print("currentTime=============>",currentTime)
+                  let t1 = Float((self.player?.currentTime().value)!)
+                  print("t1{currentTime}=============>",t1)
+                currentProgressTime = Float(( self.player?.currentTime().timescale)!)
+                  print("currentProgressTime{timescale}=============>",currentProgressTime)
+                  let currentSeconds = t1 / currentProgressTime
+                //userdefault
+                UserDefaults.standard.set(currentProgressTime, forKey:"videototaltime")
+               
+               if let val = UserDefaults.standard.value(forKey: "videototaltime") {
+                   print(val)
+                  print("currentSeconds=============>",t1 / currentProgressTime)
+                  
+                  
+                  player!.play()
+              }
+          }
+      }
+          func stopPlayer() {
+              if let play = player {
+                
+               // progressView.isHidden = true
+                  print("stopped")
+                  play.pause()
+                 // player = nil
+                  NotificationCenter.default.addObserver(self, selector: #selector(playerStalled),
+                                                               name: NSNotification.Name.AVPlayerItemPlaybackStalled, object: player?.currentItem)
+                  print("player deallocated")
+              } else {
+                  print("player was already deallocated")
+              }
+          }
+      
+    @objc func playerStalled(note: NSNotification) {
+        let playerItem = note.object as! AVPlayerItem
+          if let player = playerItem.value(forKey: "player") as? AVPlayer{
+          player.play()
+        }
+      }
+    
+    
 //MARK:- IBActions
     
     @IBAction func btnStart(_ sender: Any) {
         
-        if playImage.image == #imageLiteral(resourceName: "play") {
-            self.playImage.image = #imageLiteral(resourceName: "videoplay")
-            
-            let videoURL = URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-            let player = AVPlayer(url: videoURL!)
-            let playerLayer = AVPlayerLayer(player: player)
-            playerLayer.frame = self.videoView.bounds
-            self.videoView.layer.addSublayer(playerLayer)
-            player.play()
-            
-            
-            
-        }
-        else{
-            self.playImage.image = #imageLiteral(resourceName: "play")
-            
-            let videoURL = URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-            let player = AVPlayer(url: videoURL!)
-            let playerLayer = AVPlayerLayer(player: player)
-            playerLayer.frame = self.videoView.bounds
-            self.videoView.layer.addSublayer(playerLayer)
-            player.pause()
-        }
+        if playBtnOutlet.imageView?.image == #imageLiteral(resourceName: "play") {
+                    initPlayer()
+                    self.playImage.image = #imageLiteral(resourceName: "videoplay")
+                    playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "videoplay")
+                }
+                else {
+                    stopPlayer()
+                    self.playImage.image = #imageLiteral(resourceName: "play")
+                    playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "play")
+                    
+                        }
+       
+        
+                    
+                        }
+        
+   
+        
+//        if playImage.image == #imageLiteral(resourceName: "play") {
+//            self.playImage.image = #imageLiteral(resourceName: "videoplay")
+//
+//            let videoURL = URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+//            let player = AVPlayer(url: videoURL!)
+//            let playerLayer = AVPlayerLayer(player: player)
+//            playerLayer.frame = self.videoView.bounds
+//            self.videoView.layer.addSublayer(playerLayer)
+//            player.play()
+//
+//
+//
+//        }
+//        else{
+//            self.playImage.image = #imageLiteral(resourceName: "play")
+//
+//            let videoURL = URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+//            let player = AVPlayer(url: videoURL!)
+//            let playerLayer = AVPlayerLayer(player: player)
+//            playerLayer.frame = self.videoView.bounds
+//            self.videoView.layer.addSublayer(playerLayer)
+//            player.pause()
+//        }
         
 //        guard let url = URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")else{return}
 //
@@ -103,7 +206,7 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
         
        // player.pause()
         
-    }
+    //}
     
     @IBAction func benifitesBtn(_ sender: Any) {
         
@@ -131,4 +234,5 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     
     self.navigationController?.pushViewController(RoutineVC.instance(), animated: true)
     }
+
 }
