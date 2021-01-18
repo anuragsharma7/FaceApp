@@ -20,8 +20,6 @@ class StepAndBenefitsVC: BaseClass {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.layer.cornerRadius = 40.0
-
-        
     }
     
 
@@ -29,8 +27,6 @@ class StepAndBenefitsVC: BaseClass {
         
         self.dismiss(animated: true, completion: nil)
     }
-    
-
 }
 
 //MARK:- Extension for TableView Delegate and DataSource
@@ -42,15 +38,10 @@ extension StepAndBenefitsVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "StepAndBenefitsCellID", for: indexPath) as? StepAndBenefitsCell
-      
-     
             return cell!
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
     }
-
-    
 }

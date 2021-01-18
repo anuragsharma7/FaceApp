@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nnG-3f-O7O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nnG-3f-O7O">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -615,7 +615,6 @@ and simple exercises</string>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="continue:" destination="g5n-jp-Bgw" eventType="touchUpInside" id="Cuw-St-coY"/>
-                                    <action selector="continueButton:" destination="g5n-jp-Bgw" eventType="touchUpInside" id="eli-Nm-jzs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="it helps us to generate you a more adapted plan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-g2-JGA">
@@ -1417,17 +1416,6 @@ and simple exercises</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSc-BA-nLz">
-                                <rect key="frame" x="20" y="30" width="35" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="4b2-cX-Nbx"/>
-                                    <constraint firstAttribute="width" constant="35" id="LMq-Br-x1H"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="cross"/>
-                                <connections>
-                                    <action selector="backBtn:" destination="IsJ-8h-ti1" eventType="touchUpInside" id="E2a-Ca-4Uk"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UD7-dg-zhn">
                                 <rect key="frame" x="146.5" y="803" width="121.5" height="34"/>
                                 <subviews>
@@ -1667,9 +1655,7 @@ and simple exercises</string>
                             <constraint firstItem="0xh-Y2-AU1" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" constant="-50" id="euB-w3-Ujx"/>
                             <constraint firstItem="N57-eW-L0f" firstAttribute="centerX" secondItem="Gvk-LC-CrM" secondAttribute="centerX" id="kkb-Vn-Vj5"/>
                             <constraint firstItem="0xh-Y2-AU1" firstAttribute="top" secondItem="F3o-Kh-l2S" secondAttribute="bottom" constant="30" id="p4F-Lb-qMI"/>
-                            <constraint firstItem="ZSc-BA-nLz" firstAttribute="leading" secondItem="Xlp-U9-xne" secondAttribute="leading" constant="20" id="qWw-mR-GQD"/>
                             <constraint firstItem="N57-eW-L0f" firstAttribute="top" secondItem="ldG-Gk-utp" secondAttribute="bottom" constant="8" id="qh0-QO-4Rv"/>
-                            <constraint firstItem="ZSc-BA-nLz" firstAttribute="top" secondItem="Gvk-LC-CrM" secondAttribute="top" constant="30" id="rFb-EY-87V"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1826,7 +1812,7 @@ and simple exercises</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYp-XD-t06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3452" y="76"/>
+            <point key="canvasLocation" x="3332" y="79"/>
         </scene>
         <!--RoutineVC-->
         <scene sceneID="5Vu-oi-58q">
@@ -2819,39 +2805,14 @@ and simple exercises</string>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ayk-CO-sdf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="314"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS0-l2-qUT">
-                                        <rect key="frame" x="20" y="30" width="35" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="35" id="ZtO-1S-ORm"/>
-                                            <constraint firstAttribute="height" constant="45" id="naq-wk-Jrr"/>
-                                        </constraints>
-                                        <state key="normal" image="cross"/>
-                                        <connections>
-                                            <action selector="crossBtn:" destination="Ba9-zm-XPK" eventType="touchUpInside" id="NH7-jN-wgv"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM0-nH-3TE">
-                                        <rect key="frame" x="187" y="30" width="54" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="54" id="g2V-m1-p4a"/>
-                                            <constraint firstAttribute="height" constant="45" id="yIW-t0-iPw"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ayk-CO-sdf" firstAttribute="top" secondItem="fLq-nY-p4C" secondAttribute="top" id="1LK-z5-FkM"/>
-                                    <constraint firstItem="YM0-nH-3TE" firstAttribute="top" secondItem="fLq-nY-p4C" secondAttribute="top" constant="30" id="CS9-mD-wvw"/>
-                                    <constraint firstItem="wS0-l2-qUT" firstAttribute="leading" secondItem="fLq-nY-p4C" secondAttribute="leading" constant="20" id="JPh-IN-2BC"/>
                                     <constraint firstItem="ayk-CO-sdf" firstAttribute="leading" secondItem="fLq-nY-p4C" secondAttribute="leading" id="OTr-ma-hAL"/>
-                                    <constraint firstItem="YM0-nH-3TE" firstAttribute="centerX" secondItem="fLq-nY-p4C" secondAttribute="centerX" constant="7" id="PD8-ad-K88"/>
                                     <constraint firstAttribute="bottom" secondItem="ayk-CO-sdf" secondAttribute="bottom" id="RkS-G3-XxY"/>
-                                    <constraint firstItem="wS0-l2-qUT" firstAttribute="top" secondItem="fLq-nY-p4C" secondAttribute="top" constant="30" id="S30-J8-h3c"/>
                                     <constraint firstAttribute="trailing" secondItem="ayk-CO-sdf" secondAttribute="trailing" id="TOT-IR-4ef"/>
                                     <constraint firstAttribute="height" constant="314" id="svu-U0-Cp9"/>
                                 </constraints>
@@ -2870,6 +2831,9 @@ and simple exercises</string>
                                                 <constraint firstAttribute="width" constant="49" id="SOV-d9-W7i"/>
                                             </constraints>
                                             <state key="normal" image="cross"/>
+                                            <connections>
+                                                <action selector="crossBtn:" destination="Ba9-zm-XPK" eventType="touchUpInside" id="ZN4-cJ-Yv2"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3030,7 +2994,7 @@ and simple exercises</string>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="55b-Ru-7hd"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="55b-Ru-7hd" firstAttribute="trailing" secondItem="WHa-C2-TD2" secondAttribute="trailing" id="DCl-UB-JKT"/>
                             <constraint firstItem="fLq-nY-p4C" firstAttribute="leading" secondItem="55b-Ru-7hd" secondAttribute="leading" id="Dan-pw-iSX"/>
@@ -3042,7 +3006,6 @@ and simple exercises</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="crossBtn" destination="wS0-l2-qUT" id="52B-tK-rMa"/>
                         <outlet property="tableView" destination="WHa-C2-TD2" id="lmy-K3-q4S"/>
                     </connections>
                 </viewController>

@@ -37,7 +37,8 @@ class RoutineVC: BaseClass {
     override func viewDidLoad() {
         super.viewDidLoad()
         getVideos()
-         
+//        print("videosArr")
+//         print("============>>>>>>",videosArr)
     }
     
     override func viewWillLayoutSubviews() {
@@ -109,7 +110,7 @@ extension RoutineVC: UITableViewDelegate,UITableViewDataSource{
             let cell =  tableView.dequeueReusableCell(withIdentifier: "RoutineCell2", for: indexPath) as? RoutineCell2
             cell?.marylineLabel.text = marylineArr[indexPath.row]
             
-            cell?.playBtn.addTarget(self, action: Selector(("playButton:")), for: UIControl.Event.touchUpInside)
+//            cell?.playBtn.addTarget(self, action: Selector(("playButton:")), for: UIControl.Event.touchUpInside)
             
             return cell!
         }

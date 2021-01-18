@@ -9,8 +9,6 @@ import UIKit
 
 class ProgressVC: BaseClass {
     
-    
-    
     //MARK:- Outlets
     
     @IBOutlet weak var collectionView: UICollectionView!

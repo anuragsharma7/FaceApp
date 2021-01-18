@@ -24,14 +24,7 @@ class PaymentWithTrialVC: BaseClass {
     @IBOutlet weak var star4ImgView: UIImageView!
     
     @IBOutlet weak var star5ImgView: UIImageView!
-//
-//    @IBOutlet weak var noInterruptionView: UIView!
-//    @IBOutlet weak var customWorkOutView: UIView!
-//
-//    @IBOutlet weak var allExerciseView: UIView!
-//    @IBOutlet weak var unlimitedUseView: UIView!
-//
-//    @IBOutlet weak var cancelAnyTimeView: UIView!
+
     @IBOutlet weak var mainView: UIView!
     
     @IBOutlet weak var trialImgView: UIImageView!
@@ -49,12 +42,7 @@ class PaymentWithTrialVC: BaseClass {
     
     @IBOutlet weak var restoreLabel: UILabel!
     @IBOutlet weak var tAndCLabel: UILabel!
-    
-//    @IBOutlet weak var spaceBetweenSVAndMainView: NSLayoutConstraint!
-    
-    
-    // var myProduct: SKProduct?
-    
+       
     var packagesAvailableForPurchases = [Purchases.Package]()
     
     
@@ -176,8 +164,9 @@ class PaymentWithTrialVC: BaseClass {
     }
     
     @IBAction func monthlyButton(_ sender: UIButton) {
-        
-        let package = self.packagesAvailableForPurchases[sender.tag]
+        guard self.packagesAvailableForPurchases.count != 0 else { return }
+//        let package = self.packagesAvailableForPurchases[sender.tag]
+        let package = self.packagesAvailableForPurchases[1]
         Purchases.shared.purchasePackage(package) { (transaction, purchaserInfo, error, userCancelled) in
             if purchaserInfo?.entitlements.all["pro"]?.isActive == true {
                 // Unlock that great "pro" content
@@ -189,8 +178,9 @@ class PaymentWithTrialVC: BaseClass {
     }
     
     @IBAction func annualyButton(_ sender: UIButton) {
-        
-        let package = self.packagesAvailableForPurchases[sender.tag]
+        guard self.packagesAvailableForPurchases.count != 0 else { return }
+//        let package = self.packagesAvailableForPurchases[sender.tag]
+        let package = self.packagesAvailableForPurchases[2]
         Purchases.shared.purchasePackage(package) { (transaction, purchaserInfo, error, userCancelled) in
             if purchaserInfo?.entitlements.all["pro"]?.isActive == true {
                 // Unlock that great "pro" content

@@ -12,9 +12,10 @@ import AVKit
 class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     
     //MARK:- Variables
+    
     var playerController = AVPlayerViewController()
     var player:AVPlayer?
-      let video1URL = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    let video1URL = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
     var currentProgressTime:Float = 0.0
     
 //MARK:- Outlets
@@ -32,9 +33,6 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     @IBOutlet weak var progressView: ButtonProgressVC!
     
     
-    
-  //var playerController = AVPlayerViewController()
-    
 //MARK:- View LifeCycle
     
     override func viewDidLoad() {
@@ -45,23 +43,10 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
         progressView.tag = 101
          //animate progress
         self.perform(#selector(animateProgress), with: nil, afterDelay: 1)
-        
-        
-        
         let data = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
         print("====================================+++++++++++++++++++++++++++++++++++++",getVideoDuration(from: URL(string: data)!))
         self.playImage.isHidden = false
         self.playImage.image = #imageLiteral(resourceName: "play")
-        
-//        let data = "http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4"
-//               let a = URL(string: data)
-//        let asset = AVURLAsset(url: a! as URL)
-//
-//        let duration = asset.duration.seconds
-//        let durationTime = CMTimeGetSeconds(duration)
-//
-////               print("the duration is",durationTime)
-//        print("the duration is",duration)
     }
 //Mark:- Methods
     
@@ -116,10 +101,8 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
                 UserDefaults.standard.set(currentProgressTime, forKey:"videototaltime")
                
                if let val = UserDefaults.standard.value(forKey: "videototaltime") {
-                   print(val)
+                   print("Total Video Time ===========>",val)
                   print("currentSeconds=============>",t1 / currentProgressTime)
-                  
-                  
                   player!.play()
               }
           }
@@ -152,87 +135,42 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     @IBAction func btnStart(_ sender: Any) {
         
         if playBtnOutlet.imageView?.image == #imageLiteral(resourceName: "play") {
-                    initPlayer()
-                    self.playImage.image = #imageLiteral(resourceName: "videoplay")
-                    playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "videoplay")
-                }
-                else {
-                    stopPlayer()
-                    self.playImage.image = #imageLiteral(resourceName: "play")
-                    playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "play")
-                    
-                        }
-       
-        
-                    
-                        }
+            initPlayer()
+            self.playImage.image = #imageLiteral(resourceName: "videoplay")
+            playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "videoplay")
+        }
+        else {
+            stopPlayer()
+            self.playImage.image = #imageLiteral(resourceName: "play")
+            playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "play")
+        }
+    }
         
    
-        
-//        if playImage.image == #imageLiteral(resourceName: "play") {
-//            self.playImage.image = #imageLiteral(resourceName: "videoplay")
-//
-//            let videoURL = URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-//            let player = AVPlayer(url: videoURL!)
-//            let playerLayer = AVPlayerLayer(player: player)
-//            playerLayer.frame = self.videoView.bounds
-//            self.videoView.layer.addSublayer(playerLayer)
-//            player.play()
-//
-//
-//
-//        }
-//        else{
-//            self.playImage.image = #imageLiteral(resourceName: "play")
-//
-//            let videoURL = URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-//            let player = AVPlayer(url: videoURL!)
-//            let playerLayer = AVPlayerLayer(player: player)
-//            playerLayer.frame = self.videoView.bounds
-//            self.videoView.layer.addSublayer(playerLayer)
-//            player.pause()
-//        }
-        
-//        guard let url = URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")else{return}
-//
-//       let player = AVPlayer(url: url)
-//        playerController = AVPlayerViewController()
-//        playerController.player = player
-//        playerController.allowsPictureInPicturePlayback = true
-//        playerController.delegate = self
-//        playerController.player?.play()
-//        self.present(playerController, animated: true, completion: nil)
-        
-        
-       // player.pause()
-        
-    //}
-    
     @IBAction func benifitesBtn(_ sender: Any) {
-        
-//        self.navigationController?.pushViewController(StepAndBenefitsVC.instance(), animated: true)
-        present(StepAndBenefitsVC.instance(), animated: true, completion: nil)
+         present(StepAndBenefitsVC.instance(), animated: true, completion: nil)
     }
     
-    
-    
 @IBAction func crossButton(_ sender: UIButton) {
-   // self.navigationController?.pushViewController(ExercisePopUpVC.instance(), animated: true)
+    stopPlayer()
+    self.playImage.image = #imageLiteral(resourceName: "play")
+    playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "play")
     present(ExercisePopUpVC.instance(), animated: true, completion: nil)
     }
 @IBAction func nextButton(_ sender: UIButton) {
     
-//    self.navigationController?.pushViewController(PauseVC.instance(), animated: true)
+    stopPlayer()
+    self.playImage.image = #imageLiteral(resourceName: "play")
+    playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "play")
     
-    let vc = PauseVC.instance()
-    vc.modalPresentationStyle = .fullScreen
-    present(vc, animated: true, completion: nil)
+    self.navigationController?.pushViewController(PauseVC.instance(), animated: true)
 
     }
     
 @IBAction func previousButton(_ sender: UIButton) {
-    
+    stopPlayer()
+    self.playImage.image = #imageLiteral(resourceName: "play")
+    playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "play")
     self.navigationController?.pushViewController(RoutineVC.instance(), animated: true)
     }
-
 }

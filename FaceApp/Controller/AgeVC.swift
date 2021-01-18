@@ -47,24 +47,6 @@ class AgeVC: BaseClass {
     
     //MARK:- IBAction
     
-    @IBAction func continueButton(_ sender: UIButton) {
-//        guard checkMandatoryFields() else {
-//            return
-//
-//        }
-//        self.navigationController?.pushViewController(HowYouEverVC.instance(), animated: true)
-//
-//       UserDefaults.standard.set(ageText.text, forKey:"ageKey")
-//
-//
-//       if let val = UserDefaults.standard.value(forKey: "ageKey") {
-//           print(val)
-//
-//    }
-//
-}
-    
-    
     @IBAction func `continue`(_ sender: UIButton) {
         guard checkMandatoryFields() else {
             return
@@ -128,7 +110,7 @@ extension AgeVC: UITextFieldDelegate {
          
         //return string == filtered
         
-        
+
     }
     
     

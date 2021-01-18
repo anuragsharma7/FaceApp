@@ -9,7 +9,7 @@
 import UIKit
 
 class ButtonProgressVC: UIView {
-
+    
     fileprivate var progressLayer = CAShapeLayer()
     fileprivate var tracklayer = CAShapeLayer()
     
@@ -18,7 +18,7 @@ class ButtonProgressVC: UIView {
         createCircularPath()
     }
     
-//    var videoTime: Float = UserDefaults.standard.object(forKey: "videototaltime") as! Float
+    //    var videoTime: Float = UserDefaults.standard.object(forKey: "videototaltime") as! Float
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -40,7 +40,7 @@ class ButtonProgressVC: UIView {
     fileprivate func createCircularPath() {
         self.backgroundColor = UIColor.clear
         self.layer.cornerRadius = self.frame.size.width/2.0
-
+        
         let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 1.5)/2, startAngle: CGFloat(-0.5 * Double.pi), endAngle: CGFloat(1.5 * Double.pi), clockwise: true)
         
         tracklayer.path = circlePath.cgPath
@@ -60,8 +60,6 @@ class ButtonProgressVC: UIView {
         
     }
     
-    
-    
     func setProgressWithAnimation(duration: TimeInterval, value: Float) {
         
         let animation = CABasicAnimation(keyPath: "strokeEnd")
@@ -73,8 +71,5 @@ class ButtonProgressVC: UIView {
         progressLayer.strokeEnd = CGFloat(value)
         progressLayer.add(animation, forKey: "animateCircle")
     }
-    
-
-
 }
 

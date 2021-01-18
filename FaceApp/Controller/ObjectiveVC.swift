@@ -12,7 +12,6 @@ import FirebaseAuth
 
 class ObjectiveVC: BaseClass {
     
-    
     enum Objective: NSNumber {
         case jawlin
         case dandruffs
@@ -21,22 +20,21 @@ class ObjectiveVC: BaseClass {
     }
     
     //MARK:- Variables
-  var authStateDidChangeListenerHandle:AuthStateDidChangeListenerHandle?
+    var authStateDidChangeListenerHandle:AuthStateDidChangeListenerHandle?
     
-  var objectiveArr = [Objective]()
+    var objectiveArr = [Objective]()
     
-  var selectedBtnArr = [0,0,0,0]
+    var selectedBtnArr = [0,0,0,0]
     
     
     //private var thoughtsCollectionRef: CollectionReference!
-   //private var Users = [User]()
+    //private var Users = [User]()
     //private var db = Firestore.firestore()
     
     //MARK:- Outlets
     @IBOutlet weak var slider1Label: UILabel!
     @IBOutlet weak var slider2Label: UILabel!
     @IBOutlet weak var slider3Label: UILabel!
-    
     @IBOutlet weak var chooseYrObjLabel: UILabel!
     @IBOutlet weak var selectMultipleLabel: UILabel!
     @IBOutlet weak var jawlineImgView: UIImageView!
@@ -44,24 +42,15 @@ class ObjectiveVC: BaseClass {
     @IBOutlet weak var dandruffsImgView: UIImageView!
     @IBOutlet weak var wrinklesImgView: UIImageView!
     @IBOutlet weak var continueBtn: UIButton!
-    
-    
     @IBOutlet weak var jawlinBtn: UIButton!
-    
     @IBOutlet weak var hairLossbBtn: UIButton!
-    
     @IBOutlet weak var dandruffsBtn: UIButton!
-    
     @IBOutlet weak var wrinklesBtn: UIButton!
-    
     @IBOutlet weak var jawlinCheckImg: UIImageView!
     @IBOutlet weak var hairLossCheckImg: UIImageView!
     @IBOutlet weak var dandruffsCheckImg: UIImageView!
     @IBOutlet weak var wrinklesCheckImg: UIImageView!
     
-    
-    
-     
     //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,29 +58,6 @@ class ObjectiveVC: BaseClass {
         hairLossCheckImg.isHidden = true
         dandruffsCheckImg.isHidden = true
         wrinklesCheckImg.isHidden = true
-        
-//        Firestore.firestore().collection("User").addSnapshotListener { [self] (querySnapshot, error) in
-//            guard let documents = querySnapshot?.documents else {
-//              print("No documents")
-//              return
-//            }
-//
-//        }
-
-
-            //documents.map ja{ queryDocumentSnapshot -> User in
-              // map document to User instance here
-                //return
-            //}
-           
-          //retrieveData()
-        
-        
-        
-        
-//        //Fetch data from cloudstore
-//        thoughtsCollectionRef = Firestore.firestore().collection("User")
-//             //fetchData()
         
         //Fetch the offerings from Revenuecat
         Purchases.shared.offerings { (offerings, error) in
@@ -102,22 +68,22 @@ class ObjectiveVC: BaseClass {
                 guard packages != nil else{
                     return
                 }
-            //Loop through packages
+                //Loop through packages
                 for i in 0...packages!.count-1 {
                     
-                //Get a refrence to the package
+                    //Get a refrence to the package
                     let package = packages![i]
                     
-                //Get a refrence to the product
+                    //Get a refrence to the product
                     let product = package.product
                     
-                //Product title
+                    //Product title
                     let title = product.localizedTitle
                     
-                //Product Price
+                    //Product Price
                     let price = product.price
-                
-                //Product duration
+                    
+                    //Product duration
                     var duration = ""
                     let subscriptionPeriod = product.subscriptionPeriod
                     
@@ -129,53 +95,28 @@ class ObjectiveVC: BaseClass {
                         duration = "/(subscriptionPeriod?.unit)Month"
                     case SKProduct.PeriodUnit.week:
                         duration = "/(subscriptionPeriod?.unit)Week"
-                    
+                        
                     @unknown default:
                         duration = ""
                     }
                     
                 }
                 
-          }
+            }
         }
-       
+        
     }
-  
-    
-
-    
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener({(auth,user) in
             if user !=  nil{
-               print("user is nil")
+                print("user is nil")
             }
             guard let user = user else{return}
             let uid = user.uid
             print("Found User with uid: \(uid)")
         })
-        
-//        thoughtsCollectionRef.getDocuments{(snapshot, error) in
-//            if let err = error{
-//                debugPrint("Error fetching docs: \(err)")
-//            }else{
-//                guard let snap = snapshot else{return}
-//                for document in snap.documents{
-//                    let data = document.data()
-//                    let user = data["Video"] as? String ?? "Annonymous"
-//                    //let timestamp = data["timestamp"] as? Date ?? Date()
-//
-//                    let userimg = data["Image"] as? String ?? "Annonymous"
-//                    let documentId = document.documentID
-//                    //let newVideo = User(Video: Users)
-//                   print(document.data())
-//                }
-//            }
-//        }
-        
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -184,39 +125,9 @@ class ObjectiveVC: BaseClass {
         guard let authStateDidChangeListenerHandle = authStateDidChangeListenerHandle else{return}
         Auth.auth().removeStateDidChangeListener(authStateDidChangeListenerHandle)
     }
-    
-    
-//    func fetchData(){
-//      db.collection("User").addSnapshotListener{
-//            (querySnapshot, error) in
-//        guard let documents = querySnapshot?.documents else {
-//            print("No documents")
-//            return
-//        }
-//        }
-//    }
-    
-//    func retrieveData(){
-//        let docRef = db.collection("User").document("LA")
-//
-//        docRef.getDocument { (document, error) in
-//            if let document = document, document.exists {
-//                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-//                print("Document data: \(dataDescription)")
-//            } else {
-//                print("Document does not exist")
-//            }
-//        }
-//
-
-    //}
-    
-    
-    
+       
     //MARK:- IBAction
-    
-    
-    
+   
     @IBAction func jawlinCheckButton(_ sender: UIButton) {
         
         switch sender.tag {
@@ -226,15 +137,15 @@ class ObjectiveVC: BaseClass {
         case 1:
             
             updateImageAndSaveData(with: hairLossCheckImg, sender: sender)
-
+            
         case 2:
-          
+            
             updateImageAndSaveData(with: dandruffsCheckImg, sender: sender)
-
+            
         case 3:
-        
+            
             updateImageAndSaveData(with: wrinklesCheckImg, sender: sender)
-
+            
         default:break
         }
         
@@ -248,14 +159,11 @@ class ObjectiveVC: BaseClass {
         
     }
     
-    
-    
-    
     @IBAction func continueButton(_ sender: UIButton) {
         self.navigationController?.pushViewController(AgeVC.instance(), animated: true)
         //continueButtonTapped()
         
-         UserDefaults.standard.set(selectedBtnArr, forKey: userDefaultKeys.objectiveArr)
+        UserDefaults.standard.set(selectedBtnArr, forKey: userDefaultKeys.objectiveArr)
         
         if let val = UserDefaults.standard.value(forKey: userDefaultKeys.objectiveArr) {
             print(val)
@@ -271,10 +179,6 @@ class ObjectiveVC: BaseClass {
                 return
             }
             print("Successfully login in firebase auth")
+        }
     }
-
-  }
-    
-    
-    
 }

@@ -37,8 +37,7 @@ class PauseVC: BaseClass {
         
         //animate progress
         self.perform(#selector(animateProgress), with: nil, afterDelay: 1)
-        
-        
+      
     }
     
     
@@ -54,7 +53,10 @@ class PauseVC: BaseClass {
 //    self.dismiss(animated: true, completion: {
 //       
 //    })
-    self.present(WorkOutVC.instance(), animated: true, completion: nil)
+    self.navigationController?.pushViewController(WorkOutVC.instance(), animated: true)
+    
+    
+   //    self.present(WorkOutVC.instance(), animated: true, completion: nil)
     
     }
     

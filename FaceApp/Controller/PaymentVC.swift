@@ -52,32 +52,25 @@ class PaymentVC: BaseClass {
     //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*day3Label.blink()
-         customWorkOutLabel.blink()
-         allExerciseLabel.blink()
-         unlimitedLabel.blink()
-         cancelLabel.blink()*/
         Animation(customView: view1)
         Animation(customView: view2)
         Animation(customView: view3)
         Animation(customView: view4)
         Animation(customView: view5)
-
     }
     
     
     func Animation(customView: UIView)  {
         UIView.animate(withDuration: 3.0, delay: 0.0, options: .curveEaseInOut, animations: {
             
-             customView.transform = CGAffineTransform(translationX: customView.bounds.origin.x + 300, y: customView.bounds.origin.y)
-    
+            customView.transform = CGAffineTransform(translationX: customView.bounds.origin.x + 300, y: customView.bounds.origin.y)
+            
         }, completion: nil)
         
         customView.transform = .identity
- 
+        
     }
-   
+    
     
     //MARK:- IBActions
     
@@ -85,16 +78,16 @@ class PaymentVC: BaseClass {
         DispatchQueue.main.async {
             self.navigationController?.pushViewController(/*HomeVc*/TabBarVC.instance(), animated: true)
         }
-       
+        
     }
     
     @IBAction func backBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
-
+        
         dismiss(animated: true, completion: nil)
         
     }
- 
+    
     //MARK:- Methods
     
     override func didReceiveMemoryWarning() {
