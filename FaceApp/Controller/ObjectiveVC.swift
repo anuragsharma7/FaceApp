@@ -7,7 +7,7 @@
 
 import UIKit
 import Purchases
-import FirebaseAuth
+
 //import FirebaseFirestore
 
 class ObjectiveVC: BaseClass {
@@ -20,7 +20,7 @@ class ObjectiveVC: BaseClass {
     }
     
     //MARK:- Variables
-    var authStateDidChangeListenerHandle:AuthStateDidChangeListenerHandle?
+    
     
     var objectiveArr = [Objective]()
     
@@ -107,27 +107,11 @@ class ObjectiveVC: BaseClass {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener({(auth,user) in
-            if user !=  nil{
-                print("user is nil")
-            }
-            guard let user = user else{return}
-            let uid = user.uid
-            print("Found User with uid: \(uid)")
-        })
-    }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        guard let authStateDidChangeListenerHandle = authStateDidChangeListenerHandle else{return}
-        Auth.auth().removeStateDidChangeListener(authStateDidChangeListenerHandle)
-    }
-       
+    
+    
     //MARK:- IBAction
-   
+    
     @IBAction func jawlinCheckButton(_ sender: UIButton) {
         
         switch sender.tag {
@@ -172,13 +156,5 @@ class ObjectiveVC: BaseClass {
     
     @objc fileprivate func continueButtonTapped(){
         print("login tapped")
-        let auth = Auth.auth()
-        auth.signInAnonymously{(result,err) in
-            if let err = err {
-                print(err.localizedDescription)
-                return
-            }
-            print("Successfully login in firebase auth")
-        }
     }
 }

@@ -3851,50 +3851,43 @@ and simple exercises</string>
                                     <constraint firstItem="b0r-EB-Wdx" firstAttribute="leading" secondItem="LJW-i2-Hd0" secondAttribute="leading" constant="30" id="zlp-lt-1ei"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" restorationIdentifier="ButtonProgressVC" translatesAutoresizingMaskIntoConstraints="NO" id="mz4-y4-TDn" customClass="ButtonProgressVC" customModule="FaceApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" restorationIdentifier="ButtonProgressVC" translatesAutoresizingMaskIntoConstraints="NO" id="mz4-y4-TDn" customClass="KDCircularProgress" customModule="KDCircularProgress">
                                 <rect key="frame" x="162" y="298" width="90" height="90"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q1h-mr-RYQ">
-                                        <rect key="frame" x="10" y="10" width="70" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="EH5-I6-jsF"/>
-                                            <constraint firstAttribute="height" constant="70" id="RTz-2h-w2N"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biZ-8k-6Mb">
-                                        <rect key="frame" x="10" y="10" width="70" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="dz0-Ic-TjM"/>
-                                            <constraint firstAttribute="height" constant="70" id="zfX-nZ-mq9"/>
-                                        </constraints>
-                                        <connections>
-                                            <action selector="btnStart:" destination="GFf-HX-Zix" eventType="touchUpInside" id="DDJ-5P-55N"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="q1h-mr-RYQ" firstAttribute="centerY" secondItem="mz4-y4-TDn" secondAttribute="centerY" id="D7D-M6-JzZ"/>
-                                    <constraint firstItem="biZ-8k-6Mb" firstAttribute="centerX" secondItem="mz4-y4-TDn" secondAttribute="centerX" id="Fl0-p7-UgM"/>
-                                    <constraint firstItem="q1h-mr-RYQ" firstAttribute="centerX" secondItem="mz4-y4-TDn" secondAttribute="centerX" id="Nnl-1j-b4T"/>
                                     <constraint firstAttribute="width" constant="90" id="Wgn-fk-dxL"/>
-                                    <constraint firstItem="biZ-8k-6Mb" firstAttribute="centerY" secondItem="mz4-y4-TDn" secondAttribute="centerY" id="kcP-4O-YrC"/>
                                     <constraint firstAttribute="height" constant="90" id="xEc-lp-YET"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q1h-mr-RYQ">
+                                <rect key="frame" x="187" y="320" width="35" height="40"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biZ-8k-6Mb">
+                                <rect key="frame" x="187" y="320" width="35" height="40"/>
+                                <connections>
+                                    <action selector="btnStart:" destination="GFf-HX-Zix" eventType="touchUpInside" id="DDJ-5P-55N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UF4-YQ-Hbb"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mz4-y4-TDn" firstAttribute="centerX" secondItem="G1P-Qw-uO5" secondAttribute="centerX" id="2dS-RJ-Fjw"/>
+                            <constraint firstItem="q1h-mr-RYQ" firstAttribute="top" secondItem="mz4-y4-TDn" secondAttribute="top" constant="22" id="A10-6D-cul"/>
                             <constraint firstItem="UF4-YQ-Hbb" firstAttribute="trailing" secondItem="LJW-i2-Hd0" secondAttribute="trailing" constant="20" id="F5i-6t-Ls0"/>
+                            <constraint firstItem="biZ-8k-6Mb" firstAttribute="top" secondItem="mz4-y4-TDn" secondAttribute="top" constant="22" id="F8x-RC-c9K"/>
                             <constraint firstItem="UF4-YQ-Hbb" firstAttribute="bottom" secondItem="LJW-i2-Hd0" secondAttribute="bottom" constant="20" id="Iky-Uj-jI0"/>
                             <constraint firstItem="mz4-y4-TDn" firstAttribute="top" secondItem="gbA-Pq-3oT" secondAttribute="bottom" constant="8" id="KvW-eZ-W1c"/>
+                            <constraint firstItem="biZ-8k-6Mb" firstAttribute="bottom" secondItem="mz4-y4-TDn" secondAttribute="bottom" constant="-28" id="NE0-lW-fsj"/>
                             <constraint firstItem="gbA-Pq-3oT" firstAttribute="leading" secondItem="UF4-YQ-Hbb" secondAttribute="leading" id="Nk7-oz-dt6"/>
                             <constraint firstItem="LJW-i2-Hd0" firstAttribute="leading" secondItem="UF4-YQ-Hbb" secondAttribute="leading" constant="20" id="QEy-pW-YEu"/>
                             <constraint firstItem="LJW-i2-Hd0" firstAttribute="top" secondItem="rFU-UN-kt3" secondAttribute="bottom" id="QGi-0G-7XS"/>
+                            <constraint firstItem="biZ-8k-6Mb" firstAttribute="leading" secondItem="mz4-y4-TDn" secondAttribute="leading" constant="25" id="Qov-9I-EFK"/>
                             <constraint firstItem="gbA-Pq-3oT" firstAttribute="top" secondItem="G1P-Qw-uO5" secondAttribute="top" id="SeG-OU-OBC"/>
                             <constraint firstItem="gbA-Pq-3oT" firstAttribute="trailing" secondItem="UF4-YQ-Hbb" secondAttribute="trailing" id="X0u-IG-agr"/>
+                            <constraint firstItem="q1h-mr-RYQ" firstAttribute="bottom" secondItem="mz4-y4-TDn" secondAttribute="bottom" constant="-28" id="Zc8-eO-Cb1"/>
+                            <constraint firstItem="q1h-mr-RYQ" firstAttribute="leading" secondItem="mz4-y4-TDn" secondAttribute="leading" constant="25" id="bHa-gK-0ba"/>
+                            <constraint firstItem="q1h-mr-RYQ" firstAttribute="trailing" secondItem="mz4-y4-TDn" secondAttribute="trailing" constant="-30" id="eZy-8n-lGI"/>
+                            <constraint firstItem="biZ-8k-6Mb" firstAttribute="trailing" secondItem="mz4-y4-TDn" secondAttribute="trailing" constant="-30" id="rfl-QY-gI7"/>
                             <constraint firstItem="mz4-y4-TDn" firstAttribute="centerX" secondItem="G1P-Qw-uO5" secondAttribute="centerX" id="zHm-sw-RrD"/>
                         </constraints>
                     </view>
@@ -3903,7 +3896,7 @@ and simple exercises</string>
                         <outlet property="numberLabel" destination="TZv-cJ-S0r" id="cIN-ad-s9o"/>
                         <outlet property="playBtnOutlet" destination="biZ-8k-6Mb" id="AZt-uy-E5y"/>
                         <outlet property="playImage" destination="q1h-mr-RYQ" id="qhU-ee-F3z"/>
-                        <outlet property="progressView" destination="mz4-y4-TDn" id="5JZ-t0-AEV"/>
+                        <outlet property="progress" destination="mz4-y4-TDn" id="ZV6-gg-m5h"/>
                         <outlet property="videoView" destination="rFU-UN-kt3" id="cjf-Md-RJt"/>
                     </connections>
                 </viewController>

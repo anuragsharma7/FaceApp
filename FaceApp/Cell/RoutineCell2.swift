@@ -15,10 +15,10 @@ class RoutineCell2: UITableViewCell {
     @IBOutlet weak var marylineLabel: UILabel!
     @IBOutlet weak var imgVideo: UIImageView!
     
-    var videos: Videos? {
+    var videos: [String: Any]? {
         didSet {
-            marylineLabel.text = videos!.name
-            self.imgVideo.sd_setImage(with: URL(string: videos!.videoUrl!), placeholderImage: Placeholders.UserProfile, options: SDWebImageOptions(rawValue: 0)) { (image, error, type, url) in
+            marylineLabel.text = (videos!["name"] as! String)
+            self.imgVideo.sd_setImage(with: URL(string: (videos!["videoUrl"] as! String)), placeholderImage: Placeholders.UserProfile, options: SDWebImageOptions.retryFailed) { (image, error, type, url) in
             }
         }
     }

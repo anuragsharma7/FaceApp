@@ -13,8 +13,8 @@ class Routine: Model {
     var painPoint: String?
     var thumbImage: String?
     
-    var videos: [Videos] = []
-    
+    var videos: [[String: Any]] = [[:]]
+
     override init() {
         super.init()
     }

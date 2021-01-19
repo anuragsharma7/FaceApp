@@ -16,8 +16,8 @@ class RoutineVC: BaseClass {
     var marylineArr = ["The Marylin 5 times","The Marylin 5 times","The Marylin 5 times","The Marylin 5 times"]
     
     
-    var videosArr: [Videos] = []
-    
+    var videosArr: [[String: Any]] = [[:]]
+
     // MARK:- Outlets
     
     @IBOutlet weak var StartWorkoutBottmY: NSLayoutConstraint!
@@ -36,9 +36,15 @@ class RoutineVC: BaseClass {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideos()
+          getVideos()
+        
+            print(videosArr)
+           // print(videosArr[0].isPaid as Any)
+        
+        
+        
 //        print("videosArr")
-//         print("============>>>>>>",videosArr)
+//        print("============>>>>>>",videosArr)
     }
     
     override func viewWillLayoutSubviews() {
@@ -108,15 +114,24 @@ extension RoutineVC: UITableViewDelegate,UITableViewDataSource{
         }
         else if indexPath.section == 1 {
             let cell =  tableView.dequeueReusableCell(withIdentifier: "RoutineCell2", for: indexPath) as? RoutineCell2
-            cell?.marylineLabel.text = marylineArr[indexPath.row]
-            
-//            cell?.playBtn.addTarget(self, action: Selector(("playButton:")), for: UIControl.Event.touchUpInside)
+            cell?.videos = videosArr[indexPath.row]
+            cell?.playBtn.addTarget(self, action: Selector(("playButton:")), for: UIControl.Event.touchUpInside)
             
             return cell!
         }
         return UITableViewCell()
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {}
+        else if indexPath.section == 1 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "RoutineCell2")
+            print("=======>>selected<<===========")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ExerciseVC") as! ExerciseVC
+            vc.videoFromBackend = videosArr
+            self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 105

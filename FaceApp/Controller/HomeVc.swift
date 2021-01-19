@@ -75,13 +75,29 @@ class HomeVc: BaseClass {
                 debugPrint("Error fetching docs: \(error)")
             } else {
                 guard let snap = snapShot else { return }
-                for doc in snap.documents {
+                 for doc in snap.documents {
                     let VideoObj = doc.data()
                     let video = Routine(info: VideoObj)
                     RoutineArr.append(video)
                 }
+                
+//                RoutineArr.append(contentsOf: (snapShot?.documents.compactMap({ (videosDocument) -> Routine? in
+//
+//                        videosN.decode(from: videoData.data())
+//
+//                }))!)
+                
+//                RoutineArr.append(contentsOf: snapShot?.documents.compactMap { videosDocument in
+//                    videosN.decode(from: videosDocument.data())
+//                } ?? [])
+             
+                print(RoutineArr)
+                
             }
         }
+        
+         
+        
     }
     
     private func getTargetDocument() {

@@ -92,8 +92,6 @@ extension ProgressVC: UICollectionViewDelegate,UICollectionViewDataSource {
         
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             guard indexPath.row == 0 else { return }

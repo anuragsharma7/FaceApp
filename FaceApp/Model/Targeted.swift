@@ -13,7 +13,7 @@ class Targeted: Model {
     var painPoint: String?
     var thumbImage: String?
     
-    var videos: [Videos] = []
+    var videos: [[String: Any]] = [[:]]
     
     override init() {
         super.init()
@@ -34,19 +34,19 @@ class Targeted: Model {
     }
 }
 
-class Videos: Model {
-    
-    var isPaid: Bool?
-    var times: Int?
-    var name: String?
-    var videoUrl: String?
-    
-    override init() {
-        super.init()
-    }
-    
-    convenience init(info: Dictionary<String, Any>) {
-        self.init()
-        self.setDictionary(info: info)
-    }
-}
+//class Videos: Model {
+//
+//    var isPaid: Bool?
+//    var times: Int?
+//    var name: String?
+//    var videoUrl: String?
+//
+//    override init() {
+//        super.init()
+//    }
+//
+//    convenience init(info: Dictionary<String, Any>) {
+//        self.init()
+//        self.setDictionary(info: info)
+//    }
+//}
