@@ -21,6 +21,12 @@ class ConsistencyVC: BaseClass {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        noBtn.layer.borderWidth = 2
+        noBtn.layer.borderColor = UIColor.white.cgColor
+        yesBtn.layer.borderWidth = 2
+        yesBtn.layer.borderColor = UIColor.white.cgColor
+        
     }
     
     //MARK:- Methods
@@ -45,10 +51,12 @@ class ConsistencyVC: BaseClass {
     //MARK:- IBAction
     
     @IBAction func noButton(_ sender: UIButton) {
+        noBtn.backgroundColor = .link
         self.navigationController?.pushViewController(LoadingVC.instance(), animated: true)
     }
     
     @IBAction func yesButton(_ sender: UIButton) {
+        yesBtn.backgroundColor = .link
         registerPushNotification()
     }
     

@@ -23,7 +23,9 @@ class AgeVC: BaseClass {
     override func viewDidLoad() {
         super.viewDidLoad()
         ageText.delegate = self
-       
+        DispatchQueue.main.async {
+            self.ageText.becomeFirstResponder()
+        }
     }
    
     
@@ -103,8 +105,8 @@ extension AgeVC: UITextFieldDelegate {
             // add their new text to the existing text
             let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
 
-            // make sure the result is under 3 characters
-            return updatedText.count <= 3
+            // make sure the result is under 2 characters
+            return updatedText.count <= 2
           
         }
          

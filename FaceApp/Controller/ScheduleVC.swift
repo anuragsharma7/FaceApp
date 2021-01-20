@@ -58,12 +58,26 @@ class ScheduleVC: BaseClass {
     override func viewDidLoad() {
         super.viewDidLoad()
         day1View.backgroundColor = .black
+        day1View.layer.borderWidth = 2
+        day1View.layer.borderColor = UIColor.white.cgColor
         day2View.backgroundColor = .black
+        day2View.layer.borderWidth = 2
+        day2View.layer.borderColor = UIColor.white.cgColor
         day3View.backgroundColor = .black
+        day3View.layer.borderWidth = 2
+        day3View.layer.borderColor = UIColor.white.cgColor
         day4View.backgroundColor = .black
+        day4View.layer.borderWidth = 2
+        day4View.layer.borderColor = UIColor.white.cgColor
         day5View.backgroundColor = .black
+        day5View.layer.borderWidth = 2
+        day5View.layer.borderColor = UIColor.white.cgColor
         day6View.backgroundColor = .black
+        day6View.layer.borderWidth = 2
+        day6View.layer.borderColor = UIColor.white.cgColor
         day7View.backgroundColor = .black
+        day7View.layer.borderWidth = 2
+        day7View.layer.borderColor = UIColor.white.cgColor
     }
     
     //MARK:- Methods

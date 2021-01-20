@@ -35,7 +35,14 @@ class HowYouEverVC: BaseClass {
     //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setBorder(of: regularBtn)
+        setBorder(of: triedBtn)
+        setBorder(of: neverBtn)
+    }
+    
+    func setBorder(of button: UIButton) {
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.white.cgColor
     }
     
     //MARK:- Methods
