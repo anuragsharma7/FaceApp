@@ -8,7 +8,9 @@
 import UIKit
 
 class StepAndBenefitsCell: UITableViewCell {
-
+    
+    @IBOutlet weak var lblForSteps1: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

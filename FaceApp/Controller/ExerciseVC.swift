@@ -37,9 +37,10 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "play")
-                self.playImage.image = #imageLiteral(resourceName: "play")
-
+        self.playImage.isHidden = false
+        playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "videoplay")
+        self.playImage.image = #imageLiteral(resourceName: "videoplay")
+        
                 progress.startAngle = -90
                 progress.progressThickness = 0.2
                 progress.trackThickness = 0.3
@@ -54,8 +55,8 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
         // let data = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
         let data = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
         print("================++++++++++++++",getVideoDuration(from: URL(string: data)!))
-        self.playImage.isHidden = false
-        self.playImage.image =  #imageLiteral(resourceName: "play")
+        
+       // self.playImage.image =  #imageLiteral(resourceName: "play")
         
         
         initVideoPlayer(withVideoIndex: 0)
@@ -69,8 +70,10 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
         lblNumberOfTimes.text = (String(videoFromBackend[withVideoIndex]["times"] as! Int)) + "X"
         lblNumberOfTimes.text = (videoFromBackend[withVideoIndex]["name"] as! String)
         let playerLayer = AVPlayerLayer(player: getPlayer(from: withVideoIndex))
-        playerLayer.frame = self.videoView.bounds
+        //playerLayer.frame = self.videoView.bounds
         self.videoView.layer.addSublayer(playerLayer)
+        playerLayer.frame = self.videoView.bounds
+
         currentProgressTime = Float(( self.player?.currentTime().timescale)!)
         //userdefault
         UserDefaults.standard.set(currentProgressTime, forKey: "videototaltime")
@@ -149,8 +152,8 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
             let videoURL = URL(string: videoUrl)
             player = AVPlayer(url: videoURL!)
             let playerLayer = AVPlayerLayer(player: player)
-            playerLayer.frame = self.videoView.bounds
-            self.videoView.layer.addSublayer(playerLayer)
+//            playerLayer.frame = self.videoView.bounds
+//            self.videoView.layer.addSublayer(playerLayer)
             print("playing")
             let currentItem:AVPlayerItem = player!.currentItem!
             print("currentItem=============>",currentItem)
@@ -225,7 +228,16 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     
     
     @IBAction func benifitesBtn(_ sender: Any) {
-        present(StepAndBenefitsVC.instance(), animated: true, completion: nil)
+//        player!.pause()
+//        self.playImage.image =  #imageLiteral(resourceName: "videoplay")
+//        playBtnOutlet.imageView?.image =  #imageLiteral(resourceName: "videoplay")
+        
+        let StepAndBenefitVC = StepAndBenefitsVC.instance() as! StepAndBenefitsVC
+        StepAndBenefitVC.benefitsArr = videoFromBackend[currentVideoIndex!]["Benefits"] as! [String]
+        print ("=========>>",videoFromBackend[currentVideoIndex!]["Benefits"] as! [String])
+        StepAndBenefitVC.stepsArr = videoFromBackend[currentVideoIndex!]["steps"] as! [String]
+        print("=========>>",videoFromBackend[currentVideoIndex!]["steps"] as! [String])
+        present( StepAndBenefitVC, animated: true, completion: nil)
     }
     
     @IBAction func crossButton(_ sender: UIButton) {
@@ -238,7 +250,8 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     @IBAction func nextButton(_ sender: UIButton) {
         
         player!.pause()
-        
+        self.playImage.image =  #imageLiteral(resourceName: "videoplay")
+        playBtnOutlet.imageView?.image =  #imageLiteral(resourceName: "videoplay")
         if currentVideoIndex != videoFromBackend.count - 1 {
             
             currentVideoIndex! += 1
@@ -256,9 +269,10 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     }
     
     @IBAction func previousButton(_ sender: UIButton) {
+        self.playImage.isHidden = false
+        self.playImage.image =  #imageLiteral(resourceName: "videoplay")
+        playBtnOutlet.imageView?.image =  #imageLiteral(resourceName: "videoplay")
         stopPlayer()
-        self.playImage.image =  #imageLiteral(resourceName: "play")
-        playBtnOutlet.imageView?.image =  #imageLiteral(resourceName: "play")
         if !(currentVideoIndex != videoFromBackend.count - 1) {
  
             currentVideoIndex! -= 1
