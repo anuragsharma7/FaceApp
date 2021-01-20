@@ -192,8 +192,8 @@ class PaymentWithTrialVC: BaseClass {
     }
     
     @IBAction func tryNowButton(_ sender: UIButton) {
-        
-        self.navigationController?.pushViewController(RoutineVC.instance(), animated: true)
+        self.navigationController?.popViewController(animated: true)
+        //self.navigationController?.pushViewController(RoutineVC.instance(), animated: true)
     }
     
     

@@ -36,15 +36,17 @@ class RoutineVC: BaseClass {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-          getVideos()
+        getVideos()
         
-            print(videosArr)
-           // print(videosArr[0].isPaid as Any)
-        
-        
-        
-//        print("videosArr")
-//        print("============>>>>>>",videosArr)
+        print(videosArr)
+        ///Set total minutes in minuteLabel...
+        /*
+        var totalMinutes: Int = 0
+        for item in videosArr {
+         totalMinutes += getVideoDurationFromUrl(url: item["time"])
+        }
+         // minutesLabel.text = totalMinutes
+         */
     }
     
     override func viewWillLayoutSubviews() {
@@ -64,7 +66,9 @@ class RoutineVC: BaseClass {
     }
     
     @IBAction func startWorkOutButton(_ sender: UIButton) {
-        self.navigationController?.pushViewController(ExerciseVC.instance(), animated: true)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ExerciseVC") as! ExerciseVC
+        vc.videoFromBackend = videosArr
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //MARK:- Methods

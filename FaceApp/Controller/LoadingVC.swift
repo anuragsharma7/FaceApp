@@ -35,6 +35,7 @@ class LoadingVC: BaseClass {
         let circularProgress = CircularProgress(frame: CGRect(x: 10.0, y: 30.0, width: 50.0, height: 50.0))
         circularProgress.progressColor = UIColor(red: 52.0/255.0, green: 141.0/255.0, blue: 252.0/255.0, alpha: 1.0)
         circularProgress.trackColor = UIColor(red: 33.0/255.0, green: 34.0/255.0, blue: 35.0/255.0, alpha: 0.6)
+        
         circularProgress.tag = 101
         circularProgress.center = self.view.center
         self.view.addSubview(circularProgress)

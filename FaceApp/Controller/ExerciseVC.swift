@@ -1,7 +1,3 @@
-
-
-
-
 //
 //  ExerciseVC.swift
 //  FaceApp
@@ -16,30 +12,24 @@ import KDCircularProgress
 
 class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     
+    //MARK:- Outlets
+    
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var headerImgVIew: UIImageView!
+    @IBOutlet weak var playBtnOutlet: UIButton!
+    @IBOutlet weak var playImage: UIImageView!
+    @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var progress: KDCircularProgress!
+    
     //MARK:- Variables
    
+    @IBOutlet weak var lblNumberOfTimes: UILabel!
     var player:AVPlayer?
     var playerLayer: AVPlayerLayer?
     let video1URL = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
    // var currentProgressTime:Float = 0.0
-    
     var videoFromBackend : [[String: Any]] = [[:]]
-    
     var currentVideoIndex: Int? = 0
-    
-    //MARK:- Outlets
-    
-    @IBOutlet weak var numberLabel: UILabel!
-    
-    @IBOutlet weak var headerImgVIew: UIImageView!
-    
-    @IBOutlet weak var playBtnOutlet: UIButton!
-    @IBOutlet weak var playImage: UIImageView!
-    
-    @IBOutlet weak var videoView: UIView!
-    
-    
-    @IBOutlet weak var progress: KDCircularProgress!
     var lastProgressAngle: Double = 0.0
     var currentProgressTime:Float = 0.0
     
@@ -54,26 +44,30 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
                 progress.progressThickness = 0.2
                 progress.trackThickness = 0.3
                 progress.clockwise = true
-                progress.gradientRotateSpeed = 2
+                progress.gradientRotateSpeed = 0
                 progress.roundedCorners = false
                 progress.glowMode = .noGlow
-                progress.glowAmount = 0.9
-                progress.set(colors: UIColor.cyan ,UIColor.white, UIColor.magenta, UIColor.white, UIColor.orange)
+                progress.glowAmount = 0.0
+                progress.set(colors: UIColor.white)
                 progress.center = CGPoint(x: view.center.x, y: view.center.y + 25)
         
-        //        let data = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+        // let data = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
         let data = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-        print("====================================+++++++++++++++++++++++++++++++++++++",getVideoDuration(from: URL(string: data)!))
+        print("================++++++++++++++",getVideoDuration(from: URL(string: data)!))
         self.playImage.isHidden = false
         self.playImage.image =  #imageLiteral(resourceName: "play")
         
         
         initVideoPlayer(withVideoIndex: 0)
-//        playVideoFromIndex(currentIndex: currentVideoIndex!)
+        // playVideoFromIndex(currentIndex: currentVideoIndex!)
+        
+        numberLabel.text = "1/\(videoFromBackend.count)"
     }
     
     //Mark:- Methods
     func initVideoPlayer(withVideoIndex: Int) {
+        lblNumberOfTimes.text = (String(videoFromBackend[withVideoIndex]["times"] as! Int)) + "X"
+        lblNumberOfTimes.text = (videoFromBackend[withVideoIndex]["name"] as! String)
         let playerLayer = AVPlayerLayer(player: getPlayer(from: withVideoIndex))
         playerLayer.frame = self.videoView.bounds
         self.videoView.layer.addSublayer(playerLayer)
@@ -242,18 +236,17 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     }
     
     @IBAction func nextButton(_ sender: UIButton) {
-         
-        player!.pause()
-  
-        if currentVideoIndex != videoFromBackend.count - 1 {
- 
-              currentVideoIndex! += 1
-              initVideoPlayer(withVideoIndex: currentVideoIndex!)
-              animateProgress()
-        }
- 
-     //   self.navigationController?.pushViewController(PauseVC.instance(), animated: true)
         
+        player!.pause()
+        
+        if currentVideoIndex != videoFromBackend.count - 1 {
+            
+            currentVideoIndex! += 1
+            initVideoPlayer(withVideoIndex: currentVideoIndex!)
+            animateProgress()
+        } else {
+            self.navigationController?.pushViewController(PauseVC.instance(), animated: true)
+        }
     }
     
     func animateProgress()  {

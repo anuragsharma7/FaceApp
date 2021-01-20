@@ -49,6 +49,7 @@ class PaymentVC: BaseClass {
     
     @IBOutlet weak var view5: UIView!
     @IBOutlet weak var view3: UIView!
+    
     //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,11 @@ class PaymentVC: BaseClass {
             self.navigationController?.pushViewController(/*HomeVc*/TabBarVC.instance(), animated: true)
         }
         
+    }
+    @IBAction func crossButton(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(/*HomeVc*/TabBarVC.instance(), animated: true)
+        }
     }
     
     @IBAction func backBtn(_ sender: UIButton) {

@@ -206,7 +206,9 @@ extension HomeVc: UICollectionViewDataSource {
     
     @objc func startWorkOutAction() {
         print("startWorkOutAction called")
-        self.navigationController?.pushViewController(RoutineVC.instance(), animated: true)
+        let routineVC = RoutineVC.instance() as! RoutineVC
+        routineVC.videosArr = RoutineArr[0].videos
+        self.navigationController?.pushViewController(routineVC, animated: true)
         print("startWorkOutAction called")
     }
 }

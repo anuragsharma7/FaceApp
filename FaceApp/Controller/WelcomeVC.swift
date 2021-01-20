@@ -19,6 +19,8 @@ class WelcomeVC: BaseClass {
     //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        facerefLabel.textColor = .grayColor
     }
     
     //  MARK:-IBAction
