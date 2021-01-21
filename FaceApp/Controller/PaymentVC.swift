@@ -53,21 +53,41 @@ class PaymentVC: BaseClass {
     //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        Animation(customView: view1)
-        Animation(customView: view2)
-        Animation(customView: view3)
-        Animation(customView: view4)
-        Animation(customView: view5)
+        Animation(customView: view1) { [self] (isTrue) in
+            if isTrue {
+                Animation(customView: view2) { (isTrue2) in
+                    if isTrue2 {
+                        print("2nd animation complete")
+                    }
+                }
+                
+            }
+        }
+        
+//        Animation(customView: view3)
+//        Animation(customView: view4)
+//        Animation(customView: view5)
     }
     
     
-    func Animation(customView: UIView)  {
-        UIView.animate(withDuration: 3.0, delay: 0.0, options: .curveEaseInOut, animations: {
-            
-            customView.transform = CGAffineTransform(translationX: customView.bounds.origin.x + 300, y: customView.bounds.origin.y)
-            
-        }, completion: nil)
+    func Animation(customView: UIView, completionA: @escaping(_ isComplete: Bool) -> () )  {
+//        // New animation
+//
+//        UIView.animate(withDuration: 30.0, delay: 0, options: [.repeat, .autoreverse], animations: {
+//
+//            customView.transform = CGAffineTransform(translationX: -customView.frame.width + self.view.bounds.width, y: 0)
+//
+//                    }, completion: nil)
         
+        
+        UIView.animate(withDuration: 3.0, delay: 0.0, options: .curveEaseInOut, animations: {
+
+            customView.transform = CGAffineTransform(translationX: customView.bounds.origin.x + 300, y: customView.bounds.origin.y)
+
+        }, completion: {_ in
+            completionA(true)
+        })
+
         customView.transform = .identity
         
     }
