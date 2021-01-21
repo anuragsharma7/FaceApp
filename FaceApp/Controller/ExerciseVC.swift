@@ -21,6 +21,7 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var progress: KDCircularProgress!
     
+    @IBOutlet weak var lblForName: UILabel!
     //MARK:- Variables
    
     @IBOutlet weak var lblNumberOfTimes: UILabel!
@@ -60,6 +61,7 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
         
         
         initVideoPlayer(withVideoIndex: 0)
+        animateProgress()
         // playVideoFromIndex(currentIndex: currentVideoIndex!)
         
         numberLabel.text = "1/\(videoFromBackend.count)"
@@ -68,7 +70,7 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
     //Mark:- Methods
     func initVideoPlayer(withVideoIndex: Int) {
         lblNumberOfTimes.text = (String(videoFromBackend[withVideoIndex]["times"] as! Int)) + "X"
-        lblNumberOfTimes.text = (videoFromBackend[withVideoIndex]["name"] as! String)
+        lblForName.text = (videoFromBackend[withVideoIndex]["name"] as! String)
         let playerLayer = AVPlayerLayer(player: getPlayer(from: withVideoIndex))
         //playerLayer.frame = self.videoView.bounds
         self.videoView.layer.addSublayer(playerLayer)
@@ -181,9 +183,9 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
             print("stopped")
             play.pause()
             // player = nil
-            NotificationCenter.default.addObserver(self, selector: #selector(playerStalled),
-                                                   name: NSNotification.Name.AVPlayerItemPlaybackStalled, object: player?.currentItem)
-            print("player deallocated")
+//            NotificationCenter.default.addObserver(self, selector: #selector(playerStalled),
+//                                                   name: NSNotification.Name.AVPlayerItemPlaybackStalled, object: player?.currentItem)
+//            print("player deallocated")
         } else {
             print("player was already deallocated")
         }
@@ -225,8 +227,6 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
         //            playBtnOutlet.imageView?.image = #imageLiteral(resourceName: "videoplay")
         //        }
     }
-    
-    
     @IBAction func benifitesBtn(_ sender: Any) {
 //        player!.pause()
 //        self.playImage.image =  #imageLiteral(resourceName: "videoplay")
@@ -272,12 +272,18 @@ class ExerciseVC: BaseClass, AVPlayerViewControllerDelegate {
         self.playImage.isHidden = false
         self.playImage.image =  #imageLiteral(resourceName: "videoplay")
         playBtnOutlet.imageView?.image =  #imageLiteral(resourceName: "videoplay")
-        stopPlayer()
+       
         if !(currentVideoIndex != videoFromBackend.count - 1) {
- 
+            
             currentVideoIndex! -= 1
-              initVideoPlayer(withVideoIndex: currentVideoIndex!)
+            guard currentVideoIndex != -1 else {
+                return
+            }
+            stopPlayer()
+            initVideoPlayer(withVideoIndex: currentVideoIndex!)
             animateProgress()
+            
+            
         }
        // self.navigationController?.pushViewController(RoutineVC.instance(), animated: true)
     }

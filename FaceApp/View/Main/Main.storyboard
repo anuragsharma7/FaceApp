@@ -37,7 +37,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="798"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Alpha Face" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oJ-kG-jgs">
-                                                <rect key="frame" x="1.5" y="0.0" width="371" height="95"/>
+                                                <rect key="frame" x="84.5" y="0.0" width="205" height="95"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="95" id="KB5-R3-AOg"/>
                                                 </constraints>
@@ -46,7 +46,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let your face reflects excellence, ambition  and status." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L5-Y3-kLb">
-                                                <rect key="frame" x="30" y="120" width="314" height="60"/>
+                                                <rect key="frame" x="20" y="120" width="334.5" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="ui6-Wq-Kac"/>
                                                 </constraints>
@@ -70,7 +70,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-d2-KZB">
-                                                <rect key="frame" x="56.5" y="598" width="261.5" height="100"/>
+                                                <rect key="frame" x="52" y="598" width="270" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="F2j-Pg-w3I"/>
                                                 </constraints>
@@ -240,6 +240,14 @@ and simple exercises</string>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E6L-hw-TRe">
+                                                        <rect key="frame" x="149.5" y="10.5" width="22" height="21"/>
+                                                        <color key="tintColor" red="0.0" green="0.61176470589999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="22" id="Qrv-he-hmj"/>
+                                                            <constraint firstAttribute="height" constant="22" id="UtE-dY-671"/>
+                                                        </constraints>
+                                                    </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7n-wB-Esx">
                                                         <rect key="frame" x="0.0" y="0.0" width="179.5" height="187.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -252,14 +260,6 @@ and simple exercises</string>
                                                             <action selector="jawlinCheckButton:" destination="lhs-yJ-FMk" eventType="touchUpInside" id="jrB-u5-Sbj"/>
                                                         </connections>
                                                     </button>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E6L-hw-TRe">
-                                                        <rect key="frame" x="149.5" y="10.5" width="22" height="21"/>
-                                                        <color key="tintColor" red="0.0" green="0.61176470589999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="22" id="Qrv-he-hmj"/>
-                                                            <constraint firstAttribute="height" constant="22" id="UtE-dY-671"/>
-                                                        </constraints>
-                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -2897,10 +2897,9 @@ and simple exercises</string>
                                                     <state key="normal" image="circle.fill" catalog="system"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. lorem lpsumm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbW-8y-glg">
-                                                    <rect key="frame" x="53" y="14" width="124" height="27"/>
+                                                    <rect key="frame" x="53" y="14" width="135" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="Jfe-I5-GeV"/>
-                                                        <constraint firstAttribute="width" constant="124" id="X88-b9-RhD"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2912,7 +2911,6 @@ and simple exercises</string>
                                                 <constraint firstItem="xVT-fp-PNZ" firstAttribute="leading" secondItem="0yw-D3-h2f" secondAttribute="leading" constant="15" id="KQW-qh-qv3"/>
                                                 <constraint firstAttribute="bottom" secondItem="rbW-8y-glg" secondAttribute="bottom" constant="9" id="NeY-b6-3RB"/>
                                                 <constraint firstItem="rbW-8y-glg" firstAttribute="leading" secondItem="xVT-fp-PNZ" secondAttribute="trailing" constant="8" id="k6r-va-Cz8"/>
-                                                <constraint firstAttribute="trailing" secondItem="rbW-8y-glg" secondAttribute="trailing" constant="237" id="kxn-Ep-7b5"/>
                                                 <constraint firstAttribute="bottom" secondItem="xVT-fp-PNZ" secondAttribute="bottom" constant="8" id="l2q-n9-JJp"/>
                                                 <constraint firstItem="xVT-fp-PNZ" firstAttribute="top" secondItem="0yw-D3-h2f" secondAttribute="top" constant="12" id="muU-8H-yUD"/>
                                                 <constraint firstItem="rbW-8y-glg" firstAttribute="leading" secondItem="xVT-fp-PNZ" secondAttribute="trailing" constant="8" symbolic="YES" id="rPW-jP-657"/>
@@ -3615,6 +3613,7 @@ and simple exercises</string>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="049-lN-NUM">
                                                 <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="IcN-5U-NhG"/>
                                                     <constraint firstAttribute="width" constant="50" id="R7k-D8-f5N"/>
@@ -3626,6 +3625,7 @@ and simple exercises</string>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZv-cJ-S0r">
                                                 <rect key="frame" x="182" y="52" width="50" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="BUr-vx-7Zg"/>
                                                     <constraint firstAttribute="width" constant="50" id="UWx-Fr-yRC"/>
@@ -3695,10 +3695,9 @@ and simple exercises</string>
                                         <rect key="frame" x="92" y="0.0" width="190" height="75"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idi-dF-nu2">
-                                                <rect key="frame" x="10" y="0.0" width="170" height="42"/>
+                                                <rect key="frame" x="75" y="0.0" width="40" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="FbP-OO-0bI"/>
-                                                    <constraint firstAttribute="width" constant="170" id="ucf-RZ-33F"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3753,7 +3752,6 @@ and simple exercises</string>
                                             <constraint firstItem="m7U-bB-AJA" firstAttribute="centerY" secondItem="Nkp-2H-vwF" secondAttribute="centerY" id="VFu-tn-bIY"/>
                                             <constraint firstItem="m7U-bB-AJA" firstAttribute="centerX" secondItem="Nkp-2H-vwF" secondAttribute="centerX" constant="3" id="wud-ce-K1t"/>
                                             <constraint firstAttribute="height" constant="50" id="yld-Gz-Zyz"/>
-                                            <constraint firstAttribute="width" constant="220" id="zN4-Ld-MBG"/>
                                             <constraint firstItem="xzf-jf-XFo" firstAttribute="leading" secondItem="m7U-bB-AJA" secondAttribute="trailing" constant="7.5" id="znV-2G-i7j"/>
                                         </constraints>
                                     </view>
@@ -3835,6 +3833,7 @@ and simple exercises</string>
                     </view>
                     <connections>
                         <outlet property="headerImgVIew" destination="QtE-LS-4y5" id="VBX-8h-CDC"/>
+                        <outlet property="lblForName" destination="m7U-bB-AJA" id="dq5-ZL-b5j"/>
                         <outlet property="lblNumberOfTimes" destination="idi-dF-nu2" id="Jsk-OV-09y"/>
                         <outlet property="numberLabel" destination="TZv-cJ-S0r" id="cIN-ad-s9o"/>
                         <outlet property="playBtnOutlet" destination="biZ-8k-6Mb" id="AZt-uy-E5y"/>
